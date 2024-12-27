@@ -1,0 +1,16 @@
+$prefix: "" !default;
+
+// Font
+$font-family-sans-serif: "Poppins", sans-serif;
+
+// Colors
+$primary: #2b303b;
+$secondary: #23272f;
+// $succes:
+// $info:
+// $warning:
+// $danger:
+$light: #f8f8f8;
+$dark: #01112b;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
