@@ -2,7 +2,7 @@ import Hero from "./Hero";
 
 export default function Homepage() {
   return (
-    <main>
+    <main className="bg-primary">
       <Hero />
     </main>
   );

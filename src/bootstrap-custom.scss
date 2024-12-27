@@ -4,13 +4,41 @@ $prefix: "" !default;
 $font-family-sans-serif: "Poppins", sans-serif;
 
 // Colors
-$primary: #2b303b;
-$secondary: #23272f;
+$primary: #23272f;
+$secondary: #2b303b;
 // $succes:
 // $info:
 // $warning:
 // $danger:
-$light: #f8f8f8;
+$light: #e5e7eb;
 $dark: #01112b;
+
+// Buttons
+$button-padding-x: 15px;
+$button-padding-y: 10px;
+
+$btn-padding-x: $button-padding-x;
+$btn-padding-x-sm: $button-padding-x * 0.75;
+$btn-padding-x-lg: $button-padding-x * 1.5;
+
+$btn-padding-y: $button-padding-y;
+$btn-padding-y-sm: $button-padding-y * 0.75;
+$btn-padding-y-lg: $button-padding-y * 1.5;
+
+// Spacers
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+  7: $spacer * 8,
+  8: $spacer * 12,
+  9: $spacer * 16,
+  10: $spacer * 20,
+) !default;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
