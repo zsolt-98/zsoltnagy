@@ -8,11 +8,24 @@
     bottom: 1.1rem;
     width: 2.75rem;
     height: 0.275rem;
-    background-color: #58c4dc;
+    background-color: $info;
+  }
+
+  &.waiting::after {
     animation: blink 0.85s linear infinite;
+  }
+
+  &.typing::after,
+  &.deleting::after {
+    opacity: 1;
   }
 }
 
+.glowing-border {
+  box-shadow: 0 0 20px rgba($info, 0.8);
+}
+
+// Animations
 @keyframes blink {
   0%,
   100% {
