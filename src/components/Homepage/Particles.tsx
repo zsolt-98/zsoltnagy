@@ -46,12 +46,12 @@ const ParticlesComponent = () => {
           resize: true,
         },
         modes: {
-          repulse: { distance: 100, duration: 0.4 },
+          repulse: { distance: 75, duration: 0.1 },
         },
       },
       particles: {
         number: {
-          value: 160,
+          value: 200,
           density: { enable: true, area: 800 },
         },
         color: { value: "#58c4dc" },
@@ -67,10 +67,10 @@ const ParticlesComponent = () => {
         },
         move: {
           enable: true,
-          speed: 1,
+          speed: 0.5,
           direction: "none",
           random: false,
-          straight: true,
+          straight: false,
           outModes: { default: "bounce" },
         },
       },

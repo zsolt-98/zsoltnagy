@@ -54,13 +54,13 @@ export default function Hero() {
       <div className="hero-main p-5 rounded-5 w-100 d-flex justify-content-between align-items-center position-relative">
         <div className="d-inline-block">
           <div className="hero-heading-container">
-            <h3 className="text-light fs-4 fw-semibold mb-3">Hello! I'm</h3>
+            <h3 className="text-info fs-4 fw-semibold mb-3">Hello! I'm</h3>
             <h1
               className={`h1-cursor ${phase} d-inline-block text-white display-1 fw-light mb-3`}
             >
               {name}
             </h1>
-            <h2 className="text-light fs-4 fw-semibold mb-3">
+            <h2 className="text-info fs-4 fw-semibold mb-3">
               A front-end developer
               <br />
               based in Subotica, Serbia.
@@ -83,12 +83,12 @@ export default function Hero() {
       </div>
       <div className="hero-tech-stack p-5 rounded-5 d-flex flex-column justify-content-center align-items-center position-relative">
         <div className="">
-          <h3 className="text-light fs-4 fw-semibold mb-3 text-nowrap">
+          <h3 className="text-info fs-4 fw-semibold mb-3 text-nowrap">
             Tech stack
           </h3>
         </div>
         <Stack
-          gap={3}
+          gap={2}
           className="hero-tech-stack-icons d-flex flex-column align-items-center"
         >
           <Image
