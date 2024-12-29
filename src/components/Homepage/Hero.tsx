@@ -46,7 +46,15 @@ export default function Hero() {
       fluid="xl"
       className="vh-100 bg-primary d-flex align-items-center"
     >
-      <div className="mx-5 w-100 d-flex justify-content-between align-items-center mx-6">
+      <div
+        className="hero-main p-6 rounded-5 mx-5 w-100 d-flex justify-content-between align-items-center mx-6 position-relative"
+        style={{
+          zIndex: 2,
+          backgroundColor: "rgba(9, 10, 12, 0.75)",
+          backdropFilter: "blur(3px)",
+          WebkitBackdropFilter: "blur(3px)",
+        }}
+      >
         <div className="d-inline-block">
           <h3 className="text-light fs-4 fw-semibold">Hello! I'm</h3>
           <h1
@@ -80,7 +88,7 @@ export default function Hero() {
               top: "7.5%",
               left: "7.5%",
               zIndex: "1",
-              // transform: "rotate(10deg)",
+              background: "none", // transform: "rotate(10d eg)",
             }}
           ></div>
         </div>

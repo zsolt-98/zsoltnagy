@@ -7,76 +7,55 @@ const ParticlesComponent = () => {
   const [init, setInit] = useState(false);
 
   useEffect(() => {
-    const initEngine = async () => {
-      await initParticlesEngine(async (engine) => {
-        await loadFull(engine);
-      });
+    initParticlesEngine(async (engine) => {
+      await loadFull(engine);
       setInit(true);
-    };
-    initEngine();
+    });
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log("Particles container loaded:", container);
+    if (!container) return;
+
+    const heroMain = document.querySelector(".hero-main");
+    if (heroMain) {
+      heroMain.addEventListener("mouseenter", () => {
+        container.actualOptions.interactivity.events.onHover.enable = false;
+      });
+
+      heroMain.addEventListener("mouseleave", () => {
+        container.actualOptions.interactivity.events.onHover.enable = true;
+      });
+    }
   };
 
   const options: ISourceOptions = useMemo(
     () => ({
-      background: {
-        color: {
-          value: "transparent",
-        },
-      },
-      fullScreen: {
-        enable: false,
-      },
+      background: { color: { value: "transparent" } },
+      fullScreen: { enable: false },
       fpsLimit: 120,
       interactivity: {
         events: {
-          onClick: {
-            enable: false,
-            mode: "push",
-          },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
+          onClick: { enable: false },
+          onHover: { enable: true, mode: "repulse" },
           resize: true,
         },
         modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 100,
-            duration: 0.4,
-          },
+          repulse: { distance: 100, duration: 0.4 },
         },
       },
       particles: {
         number: {
           value: 160,
-          density: {
-            enable: true,
-            area: 800,
-          },
+          density: { enable: true, area: 800 },
         },
-        color: {
-          value: "#58c4dc",
-        },
-        shape: {
-          type: "circle",
-        },
-        opacity: {
-          value: 0.5,
-        },
-        size: {
-          value: { min: 2, max: 3 },
-        },
+        color: { value: "#58c4dc" },
+        shape: { type: "circle" },
+        opacity: { value: 0.5 },
+        size: { value: { min: 2, max: 3 } },
         links: {
           enable: true,
           distance: 150,
-          color: "#e5e7eb", // Light colored links
+          color: "#e5e7eb",
           opacity: 0.4,
           width: 1,
         },
@@ -86,9 +65,7 @@ const ParticlesComponent = () => {
           direction: "none",
           random: false,
           straight: true,
-          outModes: {
-            default: "bounce",
-          },
+          outModes: { default: "bounce" },
         },
       },
       detectRetina: true,
@@ -96,18 +73,17 @@ const ParticlesComponent = () => {
     []
   );
 
-  if (init) {
-    return (
-      <Particles
-        id="tsparticles"
-        particlesLoaded={particlesLoaded}
-        options={options}
-        className="position-absolute w-100"
-      />
-    );
-  }
+  if (!init) return null;
 
-  return null;
+  return (
+    <Particles
+      id="tsparticles"
+      particlesLoaded={particlesLoaded}
+      options={options}
+      className="position-absolute w-100 vh-100 overflow-hidden"
+      style={{ zIndex: 1 }}
+    />
+  );
 };
 
 export default ParticlesComponent;
