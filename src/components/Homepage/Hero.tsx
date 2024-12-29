@@ -1,8 +1,13 @@
 import { useEffect, useState } from "react";
+
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
+import Stack from "react-bootstrap/Stack";
 
 import portfolioImage from "../../assets/Dutch-Van-Der-Linde-Red-Dead-Redemption-2.jpg";
+
+import IconLinkedin from "../Icons/IconLinkedin";
+import IconGithub from "../Icons/IconGithub";
 
 type Phase = "typing" | "waiting" | "deleting";
 
@@ -47,7 +52,7 @@ export default function Hero() {
       className="vh-100 bg-primary d-flex align-items-center"
     >
       <div
-        className="hero-main p-6 rounded-5 mx-5 w-100 d-flex justify-content-between align-items-center mx-6 position-relative"
+        className="hero-main p-6 rounded-5 w-100 d-flex justify-content-between align-items-center position-relative"
         style={{
           zIndex: 2,
           backgroundColor: "rgba(9, 10, 12, 0.75)",
@@ -56,19 +61,32 @@ export default function Hero() {
         }}
       >
         <div className="d-inline-block">
-          <h3 className="text-light fs-4 fw-semibold">Hello! I'm</h3>
-          <h1
-            className={`h1-cursor ${phase} d-inline-block text-white display-1 fw-light`}
-          >
-            {name}
-          </h1>
-          <h2 className="text-light fs-4 fw-semibold">
-            A front-end developer
-            <br />
-            based in Subotica, Serbia.
-          </h2>
+          <div className="hero-heading-container">
+            <h3 className="text-light fs-4 fw-semibold mb-3">Hello! I'm</h3>
+            <h1
+              className={`h1-cursor ${phase} d-inline-block text-white display-1 fw-light mb-3`}
+            >
+              {name}
+            </h1>
+            <h2 className="text-light fs-4 fw-semibold mb-3">
+              A front-end developer
+              <br />
+              based in Subotica, Serbia.
+            </h2>
+          </div>
+          <div className="hero-social-icon-container">
+            <a href="">
+              <IconLinkedin size={40} stroke="var(--bs-light)" />
+            </a>
+            <a href="">
+              <IconGithub size={40} stroke="var(--bs-light)" />
+            </a>
+          </div>
         </div>
-        <div className="position-relative">
+        <div
+          className="img-container position-relative"
+          style={{ margin: "0 2rem 2rem 0" }}
+        >
           <div
             className="rounded-5 bg-light position-relative overflow-hidden"
             style={{
@@ -85,10 +103,10 @@ export default function Hero() {
             style={{
               height: "400px",
               width: "400px",
-              top: "7.5%",
-              left: "7.5%",
+              top: "2rem",
+              left: "2rem",
               zIndex: "1",
-              background: "none", // transform: "rotate(10d eg)",
+              background: "none",
             }}
           ></div>
         </div>
