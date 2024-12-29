@@ -21,8 +21,30 @@
   }
 }
 
-.glowing-border {
-  box-shadow: 0 0 20px rgba($info, 0.8);
+.hero {
+  &-main {
+    z-index: 2;
+    background-color: rgba(9, 10, 12, 0.75);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  &-glowing-border {
+    box-shadow: 4px 4px 8px rgba($info, 0.8);
+    height: 20rem;
+    width: 20rem;
+    z-index: 2;
+  }
+
+  &-tech {
+    &-stack {
+      background-color: rgba(9, 10, 12, 0.75);
+    }
+
+    &-icon {
+      width: 10rem;
+    }
+  }
 }
 
 // Animations

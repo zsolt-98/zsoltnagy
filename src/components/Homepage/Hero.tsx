@@ -49,17 +49,9 @@ export default function Hero() {
   return (
     <Container
       fluid="xl"
-      className="vh-100 bg-primary d-flex align-items-center"
+      className="vh-100 px-0 bg-primary d-flex align-items-center gap-5"
     >
-      <div
-        className="hero-main p-6 rounded-5 w-100 d-flex justify-content-between align-items-center position-relative"
-        style={{
-          zIndex: 2,
-          backgroundColor: "rgba(9, 10, 12, 0.75)",
-          backdropFilter: "blur(3px)",
-          WebkitBackdropFilter: "blur(3px)",
-        }}
-      >
+      <div className="hero-main p-5 rounded-5 w-100 d-flex justify-content-between align-items-center position-relative">
         <div className="d-inline-block">
           <div className="hero-heading-container">
             <h3 className="text-light fs-4 fw-semibold mb-3">Hello! I'm</h3>
@@ -83,33 +75,37 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div
-          className="img-container position-relative"
-          style={{ margin: "0 2rem 2rem 0" }}
-        >
-          <div
-            className="rounded-5 bg-light position-relative overflow-hidden"
-            style={{
-              height: "400px",
-              width: "400px",
-              zIndex: "2",
-              // transform: "rotate(10deg)",
-            }}
-          >
+        <div className="img-container position-relative">
+          <div className="hero-glowing-border rounded-5 border-info position-relative overflow-hidden">
             <Image src={portfolioImage}></Image>
           </div>
-          <div
-            className="glowing-border rounded-5 border border-2 border-info position-absolute"
-            style={{
-              height: "400px",
-              width: "400px",
-              top: "2rem",
-              left: "2rem",
-              zIndex: "1",
-              background: "none",
-            }}
-          ></div>
         </div>
+      </div>
+      <div className="hero-tech-stack p-5 rounded-5 d-flex flex-column justify-content-center align-items-center position-relative">
+        <div className="">
+          <h3 className="text-light fs-4 fw-semibold mb-3">Tech stack</h3>
+        </div>
+        <Stack
+          gap={3}
+          className="hero-tech-stack-icons d-flex flex-column align-items-center"
+        >
+          <Image
+            className="hero-tech-icon"
+            src="https://skillicons.dev/icons?i=html,css"
+          />
+          <Image
+            className="hero-tech-icon"
+            src="https://skillicons.dev/icons?i=javascript,typescript"
+          />
+          <Image
+            className="hero-tech-icon"
+            src="https://skillicons.dev/icons?i=react,bootstrap"
+          />
+          <Image
+            className="hero-tech-icon"
+            src="https://skillicons.dev/icons?i=sass,git"
+          />
+        </Stack>
       </div>
     </Container>
   );
