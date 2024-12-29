@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 
-import portfolioImage from "../assets/Dutch-Van-Der-Linde-Red-Dead-Redemption-2.jpg";
+import portfolioImage from "../../assets/Dutch-Van-Der-Linde-Red-Dead-Redemption-2.jpg";
 
 type Phase = "typing" | "waiting" | "deleting";
 
@@ -73,7 +73,7 @@ export default function Hero() {
             <Image src={portfolioImage}></Image>
           </div>
           <div
-            className="glowing-border rounded-5 border border-5 border-info position-absolute"
+            className="glowing-border rounded-5 border border-2 border-info position-absolute"
             style={{
               height: "400px",
               width: "400px",
