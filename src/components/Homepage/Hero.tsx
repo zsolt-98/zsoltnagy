@@ -83,7 +83,9 @@ export default function Hero() {
       </div>
       <div className="hero-tech-stack p-5 rounded-5 d-flex flex-column justify-content-center align-items-center position-relative">
         <div className="">
-          <h3 className="text-light fs-4 fw-semibold mb-3">Tech stack</h3>
+          <h3 className="text-light fs-4 fw-semibold mb-3 text-nowrap">
+            Tech stack
+          </h3>
         </div>
         <Stack
           gap={3}
