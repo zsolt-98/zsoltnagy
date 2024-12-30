@@ -3,7 +3,7 @@ import ParticlesComponent from "./Particles";
 
 export default function Homepage() {
   return (
-    <main className="bg-primary">
+    <main className="bg-primary overflow-hidden">
       <ParticlesComponent />
       <Hero />
     </main>

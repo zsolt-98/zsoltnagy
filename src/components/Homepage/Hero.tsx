@@ -50,7 +50,7 @@ export default function Hero() {
       fluid="xl"
       className="min-vh-100 px-0 bg-primary d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-5"
     >
-      <div className="hero-main p-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
+      <div className="hero-main p-3 p-xl-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
         <div className="d-inline-block">
           <div className="hero-heading-container">
             <h3 className="text-info fs-4 fw-semibold mb-3">Hello! I'm</h3>
