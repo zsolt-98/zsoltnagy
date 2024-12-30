@@ -21,9 +21,10 @@ interface AnimationStates {
 }
 
 export default function Hero() {
-  const [name, setName] = useState<string>("\u00A0");
-  const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const [phase, setPhase] = useState<Phase>("typing");
+  const fullName: string = "Zsolt Nagy";
+  const [name, setName] = useState<string>(fullName);
+  const [currentIndex, setCurrentIndex] = useState<number>(fullName.length);
+  const [phase, setPhase] = useState<Phase>("waiting");
   const [animationStates, setAnimationStates] = useState<AnimationStates>({
     hello: false,
     name: false,
@@ -33,7 +34,12 @@ export default function Hero() {
     techStack: false,
     techStackIcons: false,
   });
-  const fullName: string = "Zsolt Nagy";
+
+  useEffect(() => {
+    if (phase === "waiting") {
+      setTimeout(() => setPhase("deleting"), 3000);
+    }
+  }, [phase]);
 
   useEffect(() => {
     const handleTyping = (): void => {
@@ -43,7 +49,7 @@ export default function Hero() {
           setCurrentIndex((prev) => prev + 1);
         } else {
           setPhase("waiting");
-          setTimeout(() => setPhase("deleting"), 4000);
+          setTimeout(() => setPhase("deleting"), 3000);
         }
       } else if (phase === "deleting") {
         if (currentIndex > 1) {
