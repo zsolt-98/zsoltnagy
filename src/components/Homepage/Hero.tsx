@@ -49,7 +49,7 @@ export default function Hero() {
   return (
     <Container
       fluid="xl"
-      className="vh-100 px-0 bg-primary d-flex align-items-center gap-5"
+      className="min-vh-100 px-0 bg-primary d-flex flex-column flex-xxl-row align-items-center gap-5"
     >
       <div className="hero-main p-5 rounded-5 w-100 d-flex justify-content-between align-items-center position-relative">
         <div className="d-inline-block">
@@ -88,8 +88,8 @@ export default function Hero() {
           </h3>
         </div>
         <Stack
-          gap={2}
-          className="hero-tech-stack-icons d-flex flex-column align-items-center"
+          gap={3}
+          className="hero-tech-stack-icons d-flex flex-row flex-xxl-column align-items-center"
         >
           <Image
             className="hero-tech-icon"

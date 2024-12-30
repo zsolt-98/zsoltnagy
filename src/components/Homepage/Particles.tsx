@@ -43,7 +43,11 @@ const ParticlesComponent = () => {
         events: {
           onClick: { enable: false },
           onHover: { enable: true, mode: "repulse" },
-          resize: true,
+          resize: {
+            enable: true,
+            delay: 0, // Minimize delay on resize
+            factor: 1, // Keep aspect ratio
+          },
         },
         modes: {
           repulse: { distance: 75, duration: 0.1 },
@@ -74,7 +78,8 @@ const ParticlesComponent = () => {
           outModes: { default: "bounce" },
         },
       },
-      detectRetina: true,
+      retina_detect: true,
+      smooth: true, // Enable smooth animations
     }),
     []
   );
@@ -86,7 +91,7 @@ const ParticlesComponent = () => {
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={options}
-      className="position-absolute w-100 vh-100 overflow-hidden"
+      className="position-fixed w-100 vh-100 overflow-hidden"
       style={{ zIndex: 1 }}
     />
   );
