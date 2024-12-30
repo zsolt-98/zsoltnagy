@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 
-import portfolioImage from "../../assets/Dutch-Van-Der-Linde-Red-Dead-Redemption-2.jpg";
+import portfolioImage from "../../assets/zsoltnagy.jpg";
 
 import IconLinkedin from "../Icons/IconLinkedin";
 import IconGithub from "../Icons/IconGithub";
@@ -79,7 +79,10 @@ export default function Hero() {
           </div>
           <div className="img-container position-relative mt-5 mt-lg-0">
             <div className="hero-glowing-border rounded-5 border-info position-relative overflow-hidden">
-              <Image src={portfolioImage}></Image>
+              <Image
+                src={portfolioImage}
+                className="img-fluid w-100 h-100 object-fit-cover"
+              ></Image>
             </div>
           </div>
         </div>
@@ -93,7 +96,7 @@ export default function Hero() {
             <div className="d-flex flex-column flex-md-row align-items-center justify-content-center">
               <div className="d-flex flex-row">
                 <Image
-                  className="hero-tech-icon"
+                  className="hero-tech-icon first-icon"
                   src="https://skillicons.dev/icons?i=html"
                 />
                 <Image

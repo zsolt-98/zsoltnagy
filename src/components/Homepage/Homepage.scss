@@ -64,6 +64,14 @@ $cursor-size: 0.7em;
     &-icon {
       width: 4rem;
       margin: 0.5rem;
+
+      &.first-icon {
+        margin-left: 0;
+
+        @media (max-width: 768px) {
+          margin-left: 0.5rem;
+        }
+      }
     }
   }
 }
