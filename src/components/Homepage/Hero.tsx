@@ -90,8 +90,8 @@ export default function Hero() {
             </h3>
           </div>
           <div className="hero-tech-stack-icons d-flex flex-column flex-md-row">
-            <div className="d-flex align-items-center">
-              <div>
+            <div className="d-flex flex-column flex-md-row align-items-center justify-content-center">
+              <div className="d-flex flex-row">
                 <Image
                   className="hero-tech-icon"
                   src="https://skillicons.dev/icons?i=html"
@@ -101,7 +101,7 @@ export default function Hero() {
                   src="https://skillicons.dev/icons?i=css"
                 />
               </div>
-              <div>
+              <div className="d-flex flex-row">
                 <Image
                   className="hero-tech-icon"
                   src="https://skillicons.dev/icons?i=js"
@@ -112,8 +112,8 @@ export default function Hero() {
                 />
               </div>
             </div>
-            <div className="d-flex ">
-              <div>
+            <div className="d-flex flex-column flex-md-row align-items-center justify-content-center">
+              <div className="d-flex flex-row">
                 <Image
                   className="hero-tech-icon"
                   src="https://skillicons.dev/icons?i=react"
@@ -123,7 +123,7 @@ export default function Hero() {
                   src="https://skillicons.dev/icons?i=bootstrap"
                 />
               </div>
-              <div>
+              <div className="d-flex flex-row">
                 <Image
                   className="hero-tech-icon"
                   src="https://skillicons.dev/icons?i=sass"

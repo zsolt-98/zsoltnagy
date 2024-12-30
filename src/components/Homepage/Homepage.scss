@@ -23,10 +23,10 @@ $cursor-size: 0.7em;
   &::after {
     content: "";
     position: absolute;
-    right: -#{$cursor-size}; // Changed from fixed -3.15rem
-    bottom: 0.25em; // Changed from fixed 1.1rem
-    width: 0.6em; // Changed from fixed 2.75rem
-    height: 0.06em; // Changed from fixed 0.275rem
+    right: -#{$cursor-size};
+    bottom: 0.25em;
+    width: 0.6em;
+    height: 0.06em;
     background-color: $info;
   }
 
