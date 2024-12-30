@@ -71,6 +71,11 @@ $cursor-size: 0.7em;
       width: 4rem;
       margin: 0 0.5rem 0 0.5rem;
 
+      @media (max-width: 768px) {
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
       &.first-icon {
         margin-left: 0;
 
