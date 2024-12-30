@@ -10,10 +10,29 @@ import IconGithub from "../Icons/IconGithub";
 
 type Phase = "typing" | "waiting" | "deleting";
 
+interface AnimationStates {
+  hello: boolean;
+  name: boolean;
+  image: boolean;
+  role: boolean;
+  social: boolean;
+  techStack: boolean;
+  techStackIcons: boolean;
+}
+
 export default function Hero() {
   const [name, setName] = useState<string>("\u00A0");
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [phase, setPhase] = useState<Phase>("typing");
+  const [animationStates, setAnimationStates] = useState<AnimationStates>({
+    hello: false,
+    name: false,
+    image: false,
+    role: false,
+    social: false,
+    techStack: false,
+    techStackIcons: false,
+  });
   const fullName: string = "Zsolt Nagy";
 
   useEffect(() => {
@@ -45,6 +64,26 @@ export default function Hero() {
     return () => clearInterval(intervalId);
   }, [currentIndex, fullName, phase]);
 
+  useEffect(() => {
+    const animations = [
+      { key: "hello", delay: 100 },
+      { key: "name", delay: 200 },
+      { key: "image", delay: 200 },
+      { key: "role", delay: 300 },
+      { key: "social", delay: 400 },
+      { key: "techStack", delay: 500 },
+      { key: "techStackIcons", delay: 600 },
+    ] as const;
+
+    const timeouts = animations.map(({ key, delay }) =>
+      setTimeout(
+        () => setAnimationStates((prev) => ({ ...prev, [key]: true })),
+        delay
+      )
+    );
+    return () => timeouts.forEach((timeout) => clearTimeout(timeout));
+  }, []);
+
   return (
     <Container
       fluid="xl"
@@ -54,21 +93,37 @@ export default function Hero() {
         <div className="p-3 p-xl-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
           <div className="d-inline-block">
             <div className="hero-heading-container">
-              <h3 className="text-info fs-4 fw-semibold mb-3">Hello! I'm</h3>
+              <h3
+                className={`text-info hero-heading ${
+                  animationStates.hello ? "animating" : ""
+                } fs-4 fw-semibold mb-3`}
+              >
+                Hello! I'm
+              </h3>
               <div className="h1-cursor-wrapper">
                 <h1
-                  className={`h1-cursor ${phase} d-inline-block text-white display-1 fw-light mb-3`}
+                  className={`hero-heading ${
+                    animationStates.name ? "animating" : ""
+                  } h1-cursor ${phase} d-inline-block text-white display-1 fw-light mb-3`}
                 >
                   {name}
                 </h1>
               </div>
-              <h2 className="text-info fs-4 fw-semibold mb-3">
+              <h2
+                className={`hero-heading ${
+                  animationStates.role ? "animating" : ""
+                } text-info fs-4 fw-semibold mb-3`}
+              >
                 A front-end developer
                 <br />
                 based in Subotica, Serbia.
               </h2>
             </div>
-            <div className="hero-social-icon-container">
+            <div
+              className={`hero-social-icon-container ${
+                animationStates.social ? "animating" : ""
+              }`}
+            >
               <a href="">
                 <IconLinkedin size={40} stroke="var(--bs-light)" />
               </a>
@@ -77,7 +132,11 @@ export default function Hero() {
               </a>
             </div>
           </div>
-          <div className="img-container position-relative mt-5 mt-lg-0">
+          <div
+            className={`hero-img-container ${
+              animationStates.image ? "animating" : ""
+            } position-relative mt-5 mt-lg-0`}
+          >
             <div className="hero-glowing-border rounded-5 border-info position-relative overflow-hidden">
               <Image
                 src={portfolioImage}
@@ -88,11 +147,19 @@ export default function Hero() {
         </div>
         <div className="hero-tech-stack p-5 rounded-5 d-flex flex-column justify-content-start  position-relative">
           <div>
-            <h3 className="text-info text-center text-lg-start fs-4 fw-semibold mb-3 text-nowrap">
+            <h3
+              className={`hero-tech-stack-title ${
+                animationStates.techStack ? "animating" : ""
+              } text-info text-center text-lg-start fs-4 fw-semibold mb-3 text-nowrap`}
+            >
               Tech stack
             </h3>
           </div>
-          <div className="hero-tech-stack-icons d-flex flex-column flex-md-row">
+          <div
+            className={`hero-tech-stack-icons ${
+              animationStates.techStackIcons ? "animating" : ""
+            } d-flex flex-column flex-md-row`}
+          >
             <div className="d-flex flex-column flex-md-row align-items-center justify-content-center">
               <div className="d-flex flex-row">
                 <Image
