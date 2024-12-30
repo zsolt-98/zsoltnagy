@@ -11,6 +11,7 @@ import IconGithub from "../Icons/IconGithub";
 type Phase = "typing" | "waiting" | "deleting";
 
 interface AnimationStates {
+  container: boolean;
   hello: boolean;
   name: boolean;
   image: boolean;
@@ -26,6 +27,7 @@ export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState<number>(fullName.length);
   const [phase, setPhase] = useState<Phase>("waiting");
   const [animationStates, setAnimationStates] = useState<AnimationStates>({
+    container: false,
     hello: false,
     name: false,
     image: false,
@@ -72,13 +74,14 @@ export default function Hero() {
 
   useEffect(() => {
     const animations = [
-      { key: "hello", delay: 100 },
-      { key: "name", delay: 200 },
-      { key: "image", delay: 200 },
-      { key: "role", delay: 300 },
-      { key: "social", delay: 400 },
-      { key: "techStack", delay: 500 },
-      { key: "techStackIcons", delay: 600 },
+      { key: "container", delay: 100 },
+      { key: "hello", delay: 400 },
+      { key: "name", delay: 500 },
+      { key: "image", delay: 500 },
+      { key: "role", delay: 600 },
+      { key: "social", delay: 700 },
+      { key: "techStack", delay: 800 },
+      { key: "techStackIcons", delay: 900 },
     ] as const;
 
     const timeouts = animations.map(({ key, delay }) =>
@@ -95,7 +98,11 @@ export default function Hero() {
       fluid="xl"
       className="min-vh-100 px-0 bg-primary d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-5"
     >
-      <div className="hero-main my-6">
+      <div
+        className={`hero-main ${
+          animationStates.container ? "animating" : ""
+        } my-6`}
+      >
         <div className="p-3 p-xl-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
           <div className="d-inline-block">
             <div className="hero-heading-container">
