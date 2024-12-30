@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
-import Stack from "react-bootstrap/Stack";
 
 import portfolioImage from "../../assets/Dutch-Van-Der-Linde-Red-Dead-Redemption-2.jpg";
 
