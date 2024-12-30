@@ -17,20 +17,16 @@ const ParticlesComponent = () => {
     if (!container) return;
 
     const heroMain = document.querySelector(".hero-main");
-    const heroTech = document.querySelector(".hero-tech-stack");
 
-    if (heroMain && heroTech) {
-      const elements = [heroMain, heroTech];
-
-      elements.forEach((element) => {
-        element.addEventListener("mouseenter", () => {
-          container.actualOptions.interactivity.events.onHover.enable = false;
-        });
-
-        element.addEventListener("mouseleave", () => {
-          container.actualOptions.interactivity.events.onHover.enable = true;
-        });
+    if (heroMain) {
+      heroMain.addEventListener("mouseenter", () => {
+        container.actualOptions.interactivity.events.onHover.enable = false;
       });
+
+      heroMain.addEventListener("mouseleave", () => {
+        container.actualOptions.interactivity.events.onHover.enable = true;
+      });
+      // });
     }
   };
 
