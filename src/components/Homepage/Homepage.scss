@@ -41,9 +41,9 @@
   &-main,
   &-tech-stack {
     z-index: 2;
-    background-color: rgba(9, 10, 12, 0.75);
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
+    // background-color: rgba(9, 10, 12, 0.75);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
   }
 
   &-glowing-border {

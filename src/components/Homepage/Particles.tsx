@@ -45,8 +45,8 @@ const ParticlesComponent = () => {
           onHover: { enable: true, mode: "repulse" },
           resize: {
             enable: true,
-            delay: 0, // Minimize delay on resize
-            factor: 1, // Keep aspect ratio
+            delay: 0,
+            factor: 1,
           },
         },
         modes: {
@@ -66,7 +66,7 @@ const ParticlesComponent = () => {
           enable: true,
           distance: 150,
           color: "#e5e7eb",
-          opacity: 0.4,
+          opacity: 0.1,
           width: 1,
         },
         move: {
@@ -79,7 +79,7 @@ const ParticlesComponent = () => {
         },
       },
       retina_detect: true,
-      smooth: true, // Enable smooth animations
+      smooth: true,
     }),
     []
   );
