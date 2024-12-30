@@ -49,17 +49,19 @@ export default function Hero() {
   return (
     <Container
       fluid="xl"
-      className="min-vh-100 px-0 bg-primary d-flex flex-column flex-xxl-row align-items-center gap-5"
+      className="min-vh-100 px-0 bg-primary d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-5"
     >
-      <div className="hero-main p-5 rounded-5 w-100 d-flex justify-content-between align-items-center position-relative">
+      <div className="hero-main p-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
         <div className="d-inline-block">
           <div className="hero-heading-container">
             <h3 className="text-info fs-4 fw-semibold mb-3">Hello! I'm</h3>
-            <h1
-              className={`h1-cursor ${phase} d-inline-block text-white display-1 fw-light mb-3`}
-            >
-              {name}
-            </h1>
+            <div className="h1-cursor-wrapper">
+              <h1
+                className={`h1-cursor ${phase} d-inline-block text-white display-1 fw-light mb-3`}
+              >
+                {name}
+              </h1>
+            </div>
             <h2 className="text-info fs-4 fw-semibold mb-3">
               A front-end developer
               <br />
@@ -75,7 +77,7 @@ export default function Hero() {
             </a>
           </div>
         </div>
-        <div className="img-container position-relative">
+        <div className="img-container position-relative mt-5 mt-lg-0">
           <div className="hero-glowing-border rounded-5 border-info position-relative overflow-hidden">
             <Image src={portfolioImage}></Image>
           </div>
@@ -87,27 +89,52 @@ export default function Hero() {
             Tech stack
           </h3>
         </div>
-        <Stack
-          gap={3}
-          className="hero-tech-stack-icons d-flex flex-row flex-xxl-column align-items-center"
-        >
-          <Image
-            className="hero-tech-icon"
-            src="https://skillicons.dev/icons?i=html,css"
-          />
-          <Image
-            className="hero-tech-icon"
-            src="https://skillicons.dev/icons?i=javascript,typescript"
-          />
-          <Image
-            className="hero-tech-icon"
-            src="https://skillicons.dev/icons?i=react,bootstrap"
-          />
-          <Image
-            className="hero-tech-icon"
-            src="https://skillicons.dev/icons?i=sass,git"
-          />
-        </Stack>
+        <div className="hero-tech-stack-icons d-flex flex-column flex-md-row flex-xxl-column align-items-center">
+          <div className="d-flex flex-row flex-xxl-column">
+            <div className="d-flex">
+              <Image
+                className="hero-tech-icon"
+                src="https://skillicons.dev/icons?i=html"
+              />
+              <Image
+                className="hero-tech-icon"
+                src="https://skillicons.dev/icons?i=css"
+              />
+            </div>
+            <div className="d-flex">
+              <Image
+                className="hero-tech-icon"
+                src="https://skillicons.dev/icons?i=js"
+              />
+              <Image
+                className="hero-tech-icon"
+                src="https://skillicons.dev/icons?i=ts"
+              />
+            </div>
+          </div>
+          <div className="d-flex flex-row flex-xxl-column">
+            <div className="d-flex">
+              <Image
+                className="hero-tech-icon"
+                src="https://skillicons.dev/icons?i=react"
+              />
+              <Image
+                className="hero-tech-icon"
+                src="https://skillicons.dev/icons?i=bootstrap"
+              />
+            </div>
+            <div className="d-flex">
+              <Image
+                className="hero-tech-icon"
+                src="https://skillicons.dev/icons?i=sass"
+              />
+              <Image
+                className="hero-tech-icon"
+                src="https://skillicons.dev/icons?i=git"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </Container>
   );

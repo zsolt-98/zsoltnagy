@@ -1,6 +1,22 @@
 .h1-cursor {
   position: relative;
 
+  @media (max-width: 991px) {
+    margin-right: 3.2rem;
+  }
+
+  &-wrapper {
+    min-width: 40rem;
+
+    @media (max-width: 1199px) {
+      min-width: 30rem;
+    }
+
+    @media (max-width: 991px) {
+      min-width: 35rem;
+    }
+  }
+
   &::after {
     content: "";
     position: absolute;
@@ -43,7 +59,8 @@
     }
 
     &-icon {
-      width: 10rem;
+      width: 4rem;
+      margin: 0.5rem;
     }
   }
 }
