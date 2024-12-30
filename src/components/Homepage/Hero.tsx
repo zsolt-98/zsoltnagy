@@ -84,14 +84,14 @@ export default function Hero() {
           </div>
         </div>
         <div className="hero-tech-stack p-5 rounded-5 d-flex flex-column justify-content-start  position-relative">
-          <div className="">
-            <h3 className="text-info fs-4 fw-semibold mb-3 text-nowrap">
+          <div>
+            <h3 className="text-info text-center text-lg-start fs-4 fw-semibold mb-3 text-nowrap">
               Tech stack
             </h3>
           </div>
-          <div className="hero-tech-stack-icons d-flex flex-row">
+          <div className="hero-tech-stack-icons d-flex flex-column flex-md-row">
             <div className="d-flex align-items-center">
-              <div className="d-flex flex-column flex-md-row">
+              <div>
                 <Image
                   className="hero-tech-icon"
                   src="https://skillicons.dev/icons?i=html"
@@ -101,7 +101,7 @@ export default function Hero() {
                   src="https://skillicons.dev/icons?i=css"
                 />
               </div>
-              <div className="d-flex flex-column flex-md-row">
+              <div>
                 <Image
                   className="hero-tech-icon"
                   src="https://skillicons.dev/icons?i=js"
@@ -113,7 +113,7 @@ export default function Hero() {
               </div>
             </div>
             <div className="d-flex ">
-              <div className="d-flex flex-column flex-md-row">
+              <div>
                 <Image
                   className="hero-tech-icon"
                   src="https://skillicons.dev/icons?i=react"
@@ -123,7 +123,7 @@ export default function Hero() {
                   src="https://skillicons.dev/icons?i=bootstrap"
                 />
               </div>
-              <div className="d-flex flex-column flex-md-row">
+              <div>
                 <Image
                   className="hero-tech-icon"
                   src="https://skillicons.dev/icons?i=sass"
