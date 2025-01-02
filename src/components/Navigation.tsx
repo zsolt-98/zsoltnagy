@@ -15,9 +15,9 @@ export default function Navigation() {
         <span className="nav-btn-line nav-btn-line line-2"></span>
       </button>
 
-      <div className={`nav-menu h-100 ${isOpen ? "open" : ""}`}>
+      <div className={`nav-menu ${isOpen ? "open" : ""}`}>
         <div className="nav-menu-content min-vh-100 d-flex align-items-center p-3 p-xl-5">
-          <nav className="d-flex flex-column justify-content-between h-100">
+          <nav className="d-flex flex-column justify-content-between">
             <ul className="list-unstyled mb-5">
               <li className="mb-4">
                 <a
