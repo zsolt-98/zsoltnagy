@@ -16,14 +16,14 @@ const ParticlesComponent = () => {
   const particlesLoaded = async (container?: Container): Promise<void> => {
     if (!container) return;
 
-    const heroMain = document.querySelector(".hero-main");
+    const blurBG = document.querySelector(".blur-bg");
 
-    if (heroMain) {
-      heroMain.addEventListener("mouseenter", () => {
+    if (blurBG) {
+      blurBG.addEventListener("mouseenter", () => {
         container.actualOptions.interactivity.events.onHover.enable = false;
       });
 
-      heroMain.addEventListener("mouseleave", () => {
+      blurBG.addEventListener("mouseleave", () => {
         container.actualOptions.interactivity.events.onHover.enable = true;
       });
       // });

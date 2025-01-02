@@ -1,7 +1,5 @@
 import { useState } from "react";
 
-import Offcanvas from "react-bootstrap/Offcanvas";
-
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,15 +15,9 @@ export default function Navigation() {
         <span className="nav-btn-line nav-btn-line line-2"></span>
       </button>
 
-      <Offcanvas
-        show={isOpen}
-        onHide={handleToggle}
-        placement="end"
-        backdrop={false}
-        className="bg-transparent text-info"
-      >
-        <Offcanvas.Body>
-          <nav className="d-flex flex-column justify-content-between h-100 p-4">
+      <div className={`nav-menu h-100 ${isOpen ? "open" : ""}`}>
+        <div className="nav-menu-content min-vh-100 d-flex align-items-center p-3 p-xl-5">
+          <nav className="d-flex flex-column justify-content-between h-100">
             <ul className="list-unstyled mb-5">
               <li className="mb-4">
                 <a
@@ -77,8 +69,8 @@ export default function Navigation() {
 
             <div className="d-flex gap-4"></div>
           </nav>
-        </Offcanvas.Body>
-      </Offcanvas>
+        </div>
+      </div>
     </>
   );
 }
