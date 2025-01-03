@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useMediaQuery } from "react-responsive";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const isXXLargeScreen = useMediaQuery({ minWidth: 1401 });
 
   const handleToggle = () => setIsOpen(!isOpen);
 
@@ -15,7 +17,11 @@ export default function Navigation() {
         <span className="nav-btn-line nav-btn-line line-2"></span>
       </button>
 
-      <div className={`nav-menu ${isOpen ? "open" : ""}`}>
+      <div
+        className={` ${
+          isXXLargeScreen ? "nav-menu-side" : "nav-menu-overlay"
+        } ${isOpen ? "open" : ""}`}
+      >
         <div className="nav-menu-content min-vh-100 d-flex align-items-center p-3 p-xl-5">
           <nav className="d-flex flex-column justify-content-between">
             <ul className="list-unstyled mb-5">
