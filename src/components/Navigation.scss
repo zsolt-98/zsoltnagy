@@ -77,4 +77,13 @@
       }
     }
   }
+
+  &-logo-container {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 4rem;
+    height: 4rem;
+    z-index: 9999;
+  }
 }

@@ -1,5 +1,9 @@
 import { useMediaQuery } from "react-responsive";
 
+import Image from "react-bootstrap/Image";
+
+import logo from "../assets/zsn-logo-500x500.png";
+
 interface NavigationProps {
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
@@ -19,6 +23,10 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
         <span className="nav-btn-line nav-btn-line line-1"></span>
         <span className="nav-btn-line nav-btn-line line-2"></span>
       </button>
+
+      <div className="nav-logo-container">
+        <Image src={logo} className="w-100" />
+      </div>
 
       <div
         className={` ${
