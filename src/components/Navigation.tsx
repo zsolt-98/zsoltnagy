@@ -14,7 +14,7 @@ interface NavigationProps {
 }
 
 export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
-  const isXXLargeScreen = useMediaQuery({ minWidth: 1515 });
+  const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
 
   const handleToggle = () => setIsOpen(!isOpen);
 
@@ -37,33 +37,51 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
           isXXLargeScreen ? "nav-menu-side" : "nav-menu-overlay"
         } ${isOpen ? "open" : ""}`}
       >
-        <div className="nav-menu-content min-vh-100 d-flex align-items-center p-3 p-xl-5">
+        <div
+          className={`nav-menu-content min-vh-100 d-flex align-items-center justify-content-${
+            !isXXLargeScreen ? "center" : "start"
+          } p-5`}
+        >
           <Nav className="d-flex flex-column justify-content-between gap-6">
             <Stack gap={3} className="fs-4">
-              <Nav.Link className="text-info p-0" href="/work">
+              <Nav.Link
+                className="nav-menu-content-title text-info p-0"
+                href="/work"
+              >
                 My Work
               </Nav.Link>
-              <Nav.Link className="text-info p-0" href="/work">
+              <Nav.Link
+                className="nav-menu-content-title text-info p-0"
+                href="/work"
+              >
                 My résumé
               </Nav.Link>
             </Stack>
 
             <div>
-              <h3 className="text-light fs-4 fw-light">Connect with me</h3>
+              <h3 className="nav-menu-content-connect text-light fs-4 fw-light">
+                Connect with me
+              </h3>
               <div>
                 <Nav.Link
-                  className="text-info p-0"
+                  className="nav-menu-content-email text-info p-0"
                   href="mailto:your.email@example.com"
                 >
                   zsolt.nagy998@gmail.com
                 </Nav.Link>
               </div>
               <div className="d-flex mt-2">
-                <Nav.Link className="p-0">
-                  <IconLinkedin size={30} stroke="#58c4dc" />
+                <Nav.Link className="nav-menu-content-social p-0">
+                  <IconLinkedin
+                    size={!isXXLargeScreen ? 50 : 30}
+                    stroke="#58c4dc"
+                  />
                 </Nav.Link>
-                <Nav.Link className="p-0">
-                  <IconGithub size={30} stroke="#58c4dc" />
+                <Nav.Link className="nav-menu-content-social p-0">
+                  <IconGithub
+                    size={!isXXLargeScreen ? 50 : 30}
+                    stroke="#58c4dc"
+                  />
                 </Nav.Link>
               </div>
             </div>
