@@ -8,6 +8,7 @@ import portfolioImage from "../../assets/zsoltnagy.jpg";
 import IconLinkedin from "../Icons/IconLinkedin";
 import IconGithub from "../Icons/IconGithub";
 import Navigation from "../Navigation";
+import { useMediaQuery } from "react-responsive";
 
 type Phase = "typing" | "waiting" | "deleting";
 
@@ -27,6 +28,8 @@ export default function Hero() {
   const [name, setName] = useState<string>(fullName);
   const [currentIndex, setCurrentIndex] = useState<number>(fullName.length);
   const [phase, setPhase] = useState<Phase>("waiting");
+  const isXXLargeScreen = useMediaQuery({ minWidth: 1401 });
+  const [isOpen, setIsOpen] = useState(false);
   const [animationStates, setAnimationStates] = useState<AnimationStates>({
     container: false,
     hello: false,
@@ -102,9 +105,9 @@ export default function Hero() {
           className="min-vh-100 px-0 bg-primary d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-5"
         >
           <div
-            className={`hero-main blur-bg ${
-              animationStates.container ? "animating" : ""
-            } my-6`}
+            className={`hero-main ${
+              !isXXLargeScreen && isOpen ? "hero-main-exit" : ""
+            } blur-bg ${animationStates.container ? "animating" : ""} my-6`}
           >
             <div className="p-3 p-xl-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
               <div className="d-inline-block">
@@ -224,7 +227,7 @@ export default function Hero() {
             </div>
           </div>
         </Container>
-        <Navigation />
+        <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
       </div>
     </>
   );

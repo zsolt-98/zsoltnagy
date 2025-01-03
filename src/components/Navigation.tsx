@@ -1,8 +1,12 @@
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-export default function Navigation() {
-  const [isOpen, setIsOpen] = useState(false);
+interface NavigationProps {
+  isOpen: boolean;
+  setIsOpen: (value: boolean) => void;
+}
+
+export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1401 });
 
   const handleToggle = () => setIsOpen(!isOpen);
