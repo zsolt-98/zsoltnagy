@@ -14,7 +14,7 @@ interface NavigationProps {
 }
 
 export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
-  const isXXLargeScreen = useMediaQuery({ minWidth: 1401 });
+  const isXXLargeScreen = useMediaQuery({ minWidth: 1515 });
 
   const handleToggle = () => setIsOpen(!isOpen);
 

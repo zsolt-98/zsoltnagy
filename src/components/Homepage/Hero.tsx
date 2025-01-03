@@ -28,7 +28,7 @@ export default function Hero() {
   const [name, setName] = useState<string>(fullName);
   const [currentIndex, setCurrentIndex] = useState<number>(fullName.length);
   const [phase, setPhase] = useState<Phase>("waiting");
-  const isXXLargeScreen = useMediaQuery({ minWidth: 1401 });
+  const isXXLargeScreen = useMediaQuery({ minWidth: 1515 });
   const [isOpen, setIsOpen] = useState(false);
   const [animationStates, setAnimationStates] = useState<AnimationStates>({
     container: false,
