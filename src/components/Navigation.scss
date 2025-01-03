@@ -50,12 +50,14 @@
       min-width: 0;
       overflow: hidden;
       backdrop-filter: blur(3px);
-      transition: all 0.3s ease;
+      visibility: hidden;
 
       &.open {
         width: 17.5em;
         min-width: 17.5em;
         box-shadow: 0 0 15px 5px rgba($dark, 0.15);
+        visibility: visible;
+        transition: all 0.3s ease;
       }
     }
     &-overlay {
