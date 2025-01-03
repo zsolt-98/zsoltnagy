@@ -123,7 +123,7 @@ export default function Hero() {
                     <h1
                       className={`hero-heading ${
                         animationStates.name ? "animating" : ""
-                      } h1-cursor ${phase} d-inline-block text-white display-1 fw-light mb-3`}
+                      } h1-cursor ${phase} d-inline-block text-light display-1 fw-light mb-3`}
                     >
                       {name}
                     </h1>
@@ -144,10 +144,10 @@ export default function Hero() {
                   }`}
                 >
                   <a href="">
-                    <IconLinkedin size={40} stroke="var(--bs-light)" />
+                    <IconLinkedin size={40} stroke="#e5e7eb" />
                   </a>
                   <a href="">
-                    <IconGithub size={40} stroke="var(--bs-light)" />
+                    <IconGithub size={40} stroke="#e5e7eb" />
                   </a>
                 </div>
               </div>

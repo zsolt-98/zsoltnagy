@@ -54,8 +54,8 @@
       transition: width 0.3s ease, min-width 0.3s ease, visibility 0s 0.3s;
 
       &.open {
-        width: 17.5em;
-        min-width: 17.5em;
+        width: 20em; // 17.5em
+        min-width: 20em; // 17.5em
         box-shadow: 0 0 15px 5px rgba($dark, 0.15);
         visibility: visible;
         transition: width 0.3s ease, min-width 0.3s ease, visibility 0s;

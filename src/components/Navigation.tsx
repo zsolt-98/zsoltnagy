@@ -1,8 +1,12 @@
 import { useMediaQuery } from "react-responsive";
 
 import Image from "react-bootstrap/Image";
+import Stack from "react-bootstrap/Stack";
+import Nav from "react-bootstrap/Nav";
 
 import logo from "../assets/zsn-logo-500x500.png";
+import IconLinkedin from "./Icons/IconLinkedin";
+import IconGithub from "./Icons/IconGithub";
 
 interface NavigationProps {
   isOpen: boolean;
@@ -34,58 +38,36 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
         } ${isOpen ? "open" : ""}`}
       >
         <div className="nav-menu-content min-vh-100 d-flex align-items-center p-3 p-xl-5">
-          <nav className="d-flex flex-column justify-content-between">
-            <ul className="list-unstyled mb-5">
-              <li className="mb-4">
-                <a
-                  href="/work"
-                  className="text-info text-decoration-none fs-4 fw-semibold"
-                >
-                  My Work
-                </a>
-              </li>
-              <li className="mb-4">
-                <a
-                  href="/shelf"
-                  className="text-info text-decoration-none fs-4 fw-semibold"
-                >
-                  My Shelf
-                </a>
-              </li>
-              <li className="mb-4">
-                <a
-                  href="/resume"
-                  className="text-info text-decoration-none fs-4 fw-semibold"
-                >
-                  My Résumé
-                </a>
-              </li>
-            </ul>
+          <Nav className="d-flex flex-column justify-content-between gap-6">
+            <Stack gap={3} className="fs-4">
+              <Nav.Link className="text-info p-0" href="/work">
+                My Work
+              </Nav.Link>
+              <Nav.Link className="text-info p-0" href="/work">
+                My résumé
+              </Nav.Link>
+            </Stack>
 
-            <div className="mb-5">
-              <h3 className="text-info fs-4 fw-semibold mb-4">Say Hello</h3>
-              <ul className="list-unstyled">
-                <li className="mb-3">
-                  <a
-                    href="mailto:your.email@example.com"
-                    className="text-info text-decoration-none"
-                  >
-                    your.email@example.com
-                  </a>
-                </li>
-                <li className="mb-3">
-                  <a
-                    href="https://t.me/yourusername"
-                    className="text-info text-decoration-none"
-                  >
-                    t.me/yourusername
-                  </a>
-                </li>
-              </ul>
+            <div>
+              <h3 className="text-light fs-4 fw-light">Connect with me</h3>
+              <div>
+                <Nav.Link
+                  className="text-info p-0"
+                  href="mailto:your.email@example.com"
+                >
+                  zsolt.nagy998@gmail.com
+                </Nav.Link>
+              </div>
+              <div className="d-flex mt-2">
+                <Nav.Link className="p-0">
+                  <IconLinkedin size={30} stroke="#58c4dc" />
+                </Nav.Link>
+                <Nav.Link className="p-0">
+                  <IconGithub size={30} stroke="#58c4dc" />
+                </Nav.Link>
+              </div>
             </div>
-
-            <div className="d-flex gap-4"></div>
-          </nav>
+          </Nav>
         </div>
       </div>
     </>
