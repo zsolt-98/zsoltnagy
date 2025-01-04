@@ -144,10 +144,18 @@ export default function Hero() {
                   }`}
                 >
                   <a href="">
-                    <IconLinkedin size={40} stroke="#e5e7eb" />
+                    <IconLinkedin
+                      className="hero-social-icon"
+                      size={40}
+                      stroke="#e5e7eb"
+                    />
                   </a>
                   <a href="">
-                    <IconGithub size={40} stroke="#e5e7eb" />
+                    <IconGithub
+                      className="hero-social-icon"
+                      size={40}
+                      stroke="#e5e7eb"
+                    />
                   </a>
                 </div>
               </div>

@@ -119,6 +119,12 @@ $cursor-size: 0.7em;
       transform: translateY(0);
     }
   }
+
+  // Hover
+  &-social-icon:hover {
+    stroke: $info !important;
+    transition: none !important;
+  }
 }
 
 // Animations

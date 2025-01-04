@@ -68,6 +68,24 @@
       }
     }
 
+    // Hover
+    &-content {
+      &-title:hover {
+        color: $light !important;
+        transition: none !important;
+      }
+
+      &-email:hover {
+        color: $light !important;
+        text-decoration: underline;
+        transition: none !important;
+      }
+    }
+    &-social-icon:hover {
+      stroke: $light !important;
+      transition: none !important;
+    }
+
     &-side {
       width: 0;
       min-width: 0;

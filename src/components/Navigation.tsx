@@ -74,12 +74,14 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
               <div className="d-flex mt-2">
                 <Nav.Link className="nav-menu-content-social p-0">
                   <IconLinkedin
+                    className="nav-menu-social-icon"
                     size={!isXXLargeScreen ? (isSMScreen ? 50 : 35) : 30}
                     stroke="#58c4dc"
                   />
                 </Nav.Link>
                 <Nav.Link className="nav-menu-content-social p-0">
                   <IconGithub
+                    className="nav-menu-social-icon"
                     size={!isXXLargeScreen ? (isSMScreen ? 50 : 35) : 30}
                     stroke="#58c4dc"
                   />
