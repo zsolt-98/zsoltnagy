@@ -27,7 +27,7 @@ const ParticlesComponent = () => {
   const options: ISourceOptions = useMemo(
     () => ({
       background: { color: { value: "transparent" } },
-      fullScreen: { enable: false },
+      fullScreen: { enable: false }, // Keep this false to restrict particles
       fpsLimit: 120,
       interactivity: {
         events: {
@@ -81,7 +81,7 @@ const ParticlesComponent = () => {
       id="tsparticles"
       particlesLoaded={particlesLoaded}
       options={options}
-      className="position-fixed w-100 vh-100 overflow-hidden"
+      className="w-100 h-100 position-absolute"
       style={{ zIndex: 1 }}
     />
   );
