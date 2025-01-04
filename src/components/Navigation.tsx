@@ -28,6 +28,18 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
       connect: false,
     });
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+
+    return () => {
+      document.body.classList.remove("no-scroll");
+    };
+  }, [isOpen]);
+
   const handleToggle = () => setIsOpen(!isOpen);
 
   useEffect(() => {

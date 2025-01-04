@@ -3,3 +3,7 @@
 @import "./bootstrap-custom.scss";
 @import "./components/Homepage/Homepage.scss";
 @import "./components/Navigation.scss";
+
+body.no-scroll {
+  overflow: hidden;
+}
