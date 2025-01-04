@@ -14,6 +14,7 @@ interface NavigationProps {
 }
 
 export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
+  const isSMScreen = useMediaQuery({ minWidth: 768 });
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
 
   const handleToggle = () => setIsOpen(!isOpen);
@@ -73,13 +74,13 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
               <div className="d-flex mt-2">
                 <Nav.Link className="nav-menu-content-social p-0">
                   <IconLinkedin
-                    size={!isXXLargeScreen ? 50 : 30}
+                    size={!isXXLargeScreen ? (isSMScreen ? 50 : 40) : 30}
                     stroke="#58c4dc"
                   />
                 </Nav.Link>
                 <Nav.Link className="nav-menu-content-social p-0">
                   <IconGithub
-                    size={!isXXLargeScreen ? 50 : 30}
+                    size={!isXXLargeScreen ? (isSMScreen ? 50 : 40) : 30}
                     stroke="#58c4dc"
                   />
                 </Nav.Link>
