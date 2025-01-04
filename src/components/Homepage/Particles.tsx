@@ -16,18 +16,14 @@ const ParticlesComponent = () => {
   const particlesLoaded = async (container?: Container): Promise<void> => {
     if (!container) return;
 
-    const blurBG = document.querySelector(".blur-bg");
-
-    if (blurBG) {
-      blurBG.addEventListener("mouseenter", () => {
-        container.actualOptions.interactivity.events.onHover.enable = false;
-      });
-
-      blurBG.addEventListener("mouseleave", () => {
-        container.actualOptions.interactivity.events.onHover.enable = true;
-      });
-      // });
-    }
+    // Add a single mousemove listener to document
+    document.addEventListener("mousemove", (event) => {
+      const element = document.elementFromPoint(event.clientX, event.clientY);
+      // Check if mouse is over any element with blur-bg class
+      const isOverBlurBg = element?.closest(".blur-bg");
+      container.actualOptions.interactivity.events.onHover.enable =
+        !isOverBlurBg;
+    });
   };
 
   const options: ISourceOptions = useMemo(
