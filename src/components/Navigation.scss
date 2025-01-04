@@ -70,6 +70,12 @@
 
     // Hover
     &-content {
+      &-title,
+      &-email,
+      &-social-icon {
+        transition: none !important;
+      }
+
       &-title:hover {
         color: $light !important;
         transition: none !important;
