@@ -7,17 +7,51 @@ import Nav from "react-bootstrap/Nav";
 import logo from "../assets/zsn-logo-500x500.png";
 import IconLinkedin from "./Icons/IconLinkedin";
 import IconGithub from "./Icons/IconGithub";
+import { useEffect, useState } from "react";
 
 interface NavigationProps {
   isOpen: boolean;
   setIsOpen: (value: boolean) => void;
 }
 
+interface NavigationAnimationStates {
+  title: boolean;
+  connect: boolean;
+}
+
 export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
   const isSMScreen = useMediaQuery({ minWidth: 768 });
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
+  const [animationStates, setAnimationStates] =
+    useState<NavigationAnimationStates>({
+      title: false,
+      connect: false,
+    });
 
   const handleToggle = () => setIsOpen(!isOpen);
+
+  useEffect(() => {
+    if (isOpen) {
+      const animations = [
+        { key: "title", delay: 200 },
+        { key: "connect", delay: 300 },
+      ] as const;
+
+      const timeouts = animations.map(({ key, delay }) =>
+        setTimeout(
+          () => setAnimationStates((prev) => ({ ...prev, [key]: true })),
+          delay
+        )
+      );
+      return () => {
+        timeouts.forEach((timeout) => clearTimeout(timeout));
+        setAnimationStates({
+          title: false,
+          connect: false,
+        });
+      };
+    }
+  }, [isOpen]);
 
   return (
     <>
@@ -44,7 +78,12 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
           } p-5`}
         >
           <Nav className="d-flex flex-column justify-content-between gap-6">
-            <Stack gap={3} className="fs-4">
+            <Stack
+              gap={3}
+              className={`nav-menu-title ${
+                animationStates.title ? "animating" : ""
+              } fs-4`}
+            >
               <Nav.Link
                 className="nav-menu-content-title text-info p-0"
                 href="/work"
@@ -59,7 +98,11 @@ export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
               </Nav.Link>
             </Stack>
 
-            <div>
+            <div
+              className={`nav-menu-connect ${
+                animationStates.connect ? "animating" : ""
+              } `}
+            >
               <h3 className="nav-menu-content-connect text-light fs-4 fw-light">
                 Connect with me
               </h3>
