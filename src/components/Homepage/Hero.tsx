@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Image from "react-bootstrap/Image";
 
-import portfolioImage from "../../assets/zsoltnagy.jpg";
+import portfolioImage from "../../assets/zsoltnagy.jpeg";
 
 import IconLinkedin from "../Icons/IconLinkedin";
 import IconGithub from "../Icons/IconGithub";
