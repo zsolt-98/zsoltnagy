@@ -1,6 +1,6 @@
-// FullpageScroll.tsx
-import { useState, useEffect, TouchEvent } from "react";
+import { useState, useEffect, TouchEvent, useCallback } from "react";
 import { useSpring, animated, config } from "@react-spring/web";
+import { useMediaQuery } from "react-responsive";
 
 interface Props {
   children: React.ReactNode[];
@@ -10,6 +10,7 @@ export default function FullpageScroll({ children }: Props) {
   const [currentPage, setCurrentPage] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
   const [touchStart, setTouchStart] = useState(0);
+  const isLargeScreen = useMediaQuery({ minWidth: 992 });
 
   const springs = useSpring({
     top: `-${currentPage * 100}vh`,
@@ -17,32 +18,43 @@ export default function FullpageScroll({ children }: Props) {
     onRest: () => setIsScrolling(false),
   });
 
-  const navigatePage = (direction: "up" | "down") => {
-    if (isScrolling) return;
+  const navigatePage = useCallback(
+    (direction: "up" | "down") => {
+      if (!isLargeScreen) return;
 
-    setIsScrolling(true);
-    if (direction === "down" && currentPage < children.length - 1) {
-      setCurrentPage((prev) => prev + 1);
-    } else if (direction === "up" && currentPage > 0) {
-      setCurrentPage((prev) => prev - 1);
-    } else {
-      setIsScrolling(false);
-    }
-  };
+      setCurrentPage((prev) => {
+        if (direction === "down" && prev < children.length - 1) {
+          setIsScrolling(true);
+          return prev + 1;
+        } else if (direction === "up" && prev > 0) {
+          setIsScrolling(true);
+          return prev - 1;
+        }
+        return prev;
+      });
+    },
+    [children.length, isLargeScreen]
+  );
 
   useEffect(() => {
+    if (!isLargeScreen) return;
+
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
-      navigatePage(e.deltaY > 0 ? "down" : "up");
+      if (!isScrolling) {
+        navigatePage(e.deltaY > 0 ? "down" : "up");
+      }
     };
 
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "ArrowDown" || e.key === "PageDown") {
-        e.preventDefault();
-        navigatePage("down");
-      } else if (e.key === "ArrowUp" || e.key === "PageUp") {
-        e.preventDefault();
-        navigatePage("up");
+      if (!isScrolling) {
+        if (e.key === "ArrowDown" || e.key === "PageDown") {
+          e.preventDefault();
+          navigatePage("down");
+        } else if (e.key === "ArrowUp" || e.key === "PageUp") {
+          e.preventDefault();
+          navigatePage("up");
+        }
       }
     };
 
@@ -52,7 +64,11 @@ export default function FullpageScroll({ children }: Props) {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [currentPage, children.length, isScrolling]);
+  }, [isScrolling, navigatePage, isLargeScreen]);
+
+  if (!isLargeScreen) {
+    return <div>{children}</div>;
+  }
 
   const handleTouchStart = (e: TouchEvent) => {
     setTouchStart(e.touches[0].clientY);
@@ -60,23 +76,21 @@ export default function FullpageScroll({ children }: Props) {
 
   const handleTouchEnd = (e: TouchEvent) => {
     const deltaY = touchStart - e.changedTouches[0].clientY;
-    if (Math.abs(deltaY) > 50) {
+    if (Math.abs(deltaY) > 50 && !isScrolling) {
       navigatePage(deltaY > 0 ? "down" : "up");
     }
   };
 
   return (
-    <div className="min-vh-100 overflow-hidden position-relative">
+    <div className="homepage-container min-vh-100 overflow-hidden position-relative">
       <animated.div
         style={springs}
-        className="position-absolute w-100"
+        className="full-page-scroll position-absolute w-100"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
         {children.map((child, index) => (
-          <div key={index} className="min-vh-100">
-            {child}
-          </div>
+          <section key={index}>{child}</section>
         ))}
       </animated.div>
     </div>
