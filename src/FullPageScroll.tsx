@@ -22,9 +22,12 @@ export default function FullpageScroll({ children }: Props) {
 
   const navigatePage = useCallback(
     (direction: "up" | "down") => {
-      if (!isLargeScreen || isOpen) return;
+      if (!isLargeScreen) return;
 
       setCurrentPage((prev) => {
+        if (direction === "down" && prev === 0) {
+          setIsOpen(false);
+        }
         if (direction === "down" && prev < children.length - 1) {
           setIsScrolling(true);
           return prev + 1;
@@ -35,11 +38,11 @@ export default function FullpageScroll({ children }: Props) {
         return prev;
       });
     },
-    [children.length, isLargeScreen, isOpen]
+    [children.length, isLargeScreen]
   );
 
   useEffect(() => {
-    if (!isLargeScreen || isOpen) return;
+    if (!isLargeScreen) return;
 
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
@@ -66,7 +69,7 @@ export default function FullpageScroll({ children }: Props) {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isScrolling, navigatePage, isLargeScreen, isOpen]);
+  }, [isScrolling, navigatePage, isLargeScreen]);
 
   if (!isLargeScreen) {
     return <div>{children}</div>;

@@ -97,7 +97,7 @@
     &-connect {
       opacity: 0;
       transform: translateY(20px);
-      transition: transform 0.3s ease;
+      transition: all 0.3s ease;
 
       &.animating {
         opacity: 1;
