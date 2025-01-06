@@ -12,7 +12,7 @@ export default function FullpageScroll({ children }: Props) {
   const [isScrolling, setIsScrolling] = useState(false);
   const [touchStart, setTouchStart] = useState(0);
   const isLargeScreen = useMediaQuery({ minWidth: 992 });
-  const { isOpen, setIsOpen } = useZustandStore();
+  const { setIsOpen } = useZustandStore();
 
   const springs = useSpring({
     top: `-${currentPage * 100}vh`,
@@ -38,7 +38,7 @@ export default function FullpageScroll({ children }: Props) {
         return prev;
       });
     },
-    [children.length, isLargeScreen]
+    [children.length, isLargeScreen, setIsOpen]
   );
 
   useEffect(() => {
