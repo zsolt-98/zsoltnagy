@@ -8,20 +8,17 @@ import logo from "../assets/zsn-logo-500x500.png";
 import IconLinkedin from "./Icons/IconLinkedin";
 import IconGithub from "./Icons/IconGithub";
 import { useEffect, useState } from "react";
-
-interface NavigationProps {
-  isOpen: boolean;
-  setIsOpen: (value: boolean) => void;
-}
+import useZustandStore from "../store/useZustandStore";
 
 interface NavigationAnimationStates {
   title: boolean;
   connect: boolean;
 }
 
-export default function Navigation({ isOpen, setIsOpen }: NavigationProps) {
+export default function Navigation() {
   const isSMScreen = useMediaQuery({ minWidth: 768 });
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
+  const { isOpen, setIsOpen } = useZustandStore();
   const [animationStates, setAnimationStates] =
     useState<NavigationAnimationStates>({
       title: false,

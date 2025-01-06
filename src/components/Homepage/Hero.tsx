@@ -9,6 +9,7 @@ import IconLinkedin from "../Icons/IconLinkedin";
 import IconGithub from "../Icons/IconGithub";
 import Navigation from "../Navigation";
 import { useMediaQuery } from "react-responsive";
+import useZustandStore from "../../store/useZustandStore.js";
 
 type Phase = "typing" | "waiting" | "deleting";
 
@@ -29,7 +30,7 @@ export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState<number>(fullName.length);
   const [phase, setPhase] = useState<Phase>("waiting");
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen } = useZustandStore();
   const [animationStates, setAnimationStates] = useState<AnimationStates>({
     container: false,
     hello: false,

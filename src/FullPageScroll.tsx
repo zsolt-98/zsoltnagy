@@ -1,6 +1,7 @@
 import { useState, useEffect, TouchEvent, useCallback } from "react";
 import { useSpring, animated, config } from "@react-spring/web";
 import { useMediaQuery } from "react-responsive";
+import useZustandStore from "./store/useZustandStore";
 
 interface Props {
   children: React.ReactNode[];
@@ -11,6 +12,7 @@ export default function FullpageScroll({ children }: Props) {
   const [isScrolling, setIsScrolling] = useState(false);
   const [touchStart, setTouchStart] = useState(0);
   const isLargeScreen = useMediaQuery({ minWidth: 992 });
+  const { isOpen, setIsOpen } = useZustandStore();
 
   const springs = useSpring({
     top: `-${currentPage * 100}vh`,
@@ -20,7 +22,7 @@ export default function FullpageScroll({ children }: Props) {
 
   const navigatePage = useCallback(
     (direction: "up" | "down") => {
-      if (!isLargeScreen) return;
+      if (!isLargeScreen || isOpen) return;
 
       setCurrentPage((prev) => {
         if (direction === "down" && prev < children.length - 1) {
@@ -33,11 +35,11 @@ export default function FullpageScroll({ children }: Props) {
         return prev;
       });
     },
-    [children.length, isLargeScreen]
+    [children.length, isLargeScreen, isOpen]
   );
 
   useEffect(() => {
-    if (!isLargeScreen) return;
+    if (!isLargeScreen || isOpen) return;
 
     const handleWheel = (e: WheelEvent) => {
       e.preventDefault();
@@ -64,7 +66,7 @@ export default function FullpageScroll({ children }: Props) {
       window.removeEventListener("wheel", handleWheel);
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isScrolling, navigatePage, isLargeScreen]);
+  }, [isScrolling, navigatePage, isLargeScreen, isOpen]);
 
   if (!isLargeScreen) {
     return <div>{children}</div>;
