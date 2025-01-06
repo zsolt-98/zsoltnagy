@@ -1,17 +1,19 @@
-import AboutMe from "./AboutMe";
+// Homepage.tsx
+import FullpageScroll from "../../FullPageScroll";
 import Hero from "./Hero";
+import AboutMe from "./AboutMe";
 import ParticlesComponent from "./Particles";
 
 export default function Homepage() {
   return (
-    <>
-      <main className="bg-primary overflow-hidden position-relative">
+    <FullpageScroll>
+      <main className="hero-container bg-primary min-vh-100 position-relative">
         <ParticlesComponent />
         <Hero />
       </main>
       <section>
         <AboutMe />
       </section>
-    </>
+    </FullpageScroll>
   );
 }
