@@ -30,7 +30,7 @@ export default function Hero() {
   const [currentIndex, setCurrentIndex] = useState<number>(fullName.length);
   const [phase, setPhase] = useState<Phase>("waiting");
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
-  const { isOpen, setIsOpen } = useZustandStore();
+  const { isOpen } = useZustandStore();
   const [animationStates, setAnimationStates] = useState<AnimationStates>({
     container: false,
     hello: false,
@@ -236,7 +236,7 @@ export default function Hero() {
             </div>
           </div>
         </Container>
-        <Navigation isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Navigation />
       </div>
     </>
   );
