@@ -27,10 +27,10 @@ export default function AboutMe() {
 
           <div className="about-engineering d-flex justify-content-center justify-content-lg-end">
             <div className="w-100 w-lg-50 text-center text-lg-start ps-0 ps-lg-5 ps-xl-6">
-              <h2 className="text-info display-3 fw-bold text-capitalize">
+              <h2 className="about-engineering-header text-info display-3 fw-bold text-capitalize">
                 Engineering
               </h2>
-              <p className="text-light">
+              <p className="about-engineering-paragraph text-light">
                 I build scalable web applications optimized for performance that
                 meet technical requirements and business needs. My engineering
                 approach creates resilient systems that grow alongside business
@@ -41,10 +41,10 @@ export default function AboutMe() {
 
           <div className="about-design d-flex justify-content-center justify-content-lg-start">
             <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-lg-5 pe-xl-6">
-              <h2 className="text-info display-3 fw-bold text-capitalize">
+              <h2 className="about-design-header text-info display-3 fw-bold text-capitalize">
                 Design
               </h2>
-              <p className="text-light">
+              <p className="about-design-paragraph text-light">
                 While my foundation is in development, I have a keen eye for
                 design. Using tools like Figma and Canva, I create intuitive
                 interfaces that enhance user engagement.

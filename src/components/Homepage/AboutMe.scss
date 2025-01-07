@@ -4,7 +4,9 @@
     z-index: 1;
   }
 
-  &-me {
+  &-me,
+  &-engineering,
+  &-design {
     &-header,
     &-paragraph {
       position: relative;
