@@ -4,6 +4,14 @@
     z-index: 1;
   }
 
+  &-content-wrapper {
+    z-index: 1;
+    position: relative;
+    padding: 1rem;
+    backdrop-filter: blur(3px) !important;
+    box-shadow: 0 0 15px 5px rgba($dark, 0.15);
+  }
+
   &-me,
   &-engineering,
   &-design {
