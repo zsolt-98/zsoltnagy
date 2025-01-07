@@ -3,14 +3,14 @@ import AboutBG from "../SVG/AboutBG";
 
 export default function AboutMe() {
   return (
-    <div className="about-wrapper bg-secondary">
+    <div className="about-wrapper bg-secondary overflow-y-hidden">
       <Container
         fluid="md"
-        className="min-vh-100 px-0 d-flex align-items-center position-relative"
+        className="min-vh-100 py-6 px-0 d-flex align-items-center position-relative"
       >
         <div className="about px-4 w-100 d-flex flex-column gap-5 gap-lg-4">
           <div className="about-me d-flex justify-content-center justify-content-lg-start">
-            <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-xl-6">
+            <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-lg-5 pe-xl-6">
               <h2 className="about-me-header text-info display-3 fw-bold text-capitalize">
                 About me
               </h2>
@@ -26,7 +26,7 @@ export default function AboutMe() {
           </div>
 
           <div className="about-engineering d-flex justify-content-center justify-content-lg-end">
-            <div className="w-100 w-lg-50 text-center text-lg-start ps-0 ps-xl-6">
+            <div className="w-100 w-lg-50 text-center text-lg-start ps-0 ps-lg-5 ps-xl-6">
               <h2 className="text-info display-3 fw-bold text-capitalize">
                 Engineering
               </h2>
@@ -40,7 +40,7 @@ export default function AboutMe() {
           </div>
 
           <div className="about-design d-flex justify-content-center justify-content-lg-start">
-            <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-xl-6">
+            <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-lg-5 pe-xl-6">
               <h2 className="text-info display-3 fw-bold text-capitalize">
                 Design
               </h2>

@@ -173,7 +173,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="hero-tech-stack p-5 rounded-5 d-flex flex-column justify-content-start  position-relative">
+            <div className="hero-tech-stack p-5 pb-0 pb-lg-5 rounded-5 d-flex flex-column justify-content-start  position-relative">
               <div>
                 <h3
                   className={`hero-tech-stack-title ${
