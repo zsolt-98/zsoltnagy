@@ -7,6 +7,43 @@ interface Props {
   children: React.ReactNode[];
 }
 
+const PaginationButton = ({
+  isActive,
+  index,
+  onClick,
+}: {
+  isActive: boolean;
+  index: number;
+  onClick: () => void;
+}) => {
+  const springs = useSpring({
+    transform: isActive ? "scale(1.25) rotate(0deg)" : "scale(1) rotate(45deg)",
+    config: {
+      tension: 200,
+      friction: 20,
+      mass: 1,
+    },
+  });
+
+  return (
+    <animated.button
+      onClick={onClick}
+      className={`${
+        isActive
+          ? "bg-transparent border border-info"
+          : "rounded-circle border-0 bg-info"
+      }`}
+      style={{
+        width: isActive ? "14px" : "12px",
+        height: isActive ? "14px" : "12px",
+        ...springs,
+        transition: "width 0.3s, height 0.3s",
+      }}
+      aria-label={`Go to page ${index + 1}`}
+    />
+  );
+};
+
 export default function FullpageScroll({ children }: Props) {
   const [currentPage, setCurrentPage] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
@@ -21,10 +58,20 @@ export default function FullpageScroll({ children }: Props) {
   });
 
   const navigatePage = useCallback(
-    (direction: "up" | "down") => {
+    (direction: "up" | "down" | number) => {
       if (!isLargeScreen) return;
 
       setCurrentPage((prev) => {
+        if (typeof direction === "number") {
+          if (direction === 0 && prev !== 0) {
+            setIsScrolling(true);
+            return direction;
+          }
+          if (direction === prev) return prev;
+          setIsScrolling(true);
+          return direction;
+        }
+
         if (direction === "down" && prev === 0) {
           setIsOpen(false);
         }
@@ -71,10 +118,6 @@ export default function FullpageScroll({ children }: Props) {
     };
   }, [isScrolling, navigatePage, isLargeScreen]);
 
-  if (!isLargeScreen) {
-    return <div>{children}</div>;
-  }
-
   const handleTouchStart = (e: TouchEvent) => {
     setTouchStart(e.touches[0].clientY);
   };
@@ -86,8 +129,28 @@ export default function FullpageScroll({ children }: Props) {
     }
   };
 
+  if (!isLargeScreen) {
+    return <div>{children}</div>;
+  }
+
   return (
     <div className="homepage-container min-vh-100 overflow-hidden position-relative">
+      {isLargeScreen && (
+        <div
+          className="scroll-pagination position-fixed top-50 translate-middle-y d-flex flex-column align-items-center gap-3"
+          style={{ zIndex: 3 }}
+        >
+          {children.map((_, index) => (
+            <PaginationButton
+              key={index}
+              isActive={currentPage === index}
+              index={index}
+              onClick={() => navigatePage(index)}
+            />
+          ))}
+        </div>
+      )}
+
       <animated.div
         style={springs}
         className="full-page-scroll position-absolute w-100"
