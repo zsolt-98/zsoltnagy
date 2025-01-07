@@ -82,7 +82,7 @@ export default function Navigation() {
         } ${isOpen ? "open" : ""}`}
       >
         <div
-          className={`nav-menu-content vh-100 d-flex align-items-center justify-content-${
+          className={`nav-menu-content min-vh-100 d-flex align-items-center justify-content-${
             !isXXLargeScreen ? "center" : "start"
           } p-5`}
         >

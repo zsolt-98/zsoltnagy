@@ -12,20 +12,11 @@
     }
   }
 
-  &-cog-bg {
-    z-index: 0;
-    top: 0rem;
-    left: -72rem;
-    right: 44rem;
-    opacity: 0.05;
-    transform: scale(0.5);
-  }
-
   &-bg {
     z-index: 0;
     top: 2rem;
     right: -22.5rem;
-    opacity: 0.25;
+    opacity: 0.15;
     transform: rotate(71.5deg) scale(2.25);
   }
 }

@@ -1,5 +1,5 @@
 import { useState, useEffect, TouchEvent, useCallback } from "react";
-import { useSpring, animated, config } from "@react-spring/web";
+import { useSpring, animated } from "@react-spring/web";
 import { useMediaQuery } from "react-responsive";
 import useZustandStore from "./store/useZustandStore";
 
@@ -126,11 +126,11 @@ export default function FullpageScroll({ children }: Props) {
   };
 
   if (!isLargeScreen) {
-    return <div className="vh-100">{children}</div>;
+    return <div className="min-vh-100">{children}</div>;
   }
 
   return (
-    <div className="homepage-container vh-100 overflow-hidden position-relative">
+    <div className="homepage-container min-vh-100 overflow-hidden position-relative">
       {isLargeScreen && (
         <div
           className="scroll-pagination position-fixed top-50 translate-middle-y d-flex flex-column align-items-center gap-3"
@@ -154,7 +154,7 @@ export default function FullpageScroll({ children }: Props) {
         onTouchEnd={handleTouchEnd}
       >
         {children.map((child, index) => (
-          <section key={index} className="vh-100">
+          <section key={index} className="min-vh-100">
             {child}
           </section>
         ))}
