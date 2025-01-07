@@ -18,11 +18,7 @@ const PaginationButton = ({
 }) => {
   const springs = useSpring({
     transform: isActive ? "scale(1.25) rotate(0deg)" : "scale(1) rotate(45deg)",
-    config: {
-      tension: 200,
-      friction: 20,
-      mass: 1,
-    },
+    config: { mass: 1, tension: 300, friction: 35, clamp: true },
   });
 
   return (
@@ -53,7 +49,7 @@ export default function FullpageScroll({ children }: Props) {
 
   const springs = useSpring({
     top: `-${currentPage * 100}vh`,
-    config: { ...config.molasses, mass: 1, tension: 180, friction: 26 },
+    config: { mass: 1, tension: 170, friction: 26, clamp: true },
     onRest: () => setIsScrolling(false),
   });
 
@@ -130,15 +126,15 @@ export default function FullpageScroll({ children }: Props) {
   };
 
   if (!isLargeScreen) {
-    return <div>{children}</div>;
+    return <div className="vh-100">{children}</div>;
   }
 
   return (
-    <div className="homepage-container min-vh-100 overflow-hidden position-relative">
+    <div className="homepage-container vh-100 overflow-hidden position-relative">
       {isLargeScreen && (
         <div
           className="scroll-pagination position-fixed top-50 translate-middle-y d-flex flex-column align-items-center gap-3"
-          style={{ zIndex: 3 }}
+          style={{ zIndex: 999 }}
         >
           {children.map((_, index) => (
             <PaginationButton
@@ -158,7 +154,9 @@ export default function FullpageScroll({ children }: Props) {
         onTouchEnd={handleTouchEnd}
       >
         {children.map((child, index) => (
-          <section key={index}>{child}</section>
+          <section key={index} className="vh-100">
+            {child}
+          </section>
         ))}
       </animated.div>
     </div>

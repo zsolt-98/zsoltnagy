@@ -4,8 +4,8 @@ import Cog from "../SVG/Cog";
 
 export default function AboutMe() {
   return (
-    <div className="bg-secondary">
-      <Container className="min-vh-100 px-0 d-flex align-items-center position-relative">
+    <div className="about-wrapper bg-secondary">
+      <Container className="vh-100 px-0 d-flex align-items-center position-relative">
         <div className="about w-100 d-flex flex-column gap-4">
           <div className="about-me d-flex justify-content-start">
             <div className="w-50 pe-6">
@@ -24,7 +24,7 @@ export default function AboutMe() {
           </div>
 
           <div className="about-design d-flex justify-content-end">
-            <div className="w-50 ps-6">
+            <div className="blur-bg w-50 ps-6">
               <h2 className="text-info display-3 fw-bold text-capitalize">
                 Design
               </h2>

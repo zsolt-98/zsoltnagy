@@ -41,8 +41,12 @@ $cursor-size: 0.7em;
 }
 
 .hero {
+  &-container {
+    z-index: 4;
+  }
+
   &-main {
-    z-index: 2;
+    z-index: 4;
     backdrop-filter: blur(3px);
     -webkit-backdrop-filter: blur(3px);
 
@@ -79,7 +83,7 @@ $cursor-size: 0.7em;
   &-glowing-border {
     height: 20rem;
     width: 20rem;
-    z-index: 2;
+    z-index: 4;
     margin: 0 $glow-shadow-size $glow-shadow-size 0;
     box-shadow: 4px 4px $glow-shadow-size rgba($info, 0.8);
   }

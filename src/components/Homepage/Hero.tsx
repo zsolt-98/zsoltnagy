@@ -103,7 +103,7 @@ export default function Hero() {
       <div className="d-flex justify-content-between blur-bg">
         <Container
           fluid="xl"
-          className="min-vh-100 px-0 d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-5"
+          className="hero-main-container vh-100 px-0 d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-5"
         >
           <div
             className={`hero-main ${

@@ -1,14 +1,19 @@
 .about {
+  &-wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
   &-me {
     &-header,
     &-paragraph {
       position: relative;
-      z-index: 2;
+      z-index: 3;
     }
   }
 
   &-cog-bg {
-    z-index: 1;
+    z-index: 0;
     top: 0rem;
     left: -72rem;
     right: 44rem;
@@ -17,7 +22,7 @@
   }
 
   &-bg {
-    z-index: 1;
+    z-index: 0;
     top: 2rem;
     right: -22.5rem;
     opacity: 0.25;
