@@ -6,7 +6,6 @@ export default function Line({ className }: IconProps) {
       width="1101"
       height="849"
       viewBox="0 0 1101 849"
-      preserveAspectRatio="xMidYMid meet"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
