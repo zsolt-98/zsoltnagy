@@ -17,6 +17,7 @@ interface NavigationAnimationStates {
 
 export default function Navigation() {
   const isSMScreen = useMediaQuery({ minWidth: 768 });
+
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
   const { isOpen, setIsOpen } = useZustandStore();
   const [animationStates, setAnimationStates] =
@@ -26,7 +27,7 @@ export default function Navigation() {
     });
 
   useEffect(() => {
-    if (isOpen) {
+    if (isOpen && !isXXLargeScreen) {
       document.body.classList.add("no-scroll");
     } else {
       document.body.classList.remove("no-scroll");
@@ -35,7 +36,7 @@ export default function Navigation() {
     return () => {
       document.body.classList.remove("no-scroll");
     };
-  }, [isOpen]);
+  }, [isOpen, isXXLargeScreen]);
 
   const handleToggle = () => setIsOpen(!isOpen);
 
