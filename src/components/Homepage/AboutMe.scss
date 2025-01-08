@@ -11,6 +11,15 @@
     backdrop-filter: blur(3px) !important;
     box-shadow: 0 0 15px 5px rgba($dark, 0.15);
     background-color: rgba($primary, 0.6);
+
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+
+    &.animating {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   &-me,

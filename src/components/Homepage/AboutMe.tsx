@@ -1,8 +1,51 @@
 import Container from "react-bootstrap/Container";
 import AboutBG from "../SVG/AboutBG";
 import Line from "../SVG/Line";
+import { useEffect, useRef, useState } from "react";
+
+interface AboutAnimation {
+  aboutMe: boolean;
+  engineering: boolean;
+  design: boolean;
+}
 
 export default function AboutMe() {
+  const [animationStates, setAnimationStates] = useState<AboutAnimation>({
+    aboutMe: false,
+    engineering: false,
+    design: false,
+  });
+  const aboutMeRef = useRef(null);
+  const engineeringRef = useRef(null);
+  const designRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.target === aboutMeRef.current && entry.isIntersecting) {
+            setAnimationStates((prev) => ({ ...prev, aboutMe: true }));
+            observer.unobserve(entry.target);
+          }
+          if (entry.target === engineeringRef.current && entry.isIntersecting) {
+            setAnimationStates((prev) => ({ ...prev, engineering: true }));
+            observer.unobserve(entry.target);
+          }
+          if (entry.target === designRef.current && entry.isIntersecting) {
+            setAnimationStates((prev) => ({ ...prev, design: true }));
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 1 }
+    );
+    if (aboutMeRef.current) observer.observe(aboutMeRef.current);
+    if (engineeringRef.current) observer.observe(engineeringRef.current);
+    if (designRef.current) observer.observe(designRef.current);
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="about-wrapper bg-secondary overflow-hidden">
       <Container
@@ -12,7 +55,12 @@ export default function AboutMe() {
         <div className="about px-4 w-100 d-flex flex-column gap-5 gap-lg-4">
           <div className="about-me d-flex justify-content-center justify-content-lg-start">
             <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-lg-5 pe-xl-6">
-              <div className="about-content-wrapper">
+              <div
+                ref={aboutMeRef}
+                className={`about-content-wrapper ${
+                  animationStates.aboutMe ? "animating" : ""
+                }`}
+              >
                 <h2 className="about-me-header text-info display-4 fw-bold text-capitalize">
                   About me
                 </h2>
@@ -30,7 +78,12 @@ export default function AboutMe() {
 
           <div className="about-engineering d-flex justify-content-center justify-content-lg-end">
             <div className="w-100 w-lg-50 text-center text-lg-start ps-0 ps-lg-5 ps-xl-6">
-              <div className="about-content-wrapper">
+              <div
+                ref={engineeringRef}
+                className={`about-content-wrapper ${
+                  animationStates.engineering ? "animating" : ""
+                }`}
+              >
                 <h2 className="about-engineering-header text-info display-4 fw-bold text-capitalize">
                   Engineering
                 </h2>
@@ -47,7 +100,12 @@ export default function AboutMe() {
 
           <div className="about-design d-flex justify-content-center justify-content-lg-start">
             <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-lg-5 pe-xl-6">
-              <div className="about-content-wrapper">
+              <div
+                ref={designRef}
+                className={`about-content-wrapper ${
+                  animationStates.design ? "animating" : ""
+                }`}
+              >
                 <h2 className="about-design-header text-info display-4 fw-bold text-capitalize">
                   Design
                 </h2>
