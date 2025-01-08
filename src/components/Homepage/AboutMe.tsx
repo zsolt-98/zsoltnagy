@@ -3,10 +3,10 @@ import AboutBG from "../SVG/AboutBG";
 
 export default function AboutMe() {
   return (
-    <div className="about-wrapper bg-secondary overflow-y-hidden">
+    <div className="about-wrapper bg-secondary overflow-hidden">
       <Container
         fluid="md"
-        className="min-vh-100 py-6 px-0 d-flex align-items-center position-relative"
+        className="vh-100 py-6 px-0 d-flex align-items-center position-relative"
       >
         <div className="about px-4 w-100 d-flex flex-column gap-5 gap-lg-4">
           <div className="about-me d-flex justify-content-center justify-content-lg-start">
