@@ -1,5 +1,6 @@
 import Container from "react-bootstrap/Container";
 import AboutBG from "../SVG/AboutBG";
+import Line from "../SVG/Line";
 
 export default function AboutMe() {
   return (
@@ -59,7 +60,8 @@ export default function AboutMe() {
             </div>
           </div>
         </div>
-        <AboutBG className="about-bg position-absolute" />
+        <AboutBG className="about-bg d-none d-xl-block position-absolute" />
+        <Line className="about-bg-line position-absolute" />
       </Container>
     </div>
   );

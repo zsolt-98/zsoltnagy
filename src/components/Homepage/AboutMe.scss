@@ -10,6 +10,7 @@
     padding: 1rem;
     backdrop-filter: blur(3px) !important;
     box-shadow: 0 0 15px 5px rgba($dark, 0.15);
+    background-color: rgba($primary, 0.6);
   }
 
   &-me,
@@ -24,9 +25,21 @@
 
   &-bg {
     z-index: 0;
-    top: 2rem;
-    right: -22.5rem;
-    opacity: 0.15;
-    transform: rotate(71.5deg) scale(2.25);
+    top: 7rem;
+    right: calc(-6rem + ((100vw - 1200px) * 0.1));
+    opacity: 0.25;
+    transform: rotate(-20deg) scale(1.8);
+    transition: right 0.3s ease-out;
+
+    @media (max-width: 1600px) {
+      right: calc(5rem + ((100vw - 1200px) * 0.1));
+    }
+
+    &-line {
+      top: -5rem;
+      left: calc(-17.5rem + ((100vw - 1200px) * 0.05));
+      transform: scale(1.1);
+      transition: left 0.3s ease-out;
+    }
   }
 }
