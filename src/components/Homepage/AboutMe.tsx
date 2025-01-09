@@ -2,6 +2,7 @@ import Container from "react-bootstrap/Container";
 import AboutBG from "../SVG/AboutBG";
 import Line from "../SVG/Line";
 import { useEffect, useRef, useState } from "react";
+import { motion, useScroll } from "motion/react";
 
 interface AboutAnimation {
   aboutMe: boolean;
@@ -48,9 +49,12 @@ export default function AboutMe() {
 
   return (
     <div className="about-wrapper bg-secondary overflow-hidden">
+      <div className="bg-line-container d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
+        <Line className="about-bg-line w-100" />
+      </div>
       <Container
         fluid="md"
-        className="min-vh-100 py-6 px-0 d-flex align-items-center position-relative"
+        className="min-vh-100 py-6 px-0 d-flex align-items-center position-relative "
       >
         <div className="about px-4 w-100 d-flex flex-column gap-5 gap-lg-4">
           <div className="about-me d-flex justify-content-center justify-content-lg-start">
@@ -119,7 +123,6 @@ export default function AboutMe() {
           </div>
         </div>
         <AboutBG className="about-bg d-none d-xl-block position-absolute" />
-        <Line className="about-bg-line position-absolute" />
       </Container>
     </div>
   );
