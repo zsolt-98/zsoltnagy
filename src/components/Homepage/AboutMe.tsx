@@ -2,7 +2,7 @@ import Container from "react-bootstrap/Container";
 import AboutBG from "../SVG/AboutBG";
 import Line from "../SVG/Line";
 import { useEffect, useRef, useState } from "react";
-import { motion, useScroll } from "motion/react";
+// import { motion, useScroll } from "motion/react";
 
 interface AboutAnimation {
   aboutMe: boolean;

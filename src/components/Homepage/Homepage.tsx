@@ -1,7 +1,7 @@
 import Hero from "./Hero";
 import AboutMe from "./AboutMe";
 import ParticlesComponent from "./Particles";
-import Line from "../SVG/Line";
+// import Line from "../SVG/Line";
 
 export default function Homepage() {
   return (
