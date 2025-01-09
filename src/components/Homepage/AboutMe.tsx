@@ -24,21 +24,27 @@ export default function AboutMe() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.target === aboutMeRef.current && entry.isIntersecting) {
-            setAnimationStates((prev) => ({ ...prev, aboutMe: true }));
-            observer.unobserve(entry.target);
+          if (entry.target === aboutMeRef.current) {
+            setAnimationStates((prev) => ({
+              ...prev,
+              aboutMe: entry.isIntersecting,
+            }));
           }
-          if (entry.target === engineeringRef.current && entry.isIntersecting) {
-            setAnimationStates((prev) => ({ ...prev, engineering: true }));
-            observer.unobserve(entry.target);
+          if (entry.target === engineeringRef.current) {
+            setAnimationStates((prev) => ({
+              ...prev,
+              engineering: entry.isIntersecting,
+            }));
           }
-          if (entry.target === designRef.current && entry.isIntersecting) {
-            setAnimationStates((prev) => ({ ...prev, design: true }));
-            observer.unobserve(entry.target);
+          if (entry.target === designRef.current) {
+            setAnimationStates((prev) => ({
+              ...prev,
+              design: entry.isIntersecting,
+            }));
           }
         });
       },
-      { threshold: 1 }
+      { threshold: 0.75 }
     );
     if (aboutMeRef.current) observer.observe(aboutMeRef.current);
     if (engineeringRef.current) observer.observe(engineeringRef.current);
