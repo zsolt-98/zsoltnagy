@@ -93,12 +93,11 @@ export default function AboutMe() {
                   About me
                 </h2>
                 <p className="about-me-paragraph text-light">
-                  As a web developer, I blend technical expertise with
-                  user-focused design principles. My journey began with
-                  maintaining Shopify sites, where I discovered my true passion
-                  for web development. This led me to transition into coding. I
-                  craft responsive web applications that prioritize user
-                  experience and performance.
+                  My journey began with maintaining Shopify sites, where I
+                  discovered my true passion for web development. This led me to
+                  transition into coding. Blending technical expertise with
+                  user-focused design principles to craft responsive web
+                  applications that prioritize user experience and performance.
                 </p>
               </div>
             </div>
@@ -116,11 +115,10 @@ export default function AboutMe() {
                   Engineering
                 </h2>
                 <p className="about-engineering-paragraph text-light">
-                  I build scalable web applications optimized for performance
-                  that meet technical requirements and business needs. My
-                  engineering approach creates resilient systems that grow
-                  alongside business needs while maintaining optimal
-                  performance.
+                  I build scalable web applications that meet technical
+                  requirements and business needs. My engineering approach
+                  creates resilient systems that grow alongside business needs
+                  while maintaining optimal performance.
                 </p>
               </div>
             </div>
