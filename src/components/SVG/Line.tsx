@@ -12,7 +12,7 @@ export default function Line({ className }: IconProps) {
     restDelta: 0.001,
   });
 
-  const pathLength = useTransform(smoothProgress, [0.3, 1], [0, 1]);
+  const pathLength = useTransform(smoothProgress, [0.1, 0.5], [0, 1]);
 
   const pathProps = isUnderLGScreen
     ? {
