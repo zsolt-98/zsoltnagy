@@ -15,6 +15,8 @@ export default function AboutMe() {
     engineering: false,
     design: false,
   });
+  const [isScrollingUp, setIsScrollingUp] = useState(false);
+  const lastScrollY = useRef(0);
   const aboutMeRef = useRef(null);
   const engineeringRef = useRef(null);
   const designRef = useRef(null);
@@ -23,34 +25,47 @@ export default function AboutMe() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const updateState = (key: keyof AboutAnimation) => {
+            setAnimationStates((prev) => {
+              if (!entry.isIntersecting && isScrollingUp) {
+                return { ...prev, [key]: false };
+              }
+              if (entry.isIntersecting) {
+                return { ...prev, [key]: true };
+              }
+              return prev;
+            });
+          };
           if (entry.target === aboutMeRef.current) {
-            setAnimationStates((prev) => ({
-              ...prev,
-              aboutMe: entry.isIntersecting,
-            }));
+            updateState("aboutMe");
           }
           if (entry.target === engineeringRef.current) {
-            setAnimationStates((prev) => ({
-              ...prev,
-              engineering: entry.isIntersecting,
-            }));
+            updateState("engineering");
           }
           if (entry.target === designRef.current) {
-            setAnimationStates((prev) => ({
-              ...prev,
-              design: entry.isIntersecting,
-            }));
+            updateState("design");
           }
         });
       },
       { threshold: 0.75 }
     );
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      setIsScrollingUp(currentScrollY < lastScrollY.current);
+      lastScrollY.current = currentScrollY;
+    };
+
     if (aboutMeRef.current) observer.observe(aboutMeRef.current);
     if (engineeringRef.current) observer.observe(engineeringRef.current);
     if (designRef.current) observer.observe(designRef.current);
+    window.addEventListener("scroll", handleScroll, { passive: true });
 
-    return () => observer.disconnect();
-  }, []);
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [isScrollingUp]);
 
   return (
     <div className="about-wrapper bg-primary overflow-hidden">
