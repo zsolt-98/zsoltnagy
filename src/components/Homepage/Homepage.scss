@@ -45,6 +45,14 @@ $cursor-size: 0.7em;
     z-index: 4;
   }
 
+  &-bg-grain {
+    background-color: rgba($primary, 1);
+    background-image: url(https://framerusercontent.com/images/rR6HYXBrMmX4cRpXfXUOvpvpB0.png);
+    background-repeat: repeat;
+    background-size: 150px;
+    opacity: 0.06;
+  }
+
   &-main {
     z-index: 4;
     backdrop-filter: blur(3px);
