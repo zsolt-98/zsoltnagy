@@ -1,5 +1,4 @@
 import PageDivider from "../SVG/PageDivider";
-import PageDividerTop from "../SVG/PageDividerTop";
 
 export default function WorkAndCV() {
   return (
