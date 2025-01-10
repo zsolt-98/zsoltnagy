@@ -1,8 +1,9 @@
 import Container from "react-bootstrap/Container";
-import AboutBG from "../SVG/AboutBG";
 import Line from "../SVG/Line";
 import { useEffect, useRef, useState } from "react";
 // import { motion, useScroll } from "motion/react";
+import grainBG from "../../assets/grainBG.png";
+import { Image } from "react-bootstrap";
 
 interface AboutAnimation {
   aboutMe: boolean;
@@ -55,10 +56,13 @@ export default function AboutMe() {
 
   return (
     <div className="about-wrapper bg-primary overflow-hidden">
-      <div className="bg-line-container d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
-        <Line className="about-bg-line w-100" />
-        <AboutBG className="about-bg w-100 h-100 position-absolute" />
+      <div className="about-bg-container">
+        <div className="about-bg-grain"></div>
+        <div className="about-bg-line-layer">
+          <Line className="about-bg-line w-100" />
+        </div>
       </div>
+
       <Container
         fluid="md"
         className="min-vh-100 py-6 px-0 d-flex align-items-center position-relative "
