@@ -1,6 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Line from "../SVG/Line";
 import { useEffect, useRef, useState } from "react";
+import PageDividerTop from "../SVG/PageDividerTop";
 // import { motion, useScroll } from "motion/react";
 
 interface AboutAnimation {
