@@ -132,6 +132,7 @@
       backdrop-filter: blur(3px);
       transition: opacity 0.3s ease, visibility 0.3s ease;
       z-index: 5;
+      overflow-y: auto;
 
       &.open {
         visibility: visible;
