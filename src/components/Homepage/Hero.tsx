@@ -10,6 +10,7 @@ import IconGithub from "../Icons/IconGithub";
 import Navigation from "../Navigation";
 import { useMediaQuery } from "react-responsive";
 import useZustandStore from "../../store/useZustandStore.js";
+import PageDividerTop from "../SVG/PageDividerTop.js";
 
 type Phase = "typing" | "waiting" | "deleting";
 
