@@ -3,78 +3,114 @@ import { IconProps } from "../../types";
 export default function AboutBG({ className }: IconProps) {
   return (
     <svg
-      width="216"
-      height="454"
-      viewBox="0 0 216 454"
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      version="1.1"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      preserveAspectRatio="xMidYMid slice"
+      viewBox="0 0 1920 1080"
       className={className}
+      style={{
+        width: "100vw",
+        height: "100vh",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: -1,
+        opacity: 0.25,
+      }}
     >
       <defs>
-        <filter id="glow-lines" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="1" result="blur" />
-          <feFlood floodColor="#E5E7EB" floodOpacity="0.15" result="color" />
-          <feComposite in="color" in2="blur" operator="in" result="glow" />
-          <feMerge>
-            <feMergeNode in="glow" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-        <filter id="glow-shapes" x="-50%" y="-50%" width="200%" height="200%">
-          <feGaussianBlur stdDeviation="3" result="blur" />
-          <feFlood floodColor="#58C4DC" floodOpacity="0.25" result="color" />
-          <feComposite in="color" in2="blur" operator="in" result="glow" />
-          <feMerge>
-            <feMergeNode in="glow" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
+        <linearGradient
+          gradientTransform="rotate(-179, 0.5, 0.5)"
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="gggrain-gradient2"
+        >
+          <stop stopColor="#3D4452" stopOpacity="1" offset="-0%" />
+          <stop stopColor="rgba(255,255,255,0)" stopOpacity="0" offset="100%" />
+        </linearGradient>
+        <linearGradient
+          gradientTransform="rotate(179, 0.5, 0.5)"
+          x1="50%"
+          y1="0%"
+          x2="50%"
+          y2="100%"
+          id="gggrain-gradient3"
+        >
+          <stop stopColor="#23272F" stopOpacity="1" offset="0%" />
+          <stop stopColor="rgba(255,255,255,0)" stopOpacity="0" offset="100%" />
+        </linearGradient>
+        <filter
+          id="gggrain-filter"
+          x="-20%"
+          y="-20%"
+          width="140%"
+          height="140%"
+          filterUnits="objectBoundingBox"
+          primitiveUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.35"
+            numOctaves="5"
+            seed="2"
+            stitchTiles="stitch"
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+            result="turbulence"
+          />
+          <feColorMatrix
+            type="saturate"
+            values="0"
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+            in="turbulence"
+            result="colormatrix"
+          />
+          <feComponentTransfer
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+            in="colormatrix"
+            result="componentTransfer"
+          >
+            <feFuncR type="linear" slope="6" />
+            <feFuncG type="linear" slope="6" />
+            <feFuncB type="linear" slope="6" />
+          </feComponentTransfer>
+          <feColorMatrix
+            x="0%"
+            y="0%"
+            width="100%"
+            height="100%"
+            in="componentTransfer"
+            result="colormatrix2"
+            type="matrix"
+            values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 35 -23"
+          />
         </filter>
       </defs>
-
-      {/* Lines with subtle glow */}
-      <g filter="url(#glow-lines)">
-        <line
-          x1="21.7863"
-          y1="19.9664"
-          x2="160.932"
-          y2="182.66"
-          stroke="#E5E7EB"
-          strokeWidth="4"
-        />
-        <line
-          x1="161.391"
-          y1="184.252"
-          x2="127.139"
-          y2="416.518"
-          stroke="#E5E7EB"
-          strokeWidth="4"
-        />
-      </g>
-
-      {/* Shapes with stronger glow */}
-      <g filter="url(#glow-shapes)">
-        <ellipse
-          cx="124.5"
-          cy="417"
-          rx="36"
-          ry="35.5"
-          transform="rotate(90 124.5 417)"
-          fill="#58C4DC"
-        />
-        <circle
-          cx="20.5"
-          cy="21.5"
-          r="19.5"
-          transform="rotate(90 20.5 21.5)"
-          fill="#58C4DC"
-        />
-        <ellipse
-          cx="159"
-          cy="184.5"
-          rx="55.5"
-          ry="55"
-          transform="rotate(90 159 184.5)"
-          fill="#58C4DC"
+      <g>
+        <rect width="100%" height="100%" fill="#23272f" />
+        <rect width="100%" height="100%" fill="url(#gggrain-gradient3)" />
+        <rect width="100%" height="100%" fill="url(#gggrain-gradient2)" />
+        <rect
+          width="100%"
+          height="100%"
+          fill="transparent"
+          filter="url(#gggrain-filter)"
+          opacity="0.65"
+          style={{ mixBlendMode: "soft-light" }}
         />
       </g>
     </svg>

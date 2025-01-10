@@ -54,9 +54,10 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <div className="about-wrapper bg-secondary overflow-hidden">
+    <div className="about-wrapper bg-primary overflow-hidden">
       <div className="bg-line-container d-flex align-items-center justify-content-center w-100 h-100 position-absolute">
         <Line className="about-bg-line w-100" />
+        <AboutBG className="about-bg w-100 h-100 position-absolute" />
       </div>
       <Container
         fluid="md"
@@ -128,7 +129,6 @@ export default function AboutMe() {
             </div>
           </div>
         </div>
-        <AboutBG className="about-bg d-none d-xl-block position-absolute" />
       </Container>
     </div>
   );
