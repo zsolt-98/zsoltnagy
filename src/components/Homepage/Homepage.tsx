@@ -1,6 +1,7 @@
 import Hero from "./Hero";
 import AboutMe from "./AboutMe";
 import ParticlesComponent from "./Particles";
+import WorkAndCV from "./WorkAndCV";
 
 export default function Homepage() {
   return (
@@ -11,6 +12,9 @@ export default function Homepage() {
       </main>
       <section>
         <AboutMe />
+      </section>
+      <section>
+        <WorkAndCV />
       </section>
     </>
   );
