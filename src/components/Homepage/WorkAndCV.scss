@@ -29,7 +29,18 @@
     position: relative;
     width: 2px;
     height: 90%;
-    box-shadow: 0 0 6px $info, 0 0 12px $info;
+    box-shadow: 0 0 3px $info, 0 0 6px $info;
+  }
+
+  &-button {
+    transition: all ease 0.3s;
+
+    &:hover {
+      background-color: transparent;
+      color: $info;
+      box-shadow: 0 6px 12px -2px rgba($info, 0.5);
+      transform: translateY(-6px);
+    }
   }
 
   &-arrow-right {

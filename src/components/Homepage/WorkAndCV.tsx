@@ -25,7 +25,7 @@ export default function WorkAndCV() {
             <Button
               variant="outline-info"
               size="lg"
-              className="rounded-0 text-uppercase fs-6 border-2 w-75"
+              className="workcv-button rounded-0 text-uppercase fs-6 border-2 w-75"
             >
               See my work
               <span className="ms-4">
@@ -46,7 +46,7 @@ export default function WorkAndCV() {
             <Button
               variant="outline-info"
               size="lg"
-              className="rounded-0 text-uppercase fs-6 border-2 w-75"
+              className="workcv-button rounded-0 text-uppercase fs-6 border-2 w-75"
             >
               See my résumé
               <span className="ms-4">

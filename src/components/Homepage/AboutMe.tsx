@@ -1,5 +1,6 @@
 import Container from "react-bootstrap/Container";
 import { useEffect, useRef, useState } from "react";
+import SquareDots from "../SVG/SquareDots";
 // import { motion, useScroll } from "motion/react";
 
 interface AboutAnimation {
@@ -131,6 +132,7 @@ export default function AboutMe() {
                   animationStates.design ? "animating" : ""
                 }`}
               >
+                <SquareDots className="about-bg-dots position-absolute" />
                 <h2 className="about-design-header text-info display-4 fw-bold text-capitalize">
                   Design
                 </h2>
