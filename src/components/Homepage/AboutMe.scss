@@ -41,10 +41,11 @@
     }
 
     &-dots {
-      opacity: 0.15;
+      opacity: 1;
       top: -6em;
-      left: -6em;
+      right: -6em;
       z-index: 1;
+      transform: scale(0.75);
     }
   }
 

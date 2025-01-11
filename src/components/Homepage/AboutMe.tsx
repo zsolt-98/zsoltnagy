@@ -71,9 +71,6 @@ export default function AboutMe() {
     <div className="about-wrapper bg-primary overflow-hidden">
       <div className="about-bg-container">
         <div className="about-bg-grain"></div>
-        {/* <div className="about-bg-line-layer">
-          <Line className="about-bg-line w-100" />
-        </div> */}
       </div>
 
       <Container
@@ -104,7 +101,7 @@ export default function AboutMe() {
           </div>
 
           <div className="about-engineering d-flex justify-content-center justify-content-lg-end">
-            <div className="w-100 w-lg-50 text-center text-lg-start ps-0 ps-lg-5 ps-xl-6">
+            <div className="w-100 w-lg-50 text-center text-lg-start ps-0 ps-lg-5 ps-xl-6 position-relative">
               <div
                 ref={engineeringRef}
                 className={`about-content-wrapper ${
@@ -121,26 +118,28 @@ export default function AboutMe() {
                   while maintaining optimal performance.
                 </p>
               </div>
+              <SquareDots className="about-bg-dots position-absolute" />
             </div>
           </div>
 
           <div className="about-design d-flex justify-content-center justify-content-lg-start">
-            <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-lg-5 pe-xl-6">
+            <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-lg-5 pe-xl-6 position-relative ">
               <div
                 ref={designRef}
                 className={`about-content-wrapper ${
                   animationStates.design ? "animating" : ""
                 }`}
               >
-                <SquareDots className="about-bg-dots position-absolute" />
-                <h2 className="about-design-header text-info display-4 fw-bold text-capitalize">
-                  Design
-                </h2>
-                <p className="about-design-paragraph text-light">
-                  While my foundation is in development, I have a keen eye for
-                  design. Using tools like Figma and Canva, I create intuitive
-                  interfaces that enhance user engagement.
-                </p>
+                <div className="">
+                  <h2 className="about-design-header text-info display-4 fw-bold text-capitalize">
+                    Design
+                  </h2>
+                  <p className="about-design-paragraph text-light">
+                    While my foundation is in development, I have a keen eye for
+                    design. Using tools like Figma and Canva, I create intuitive
+                    interfaces that enhance user engagement.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

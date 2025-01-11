@@ -12,8 +12,8 @@ export default function IconArrowRight({ className }: IconProps) {
       <path
         fill="none"
         stroke="#58c4dc"
-        stroke-width="3"
-        stroke-miterlimit="0"
+        strokeWidth="3"
+        strokeMiterlimit="0"
         d="M.043 11.119h70.714M60.917 1.319l9.8 9.8-9.8 9.8"
       ></path>
     </svg>

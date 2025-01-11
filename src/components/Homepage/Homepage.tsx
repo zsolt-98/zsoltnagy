@@ -2,6 +2,7 @@ import Hero from "./Hero";
 import AboutMe from "./AboutMe";
 import ParticlesComponent from "./Particles";
 import WorkAndCV from "./WorkAndCV";
+import FooterHomepage from "./FooterHomepage";
 
 export default function Homepage() {
   return (
@@ -17,6 +18,7 @@ export default function Homepage() {
       <section>
         <WorkAndCV />
       </section>
+      <FooterHomepage />
     </>
   );
 }

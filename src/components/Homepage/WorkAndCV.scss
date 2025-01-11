@@ -23,6 +23,12 @@
 
   &-content {
     z-index: 2;
+
+    &-container {
+      backdrop-filter: blur(3px) !important;
+      box-shadow: 0 0 15px 5px rgba($dark, 0.15);
+      background-color: rgba($primary, 0.6);
+    }
   }
 
   &-divider {

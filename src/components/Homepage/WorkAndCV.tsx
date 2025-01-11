@@ -12,7 +12,7 @@ export default function WorkAndCV() {
         <PageDivider />
       </div>
       <Container fluid="md" className="workcv-content">
-        <div className="d-flex justify-content-evenly bg-primary position-relative gap-6">
+        <div className="workcv-content-container d-flex justify-content-evenly position-relative gap-6">
           <div className="d-flex flex-column gap-6 p-3 p-xl-5 w-50">
             <div className="">
               <h2 className="text-capitalize text-info display-4 fw-bold">
