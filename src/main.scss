@@ -5,14 +5,11 @@
 @import "./components/Navigation.scss";
 @import "./components/Homepage/AboutMe.scss";
 @import "./components/Homepage/WorkAndCV.scss";
+@import "./components/Homepage/FooterHomepage.scss";
 
 body.no-scroll {
   overflow: hidden;
 }
-
-// .scroll-pagination {
-//   right: 2.25rem;
-// }
 
 @media (min-width: 992px) {
   .w-lg-50 {
