@@ -1,7 +1,7 @@
 import { IconProps } from "../../types";
 
 export default function IconLinkedin({
-  size,
+  size = 40,
   stroke = "currentColor",
   fill = "none",
   className = "",

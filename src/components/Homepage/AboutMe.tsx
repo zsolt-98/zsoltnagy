@@ -92,7 +92,7 @@ export default function AboutMe() {
                 <p className="about-me-paragraph text-light">
                   My journey began with maintaining Shopify sites, where I
                   discovered my true passion for web development. This led me to
-                  transition into coding. Blending technical expertise with
+                  transition into coding. I blend technical expertise with
                   user-focused design principles to craft responsive web
                   applications that prioritize user experience and performance.
                 </p>
