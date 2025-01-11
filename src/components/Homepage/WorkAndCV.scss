@@ -16,4 +16,16 @@
       opacity: 0.06;
     }
   }
+
+  &-divider {
+    position: relative;
+    width: 2px;
+    height: 90%;
+    box-shadow: 0 0 6px $info, 0 0 12px $info;
+  }
+
+  &-arrow-right {
+    width: 2.5em !important;
+    height: 75% !important;
+  }
 }
