@@ -71,9 +71,9 @@ export default function AboutMe() {
     <div className="about-wrapper bg-primary overflow-hidden">
       <div className="about-bg-container">
         <div className="about-bg-grain"></div>
-        <div className="about-bg-line-layer">
+        {/* <div className="about-bg-line-layer">
           <Line className="about-bg-line w-100" />
-        </div>
+        </div> */}
       </div>
 
       <Container
