@@ -11,7 +11,7 @@ export default function WorkAndCV() {
         <div className="workcv-bg-grain position-absolute"></div>
         <PageDivider />
       </div>
-      <Container fluid="md">
+      <Container fluid="md" className="workcv-content">
         <div className="d-flex justify-content-evenly bg-primary position-relative gap-6">
           <div className="d-flex flex-column gap-6 p-3 p-xl-5 w-50">
             <div className="">
