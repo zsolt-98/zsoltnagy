@@ -8,6 +8,12 @@
       inset: 0;
       width: 100%;
       height: 100%;
+      background: linear-gradient(
+        180deg,
+        $secondary 0%,
+        $secondary 75%,
+        $dark 100%
+      );
     }
 
     &-grain {

@@ -1,7 +1,5 @@
 import Container from "react-bootstrap/Container";
 import { useEffect, useRef, useState } from "react";
-import SquareDots from "../SVG/SquareDots";
-// import { motion, useScroll } from "motion/react";
 
 interface AboutAnimation {
   aboutMe: boolean;
@@ -118,7 +116,6 @@ export default function AboutMe() {
                   while maintaining optimal performance.
                 </p>
               </div>
-              <SquareDots className="about-bg-dots position-absolute" />
             </div>
           </div>
 

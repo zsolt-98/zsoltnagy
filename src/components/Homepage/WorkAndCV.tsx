@@ -6,13 +6,13 @@ import IconArrowRight from "../Icons/IconArrowRight";
 
 export default function WorkAndCV() {
   return (
-    <div className="workcv-wrapper bg-secondary position-relative d-flex justify-content-center align-items-center py-6">
+    <div className="workcv-wrapper position-relative d-flex justify-content-center align-items-center py-6">
       <div className="workcv-bg-container position-absolute">
         <div className="workcv-bg-grain position-absolute"></div>
         <PageDivider />
       </div>
       <Container fluid="md" className="workcv-content py-6">
-        <div className="workcv-content-container d-flex justify-content-evenly position-relative gap-6 mt-6">
+        <div className="workcv-content-container d-flex justify-content-evenly position-relative gap-6 my-6">
           <div className="d-flex flex-column gap-6 p-3 p-xl-5 w-50">
             <div className="">
               <h2 className="text-capitalize text-info display-4 fw-bold">
