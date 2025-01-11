@@ -14,11 +14,11 @@ export default function FooterHomepage() {
       </div>
       <Container fluid="md" className="footer-content position-relative py-6">
         <Row>
-          <Col>
-            <h3 className="text-light fs-2 fw-light">Connect with me</h3>
+          <Col sm={4}>
+            <h3 className="text-light fs-3 fw-light">Connect with me</h3>
             <div>
               <Nav.Link
-                className="nav-menu-content-email text-info p-0"
+                className="nav-menu-content-email text-info p-0 fs-5 d-inline-block"
                 href="mailto:your.email@example.com"
               >
                 zsolt.nagy998@gmail.com
@@ -36,24 +36,24 @@ export default function FooterHomepage() {
               </Nav.Link>
             </div>
           </Col>
-          <Col>
-            <Stack gap={3} className="fs-4">
+          <Col sm={4}>
+            <div className="d-flex flex-column gap-3 fs-3">
               <Nav.Link
-                className="nav-menu-content-title text-info p-0"
+                className="nav-menu-content-title text-info p-0 d-inline-block"
                 href="/work"
               >
                 My Work
               </Nav.Link>
               <Nav.Link
-                className="nav-menu-content-title text-info p-0"
+                className="nav-menu-content-title text-info p-0 d-inline-block"
                 href="/work"
               >
                 My résumé
               </Nav.Link>
-            </Stack>
+            </div>
           </Col>
         </Row>
-        <div className="border-top border-light border-1 opacity-50 my-3 mt-8" />
+        <div className="border-top border-light border-1 opacity-50 my-3 mt-6" />
         <div className="d-flex justify-content-between fs-5 text-light">
           <span className="">&copy; Zsolt Nagy</span>
           <span className="">2025</span>
