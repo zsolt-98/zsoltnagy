@@ -8,11 +8,11 @@ import IconGithub from "../Icons/IconGithub";
 
 export default function FooterHomepage() {
   return (
-    <footer className="footer-wrapper min-vh-100 d-flex justify-content-center align-items-center position-relative">
+    <footer className="footer-wrapper d-flex justify-content-center align-items-center position-relative">
       <div className="footer-bg-container">
         <div className="footer-bg-grain"></div>
       </div>
-      <Container fluid="md" className="footer-content position-relative ">
+      <Container fluid="md" className="footer-content position-relative py-6">
         <Row>
           <Col>
             <h3 className="text-light fs-2 fw-light">Connect with me</h3>
