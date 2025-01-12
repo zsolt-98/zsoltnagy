@@ -52,7 +52,7 @@
   &-content-wrapper {
     z-index: 2;
     position: relative;
-    padding: 1rem;
+    // padding: 1rem;
     backdrop-filter: blur(3px) !important;
     box-shadow: 0 0 15px 5px rgba($dark, 0.15);
     background-color: rgba($primary, 0.6);

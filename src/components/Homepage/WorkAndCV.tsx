@@ -13,13 +13,18 @@ export default function WorkAndCV() {
         <div className="workcv-bg-grain position-absolute"></div>
         <PageDivider />
       </div>
-      <Container fluid="md" className="workcv-content py-6">
-        <Row className="workcv-content-container d-flex justify-content-evenly position-relative my-6">
-          <Col xs={12} lg={6} className="d-flex flex-column gap-6 p-3 p-xl-5">
+      <Container
+        fluid="md"
+        className="workcv-content py-6 text-center text-lg-start"
+      >
+        <Row className="workcv-content-container d-flex justify-content-evenly position-relative my-6 gap-8 gap-lg-0 ">
+          <Col
+            xs={12}
+            lg={6}
+            className="workcv-container-left d-flex flex-column justify-content-between gap-5 gap-lg-6 p-3 px-lg-6"
+          >
             <div className="">
-              <h2 className="text-capitalize text-info display-4 fw-bold">
-                My work
-              </h2>
+              <h2 className="text-capitalize text-info  fw-bold">My work</h2>
               <p className="text-light fs-4">
                 A showcase of my latest web projects.
               </p>
@@ -27,7 +32,7 @@ export default function WorkAndCV() {
             <Button
               variant="outline-info"
               size="lg"
-              className="workcv-button rounded-0 text-uppercase fs-6 border-2 w-75"
+              className="workcv-button rounded-0 text-uppercase fs-6 border-2 w-100 w-xl-75"
             >
               See my work
               <span className="ms-4">
@@ -35,12 +40,14 @@ export default function WorkAndCV() {
               </span>
             </Button>
           </Col>
-          {/* <div className="workcv-divider bg-info text-info opacity-100 position-absolute top-50 start-50 translate-middle" /> */}
-          <Col xs={12} lg={6} className="d-flex flex-column gap-6 p-3 p-xl-5">
+          <div className="workcv-divider bg-info text-info opacity-100 position-absolute" />
+          <Col
+            xs={12}
+            lg={6}
+            className="workcv-container-right d-flex flex-column justify-content-between gap-5 gap-lg-6 p-3 px-lg-6"
+          >
             <div className="">
-              <h2 className="text-capitalize text-info display-4 fw-bold">
-                My résumé
-              </h2>
+              <h2 className="text-capitalize text-info fw-bold">My résumé</h2>
               <p className="text-light fs-4">
                 See my professional experience and skills.
               </p>
@@ -48,7 +55,7 @@ export default function WorkAndCV() {
             <Button
               variant="outline-info"
               size="lg"
-              className="workcv-button rounded-0 text-uppercase fs-6 border-2 w-75"
+              className="workcv-button rounded-0 text-uppercase fs-6 border-2 w-100 w-xl-75"
             >
               See my résumé
               <span className="ms-4">

@@ -80,7 +80,7 @@ export default function AboutMe() {
             <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-lg-5 pe-xl-6">
               <div
                 ref={aboutMeRef}
-                className={`about-content-wrapper ${
+                className={`about-content-wrapper p-3 ${
                   animationStates.aboutMe ? "animating" : ""
                 }`}
               >
@@ -102,7 +102,7 @@ export default function AboutMe() {
             <div className="w-100 w-lg-50 text-center text-lg-start ps-0 ps-lg-5 ps-xl-6 position-relative">
               <div
                 ref={engineeringRef}
-                className={`about-content-wrapper ${
+                className={`about-content-wrapper p-3 ${
                   animationStates.engineering ? "animating" : ""
                 }`}
               >
@@ -123,7 +123,7 @@ export default function AboutMe() {
             <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-lg-5 pe-xl-6 position-relative ">
               <div
                 ref={designRef}
-                className={`about-content-wrapper ${
+                className={`about-content-wrapper p-3 ${
                   animationStates.design ? "animating" : ""
                 }`}
               >
