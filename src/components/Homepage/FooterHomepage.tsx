@@ -11,7 +11,7 @@ export default function FooterHomepage() {
       <div className="footer-bg-container">
         <div className="footer-bg-grain"></div>
       </div>
-      <Container fluid="md" className="footer-content position-relative py-6">
+      <Container className="footer-content position-relative py-6">
         <Row>
           <Col sm={4}>
             <h3 className="text-light fs-3 fw-light">Connect with me</h3>

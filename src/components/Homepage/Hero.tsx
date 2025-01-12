@@ -101,10 +101,7 @@ export default function Hero() {
   return (
     <>
       <div className="d-flex justify-content-between blur-bg">
-        <Container
-          fluid="xl"
-          className="hero-main-container min-vh-100 px-0 d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-5"
-        >
+        <Container className="hero-main-container min-vh-100 px-0 d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-5">
           <div
             className={`hero-main ${
               !isXXLargeScreen && isOpen ? "hero-main-exit" : ""

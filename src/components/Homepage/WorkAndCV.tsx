@@ -13,10 +13,7 @@ export default function WorkAndCV() {
         <div className="workcv-bg-grain position-absolute"></div>
         <PageDivider />
       </div>
-      <Container
-        fluid="md"
-        className="workcv-content py-6 text-center text-lg-start"
-      >
+      <Container className="workcv-content py-6 px-0 text-center text-lg-start">
         <Row className="workcv-content-container d-flex justify-content-evenly position-relative my-6 gap-8 gap-lg-0 ">
           <Col
             xs={12}
