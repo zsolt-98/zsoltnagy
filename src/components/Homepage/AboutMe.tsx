@@ -75,7 +75,7 @@ export default function AboutMe() {
         fluid="md"
         className="py-6 px-0 d-flex align-items-center position-relative "
       >
-        <div className="about px-4 w-100 d-flex flex-column gap-5 gap-lg-4">
+        <div className="about w-100 d-flex flex-column gap-5 gap-lg-4">
           <div className="about-me d-flex justify-content-center justify-content-lg-start">
             <div className="w-100 w-lg-50 text-center text-lg-start pe-0 pe-lg-5 pe-xl-6">
               <div

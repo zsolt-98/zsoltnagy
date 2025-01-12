@@ -42,6 +42,7 @@
     width: 2px;
     height: 90%;
     box-shadow: 0 0 3px $info, 0 0 6px $info;
+    flex: 0 0 auto !important;
   }
 
   &-button {

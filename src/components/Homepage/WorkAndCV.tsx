@@ -1,5 +1,7 @@
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 
 import PageDivider from "../SVG/PageDivider";
 import IconArrowRight from "../Icons/IconArrowRight";
@@ -12,8 +14,8 @@ export default function WorkAndCV() {
         <PageDivider />
       </div>
       <Container fluid="md" className="workcv-content py-6">
-        <div className="workcv-content-container d-flex justify-content-evenly position-relative gap-6 my-6">
-          <div className="d-flex flex-column gap-6 p-3 p-xl-5 w-50">
+        <Row className="workcv-content-container d-flex justify-content-evenly position-relative my-6">
+          <Col xs={12} lg={6} className="d-flex flex-column gap-6 p-3 p-xl-5">
             <div className="">
               <h2 className="text-capitalize text-info display-4 fw-bold">
                 My work
@@ -32,9 +34,9 @@ export default function WorkAndCV() {
                 <IconArrowRight className="workcv-arrow-right" />
               </span>
             </Button>
-          </div>
-          <div className="workcv-divider bg-info text-info opacity-100 position-absolute top-50 start-50 translate-middle" />
-          <div className="d-flex flex-column gap-6 p-3 p-xl-5 w-50">
+          </Col>
+          {/* <div className="workcv-divider bg-info text-info opacity-100 position-absolute top-50 start-50 translate-middle" /> */}
+          <Col xs={12} lg={6} className="d-flex flex-column gap-6 p-3 p-xl-5">
             <div className="">
               <h2 className="text-capitalize text-info display-4 fw-bold">
                 My résumé
@@ -53,8 +55,8 @@ export default function WorkAndCV() {
                 <IconArrowRight className="workcv-arrow-right" />
               </span>
             </Button>
-          </div>
-        </div>
+          </Col>
+        </Row>
       </Container>
     </div>
   );
