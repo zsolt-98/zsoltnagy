@@ -12,50 +12,51 @@ export default function FooterHomepage() {
         <div className="footer-bg-grain"></div>
       </div>
       <Container className="footer-content position-relative py-6">
-        <Row>
-          <Col sm={4}>
-            <h3 className="text-light fs-3 fw-light">Connect with me</h3>
+        <Row className="gap-6 gap-lg-0">
+          <Col sm={12} lg={6}>
+            <h3 className="text-info fs-3 fw-light mb-4">Connect with me</h3>
             <div>
               <Nav.Link
-                className="nav-menu-content-email text-info p-0 fs-5 d-inline-block"
+                className="footer-email text-light p-0 fs-5 d-inline-block"
                 href="mailto:your.email@example.com"
               >
                 zsolt.nagy998@gmail.com
               </Nav.Link>
             </div>
             <div className="d-flex mt-2">
-              <Nav.Link className="nav-menu-content-social p-0">
-                <IconLinkedin
-                  className="nav-menu-social-icon"
-                  stroke="#58c4dc"
-                />
+              <Nav.Link className="footer-social p-0">
+                <IconLinkedin className="footer-social-icon" stroke="#e5e7eb" />
               </Nav.Link>
-              <Nav.Link className="nav-menu-content-social p-0">
-                <IconGithub className="nav-menu-social-icon" stroke="#58c4dc" />
+              <Nav.Link className="footer-social p-0">
+                <IconGithub className="footer-social-icon" stroke="#e5e7eb" />
               </Nav.Link>
             </div>
           </Col>
-          <Col sm={4}>
-            <div className="d-flex flex-column gap-3 fs-3">
-              <Nav.Link
-                className="nav-menu-content-title text-info p-0 d-inline-block"
-                href="/work"
-              >
-                My Work
-              </Nav.Link>
-              <Nav.Link
-                className="nav-menu-content-title text-info p-0 d-inline-block"
-                href="/work"
-              >
-                My résumé
-              </Nav.Link>
+          <Col sm={12} lg={6}>
+            <div className="d-flex flex-column gap-3 fs-4">
+              <div>
+                <Nav.Link
+                  className="footer-link text-light p-0 d-inline-block w-auto"
+                  href="/work"
+                >
+                  My Work
+                </Nav.Link>
+              </div>
+              <div>
+                <Nav.Link
+                  className="footer-link text-light p-0 d-inline-block w-auto"
+                  href="/work"
+                >
+                  My résumé
+                </Nav.Link>
+              </div>
             </div>
           </Col>
         </Row>
         <div className="border-top border-light border-1 opacity-50 my-3 mt-6" />
         <div className="d-flex justify-content-between fs-5 text-light">
-          <span className="">&copy; Zsolt Nagy</span>
-          <span className="">2025</span>
+          <span>&copy; Zsolt Nagy</span>
+          <span>2025</span>
         </div>
       </Container>
     </footer>

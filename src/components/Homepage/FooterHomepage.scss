@@ -22,4 +22,22 @@
   &-content {
     z-index: 2;
   }
+
+  &-email,
+  &-link,
+  &-social-icon {
+    transition: none !important;
+
+    &:hover {
+      color: $info !important;
+    }
+  }
+
+  &-social-icon:hover {
+    stroke: $info !important ;
+  }
+
+  &-email:hover {
+    text-decoration: underline;
+  }
 }

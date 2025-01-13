@@ -58,11 +58,12 @@
   &-button {
     transition: all ease 0.3s;
 
-    &:hover {
-      background-color: transparent;
-      color: $info;
-      box-shadow: 0 6px 12px -2px rgba($info, 0.5);
-      transform: translateY(-6px);
+    &:hover,
+    &:active {
+      background-color: transparent !important;
+      color: $info !important;
+      box-shadow: 0 6px 12px -2px rgba($info, 0.5) !important;
+      transform: translateY(-6px) !important;
     }
   }
 
