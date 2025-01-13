@@ -14,14 +14,14 @@ export default function WorkAndCV() {
         <PageDivider />
       </div>
       <Container className="workcv-content py-6 px-0 text-center text-lg-start">
-        <Row className="workcv-content-container d-flex justify-content-evenly position-relative my-6 gap-8 gap-lg-0 ">
+        <Row className="workcv-content-container d-flex mx-3 justify-content-evenly position-relative">
           <Col
             xs={12}
             lg={6}
             className="workcv-container-left d-flex flex-column justify-content-between gap-5 gap-lg-6 p-3 p-lg-6"
           >
             <div className="">
-              <h2 className="text-capitalize text-info  fw-bold">My work</h2>
+              <h2 className="text-capitalize text-info fw-bold">My work</h2>
               <p className="text-light fs-4">
                 A showcase of my latest web projects.
               </p>
