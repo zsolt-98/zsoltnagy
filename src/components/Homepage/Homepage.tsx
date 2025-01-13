@@ -4,8 +4,11 @@ import ParticlesComponent from "./Particles";
 import WorkAndCV from "./WorkAndCV";
 import FooterHomepage from "./FooterHomepage";
 import bgNetwork from "../../assets/bg-network.png";
+import { useMediaQuery } from "react-responsive";
 
 export default function Homepage() {
+  const isLgScreen = useMediaQuery({ minWidth: 992 });
+
   return (
     <>
       <main className="hero-container bg-primary position-relative">
@@ -13,11 +16,15 @@ export default function Homepage() {
         <ParticlesComponent />
         <Hero />
       </main>
-      <div className="position-relative">
+      <div className="position-relative ">
         <img
           src={bgNetwork}
-          className="position-absolute w-100 h-100"
-          style={{ zIndex: 1 }}
+          className={`position-absolute opacity-25 h-100 ${
+            isLgScreen
+              ? "w-75  py-6 start-50 translate-middle-x"
+              : "w-100 object-fit-cover"
+          } `}
+          style={{ zIndex: 3 }}
         />
         <section>
           <AboutMe />

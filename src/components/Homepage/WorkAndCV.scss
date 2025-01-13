@@ -1,8 +1,4 @@
 .workcv {
-  &-wrapper {
-    z-index: 0;
-  }
-
   &-bg {
     &-container {
       inset: 0;
@@ -28,7 +24,7 @@
   }
 
   &-content {
-    z-index: 2;
+    z-index: 4;
 
     &-container {
       backdrop-filter: blur(3px) !important;
