@@ -5,8 +5,46 @@ import Col from "react-bootstrap/Col";
 
 import PageDivider from "../SVG/PageDivider";
 import IconArrowRight from "../Icons/IconArrowRight";
+import { useEffect, useRef, useState } from "react";
 
 export default function WorkAndCV() {
+  interface workAndCVAnimation {
+    contentContainer: boolean;
+  }
+
+  const [animationStates, setAnimationStates] = useState<workAndCVAnimation>({
+    contentContainer: false,
+  });
+  const contentContainerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const updateState = (key: keyof workAndCVAnimation) => {
+            setAnimationStates((prev) => {
+              if (entry.isIntersecting && !prev[key]) {
+                return { ...prev, [key]: true };
+              }
+              return prev;
+            });
+          };
+          if (entry.target === contentContainerRef.current) {
+            updateState("contentContainer");
+          }
+        });
+      },
+      { threshold: 0.75 }
+    );
+
+    if (contentContainerRef.current)
+      observer.observe(contentContainerRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="workcv-wrapper position-relative d-flex justify-content-center align-items-center py-6">
       <div className="workcv-bg-container position-absolute">
@@ -14,7 +52,12 @@ export default function WorkAndCV() {
         <PageDivider />
       </div>
       <Container className="workcv-content py-6 px-0 text-center text-lg-start">
-        <Row className="workcv-content-container d-flex mx-3 justify-content-evenly position-relative">
+        <Row
+          ref={contentContainerRef}
+          className={`workcv-content-container ${
+            animationStates.contentContainer ? "animating" : ""
+          } d-flex mx-3 justify-content-evenly position-relative`}
+        >
           <Col
             xs={12}
             lg={6}

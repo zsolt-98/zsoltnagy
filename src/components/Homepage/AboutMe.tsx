@@ -13,8 +13,6 @@ export default function AboutMe() {
     engineering: false,
     design: false,
   });
-  const [isScrollingUp, setIsScrollingUp] = useState(false);
-  const lastScrollY = useRef(0);
   const aboutMeRef = useRef(null);
   const engineeringRef = useRef(null);
   const designRef = useRef(null);
@@ -25,10 +23,7 @@ export default function AboutMe() {
         entries.forEach((entry) => {
           const updateState = (key: keyof AboutAnimation) => {
             setAnimationStates((prev) => {
-              if (!entry.isIntersecting && isScrollingUp) {
-                return { ...prev, [key]: false };
-              }
-              if (entry.isIntersecting) {
+              if (entry.isIntersecting && !prev[key]) {
                 return { ...prev, [key]: true };
               }
               return prev;
@@ -48,22 +43,14 @@ export default function AboutMe() {
       { threshold: 0.75 }
     );
 
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      setIsScrollingUp(currentScrollY < lastScrollY.current);
-      lastScrollY.current = currentScrollY;
-    };
-
     if (aboutMeRef.current) observer.observe(aboutMeRef.current);
     if (engineeringRef.current) observer.observe(engineeringRef.current);
     if (designRef.current) observer.observe(designRef.current);
-    window.addEventListener("scroll", handleScroll, { passive: true });
 
     return () => {
       observer.disconnect();
-      window.removeEventListener("scroll", handleScroll);
     };
-  }, [isScrollingUp]);
+  }, []);
 
   return (
     <div className="about-wrapper bg-primary overflow-hidden">
