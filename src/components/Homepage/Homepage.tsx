@@ -21,7 +21,7 @@ export default function Homepage() {
           src={bgNetwork}
           className={`position-absolute opacity-25 h-100 ${
             isLgScreen
-              ? "w-75  py-6 start-50 translate-middle-x"
+              ? "w-75  py-5 start-50 translate-middle-x"
               : "w-100 object-fit-cover"
           } `}
           style={{ zIndex: 3 }}

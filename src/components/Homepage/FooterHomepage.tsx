@@ -14,14 +14,16 @@ export default function FooterHomepage() {
       <Container className="footer-content position-relative py-6">
         <Row className="gap-6 gap-lg-0">
           <Col sm={12} lg={6}>
-            <h3 className="text-info fs-3 fw-light mb-4">Connect with me</h3>
-            <div>
-              <Nav.Link
-                className="footer-email text-light p-0 fs-5 d-inline-block"
-                href="mailto:your.email@example.com"
-              >
-                zsolt.nagy998@gmail.com
-              </Nav.Link>
+            <div className="d-flex flex-column gap-3">
+              <h3 className="text-info fs-3 fw-light m-0">Connect with me</h3>
+              <div>
+                <Nav.Link
+                  className="footer-email text-light p-0 fs-5 d-inline-block"
+                  href="mailto:your.email@example.com"
+                >
+                  zsolt.nagy998@gmail.com
+                </Nav.Link>
+              </div>
             </div>
             <div className="d-flex mt-2">
               <Nav.Link className="footer-social p-0">
