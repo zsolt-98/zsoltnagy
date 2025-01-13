@@ -18,7 +18,7 @@ export default function WorkAndCV() {
           <Col
             xs={12}
             lg={6}
-            className="workcv-container-left d-flex flex-column justify-content-between gap-5 gap-lg-6 p-3 p-lg-6"
+            className="workcv-container-left d-flex flex-column justify-content-between gap-5 gap-lg-6 p-3 p-lg-6 my-6 my-lg-0"
           >
             <div className="">
               <h2 className="text-capitalize text-info fw-bold">My work</h2>
@@ -41,7 +41,7 @@ export default function WorkAndCV() {
           <Col
             xs={12}
             lg={6}
-            className="workcv-container-right d-flex flex-column justify-content-between gap-5 gap-lg-6 p-3 p-lg-6"
+            className="workcv-container-right d-flex flex-column justify-content-between gap-5 gap-lg-6 p-3 p-lg-6 my-6 my-lg-0"
           >
             <div className="">
               <h2 className="text-capitalize text-info fw-bold">My résumé</h2>
