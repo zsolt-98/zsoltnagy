@@ -1,13 +1,12 @@
 .about {
   &-wrapper {
     position: relative;
-    z-index: 0;
+    z-index: 2;
   }
 
   &-bg {
     &-container {
       position: absolute;
-      inset: 0;
       width: 100%;
       height: 100%;
       background: linear-gradient(
@@ -35,11 +34,6 @@
       z-index: 1;
     }
 
-    &-line {
-      position: relative;
-      z-index: 1;
-    }
-
     &-dots {
       opacity: 1;
       top: -6em;
@@ -50,7 +44,7 @@
   }
 
   &-content-wrapper {
-    z-index: 2;
+    z-index: 3;
     position: relative;
     // padding: 1rem;
     backdrop-filter: blur(3px) !important;
