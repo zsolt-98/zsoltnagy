@@ -3,16 +3,29 @@ import { useEffect, useRef, useState } from "react";
 
 interface AboutAnimation {
   aboutMe: boolean;
+  aboutMeTitle: boolean;
+  aboutMeText: boolean;
   engineering: boolean;
+  engineeringTitle: boolean;
+  engineeringText: boolean;
   design: boolean;
+  designTitle: boolean;
+  designText: boolean;
 }
 
 export default function AboutMe() {
   const [animationStates, setAnimationStates] = useState<AboutAnimation>({
     aboutMe: false,
+    aboutMeTitle: false,
+    aboutMeText: false,
     engineering: false,
+    engineeringTitle: false,
+    engineeringText: false,
     design: false,
+    designTitle: false,
+    designText: false,
   });
+
   const aboutMeRef = useRef(null);
   const engineeringRef = useRef(null);
   const designRef = useRef(null);
@@ -21,22 +34,33 @@ export default function AboutMe() {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          const updateState = (key: keyof AboutAnimation) => {
-            setAnimationStates((prev) => {
-              if (entry.isIntersecting && !prev[key]) {
-                return { ...prev, [key]: true };
-              }
-              return prev;
-            });
-          };
-          if (entry.target === aboutMeRef.current) {
-            updateState("aboutMe");
-          }
-          if (entry.target === engineeringRef.current) {
-            updateState("engineering");
-          }
-          if (entry.target === designRef.current) {
-            updateState("design");
+          if (entry.isIntersecting) {
+            const section =
+              entry.target === aboutMeRef.current
+                ? "aboutMe"
+                : entry.target === engineeringRef.current
+                ? "engineering"
+                : entry.target === designRef.current
+                ? "design"
+                : null;
+
+            if (section) {
+              setAnimationStates((prev) => ({ ...prev, [section]: true }));
+
+              setTimeout(() => {
+                setAnimationStates((prev) => ({
+                  ...prev,
+                  [`${section}Title`]: true,
+                }));
+              }, 300);
+
+              setTimeout(() => {
+                setAnimationStates((prev) => ({
+                  ...prev,
+                  [`${section}Text`]: true,
+                }));
+              }, 500);
+            }
           }
         });
       },
@@ -68,10 +92,18 @@ export default function AboutMe() {
                   animationStates.aboutMe ? "animating" : ""
                 }`}
               >
-                <h2 className="about-me-header text-info display-4 fw-bold text-capitalize">
+                <h2
+                  className={`about-me-header text-info display-4 fw-bold text-capitalize ${
+                    animationStates.aboutMeTitle ? "animating" : ""
+                  }`}
+                >
                   About me
                 </h2>
-                <p className="about-me-paragraph text-light">
+                <p
+                  className={`about-me-paragraph text-light ${
+                    animationStates.aboutMeText ? "animating" : ""
+                  }`}
+                >
                   My journey began with maintaining Shopify sites, where I
                   discovered my true passion for web development. This led me to
                   transition into coding. I blend technical expertise with
@@ -90,10 +122,18 @@ export default function AboutMe() {
                   animationStates.engineering ? "animating" : ""
                 }`}
               >
-                <h2 className="about-engineering-header text-info display-4 fw-bold text-capitalize">
+                <h2
+                  className={`about-engineering-header text-info display-4 fw-bold text-capitalize ${
+                    animationStates.engineeringTitle ? "animating" : ""
+                  }`}
+                >
                   Engineering
                 </h2>
-                <p className="about-engineering-paragraph text-light">
+                <p
+                  className={`about-engineering text-light ${
+                    animationStates.engineeringText ? "animating" : ""
+                  }`}
+                >
                   I build scalable web applications that meet technical
                   requirements and business needs. My engineering approach
                   creates resilient systems that grow alongside business needs
@@ -112,10 +152,18 @@ export default function AboutMe() {
                 }`}
               >
                 <div className="">
-                  <h2 className="about-design-header text-info display-4 fw-bold text-capitalize">
+                  <h2
+                    className={`about-design-header text-info display-4 fw-bold text-capitalize ${
+                      animationStates.designTitle ? "animating" : ""
+                    }`}
+                  >
                     Design
                   </h2>
-                  <p className="about-design-paragraph text-light">
+                  <p
+                    className={`about-design text-light ${
+                      animationStates.designText ? "animating" : ""
+                    }`}
+                  >
                     While my foundation is in development, I have a keen eye for
                     design. Using tools like Figma and Canva, I create intuitive
                     interfaces that enhance user engagement.
