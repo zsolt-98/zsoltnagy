@@ -7,9 +7,11 @@ import PageDivider from "../SVG/PageDivider";
 import IconArrowRight from "../Icons/IconArrowRight";
 import { useEffect, useRef, useState } from "react";
 import { useMediaQuery } from "react-responsive";
+import { useNavigate } from "react-router";
 
 export default function WorkAndCV() {
   const isLgScreen = useMediaQuery({ minWidth: 992 });
+  const navigate = useNavigate();
 
   interface workAndCVAnimation {
     contentContainer: boolean;
@@ -100,6 +102,9 @@ export default function WorkAndCV() {
               className={`workcv-button ${
                 animationStates.contentBtn ? "animating" : ""
               } rounded-0 text-uppercase fs-6 border-2 w-100 w-xl-75`}
+              onClick={() => {
+                navigate("/work");
+              }}
             >
               See my work
               <span className="ms-4">
@@ -135,6 +140,9 @@ export default function WorkAndCV() {
               className={`workcv-button ${
                 animationStates.contentBtn ? "animating" : ""
               } rounded-0 text-uppercase fs-6 border-2 w-100 w-xl-75`}
+              onClick={() => {
+                navigate("/resume");
+              }}
             >
               See my résumé
               <span className="ms-4">

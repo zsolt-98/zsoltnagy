@@ -9,6 +9,7 @@ import IconLinkedin from "./Icons/IconLinkedin";
 import IconGithub from "./Icons/IconGithub";
 import { useEffect, useState } from "react";
 import useZustandStore from "../store/useZustandStore";
+import { Link } from "react-router";
 
 interface NavigationAnimationStates {
   title: boolean;
@@ -74,7 +75,9 @@ export default function Navigation() {
       </button>
 
       <div className="nav-logo-container">
-        <Image src={logo} className="w-100" />
+        <Link to="/">
+          <Image src={logo} className="w-100" />
+        </Link>
       </div>
 
       <div
@@ -94,18 +97,18 @@ export default function Navigation() {
                 animationStates.title ? "animating" : ""
               } fs-4`}
             >
-              <Nav.Link
-                className="nav-menu-content-title text-info p-0"
-                href="/work"
+              <Link
+                to="/work"
+                className="nav-menu-content-title text-info p-0 text-decoration-none"
               >
                 My Work
-              </Nav.Link>
-              <Nav.Link
-                className="nav-menu-content-title text-info p-0"
-                href="/work"
+              </Link>
+              <Link
+                to="/resume"
+                className="nav-menu-content-title text-info p-0 text-decoration-none"
               >
-                My résumé
-              </Nav.Link>
+                My Résumé
+              </Link>
             </Stack>
 
             <div
