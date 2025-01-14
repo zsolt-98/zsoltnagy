@@ -55,8 +55,6 @@ $cursor-size: 0.7em;
 
   &-main {
     z-index: 4;
-    backdrop-filter: blur(3px);
-    -webkit-backdrop-filter: blur(3px);
 
     // Initial state
     opacity: 0;
@@ -64,11 +62,7 @@ $cursor-size: 0.7em;
 
     @media (min-width: 991px) {
       box-shadow: 0 0 15px 5px rgba($dark, 0.15);
-    }
-
-    @media (max-width: 991px) {
-      backdrop-filter: blur(1px);
-      -webkit-backdrop-filter: blur(1px);
+      backdrop-filter: blur(3px);
     }
 
     // Entry animation

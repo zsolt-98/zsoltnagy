@@ -35,21 +35,6 @@ export default function FooterHomepage() {
             if (section) {
               setAnimationStates((prev) => ({ ...prev, [section]: true }));
             }
-
-            //   setTimeout(() => {
-            //     setAnimationStates((prev) => ({
-            //       ...prev,
-            //       [`${section}Title`]: true,
-            //     }));
-            //   }, 300);
-
-            //   setTimeout(() => {
-            //     setAnimationStates((prev) => ({
-            //       ...prev,
-            //       [`${section}Text`]: true,
-            //     }));
-            //   }, 500);
-            // }
           }
         });
       },
