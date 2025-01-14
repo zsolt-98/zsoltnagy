@@ -4,15 +4,78 @@ import Col from "react-bootstrap/Col";
 import Nav from "react-bootstrap/Nav";
 import IconLinkedin from "../Icons/IconLinkedin";
 import IconGithub from "../Icons/IconGithub";
+import { useEffect, useRef, useState } from "react";
+
+interface FooterAnimation {
+  footerTop: boolean;
+  footerBottom: boolean;
+}
 
 export default function FooterHomepage() {
+  const [animationStates, setAnimationStates] = useState<FooterAnimation>({
+    footerTop: false,
+    footerBottom: false,
+  });
+
+  const footerTopRef = useRef(null);
+  const footerBottomRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const section =
+              entry.target === footerTopRef.current
+                ? "footerTop"
+                : entry.target === footerBottomRef.current
+                ? "footerBottom"
+                : null;
+
+            if (section) {
+              setAnimationStates((prev) => ({ ...prev, [section]: true }));
+            }
+
+            //   setTimeout(() => {
+            //     setAnimationStates((prev) => ({
+            //       ...prev,
+            //       [`${section}Title`]: true,
+            //     }));
+            //   }, 300);
+
+            //   setTimeout(() => {
+            //     setAnimationStates((prev) => ({
+            //       ...prev,
+            //       [`${section}Text`]: true,
+            //     }));
+            //   }, 500);
+            // }
+          }
+        });
+      },
+      { threshold: 0.75 }
+    );
+
+    if (footerTopRef.current) observer.observe(footerTopRef.current);
+    if (footerBottomRef.current) observer.observe(footerBottomRef.current);
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <footer className="footer-wrapper d-flex justify-content-center align-items-center position-relative">
       <div className="footer-bg-container">
         <div className="footer-bg-grain"></div>
       </div>
       <Container className="footer-content position-relative py-6">
-        <Row className="gap-6 gap-lg-0">
+        <Row
+          className={`footer-top-wrapper ${
+            animationStates.footerTop ? "animating" : ""
+          } gap-6 gap-lg-0`}
+          ref={footerTopRef}
+        >
           <Col sm={12} lg={6}>
             <div className="d-flex flex-column gap-3">
               <h3 className="text-info fs-3 fw-light m-0">Connect with me</h3>
@@ -55,10 +118,17 @@ export default function FooterHomepage() {
             </div>
           </Col>
         </Row>
-        <div className="border-top border-light border-1 opacity-50 my-3 mt-6" />
-        <div className="d-flex justify-content-between fs-5 text-light">
-          <span>&copy; Zsolt Nagy</span>
-          <span>2025</span>
+        <div
+          className={`footer-bottom-wrapper ${
+            animationStates.footerBottom ? "animating" : ""
+          }`}
+          ref={footerBottomRef}
+        >
+          <div className="border-top border-light border-1 opacity-50 my-3 mt-6" />
+          <div className="d-flex justify-content-between fs-5 text-light">
+            <span>&copy; Zsolt Nagy</span>
+            <span>2025</span>
+          </div>
         </div>
       </Container>
     </footer>
