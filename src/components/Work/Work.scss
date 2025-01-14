@@ -23,4 +23,11 @@
       opacity: 0.06;
     }
   }
+
+  &-carousel {
+    &-container {
+      backdrop-filter: blur(3px) !important;
+      box-shadow: 0 0 15px 5px rgba($dark, 0.15);
+    }
+  }
 }
