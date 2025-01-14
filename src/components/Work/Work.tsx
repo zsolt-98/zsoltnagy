@@ -16,7 +16,7 @@ export default function Work() {
         <div className="work-bg-grain position-absolute" />
       </div>
       <Container className="d-flex justify-content-center align-items-center z-2">
-        <div className="work-carousel-container w-100 position-relative px-5 py-4">
+        <div className="work-carousel-container w-100 position-relative p-4">
           <Image src={test} className="w-100 h-100" />
         </div>
       </Container>
