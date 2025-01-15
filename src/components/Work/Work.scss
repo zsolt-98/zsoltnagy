@@ -1,3 +1,12 @@
+.hover-state {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.default-state {
+  transition: opacity 0.3s ease;
+}
+
 .work {
   &-bg {
     &-container {
@@ -37,7 +46,25 @@
       backdrop-filter: blur(3px) !important;
     }
 
+    &-figure {
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02) translateY(-10px);
+        box-shadow: 0 10px 20px rgba($primary, 0.9);
+
+        & .hover-state {
+          opacity: 1;
+        }
+
+        & .default-state {
+          opacity: 0;
+        }
+      }
+    }
+
     &-img {
+      // width: 100%;
     }
 
     &-text {
