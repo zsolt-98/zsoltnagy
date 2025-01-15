@@ -83,7 +83,7 @@ export default function Navigation() {
       <div
         className={` ${
           isXXLargeScreen ? "nav-menu-side" : "nav-menu-overlay"
-        } ${isOpen ? "open" : ""} position-relative z-1`}
+        } ${isOpen ? "open" : ""} z-2`}
       >
         <div
           className={`nav-menu-content min-vh-100 d-flex align-items-center justify-content-${
