@@ -32,12 +32,16 @@
   }
 
   &-project {
+    &-container {
+      background-color: rgba($primary, 0.5);
+      backdrop-filter: blur(3px) !important;
+    }
+
     &-img {
     }
 
     &-text {
-      background-color: rgba($primary, 0.5);
-      backdrop-filter: blur(3px) !important;
+      background-color: rgba($primary, 0.75);
     }
   }
 }
