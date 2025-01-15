@@ -30,4 +30,14 @@
       box-shadow: 0 0 15px 5px rgba($dark, 0.15);
     }
   }
+
+  &-project {
+    &-img {
+    }
+
+    &-text {
+      background-color: rgba($primary, 0.5);
+      backdrop-filter: blur(3px) !important;
+    }
+  }
 }
