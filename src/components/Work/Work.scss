@@ -42,8 +42,10 @@
 
   &-project {
     &-main {
-      background-color: rgba($primary, 0.5);
-      backdrop-filter: blur(3px) !important;
+      @media (min-width: 577px) {
+        background-color: rgba($primary, 0.5);
+        backdrop-filter: blur(3px) !important;
+      }
     }
 
     &-figure {
