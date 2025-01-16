@@ -16,7 +16,7 @@ import portfoliHero from "../../assets/portfolio-hero.png";
 export default function Work() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
   const isUnderMdScreen = useMediaQuery({ maxWidth: 768 });
-  const isUnderSmScreen = useMediaQuery({ maxWidth: 500 });
+  const isUnderSmScreen = useMediaQuery({ maxWidth: 450 });
   const { isOpen } = useZustandStore();
 
   return (
