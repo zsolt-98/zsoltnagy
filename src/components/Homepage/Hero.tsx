@@ -105,7 +105,7 @@ export default function Hero() {
           <div
             className={`hero-main ${
               !isXXLargeScreen && isOpen ? "hero-main-exit" : ""
-            } blur-bg ${animationStates.container ? "animating" : ""} my-6`}
+            } blur-bg ${animationStates.container ? "animating" : ""} my-7`}
           >
             <div className="p-3 p-xl-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
               <div className="d-inline-block">
