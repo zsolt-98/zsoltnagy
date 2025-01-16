@@ -15,6 +15,7 @@ import portfoliHero from "../../assets/portfolio-hero.png";
 
 export default function Work() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
+  const isXLScreen = useMediaQuery({ minWidth: 1200 });
   const isUnderMdScreen = useMediaQuery({ maxWidth: 460 });
   const isUnderSmScreen = useMediaQuery({ maxWidth: 390 });
   const { isOpen } = useZustandStore();
@@ -22,7 +23,9 @@ export default function Work() {
   return (
     <section className="min-vh-100 position-relative d-flex justify-content-between">
       <Image
-        className="position-absolute w-100 h-100 z-1 opacity-25 py-5"
+        className={`position-absolute w-100 h-100 z-1 opacity-25 py-5 ${
+          !isXLScreen ? "object-fit-cover" : ""
+        }`}
         src={bgWork}
       />
       <div className="work-bg-container position-absolute">
