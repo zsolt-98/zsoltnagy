@@ -29,6 +29,10 @@ export default function Navigation() {
     });
 
   useEffect(() => {
+    setIsOpen(false);
+  }, [location, setIsOpen]);
+
+  useEffect(() => {
     if (isOpen && !isXXLargeScreen) {
       document.body.classList.add("no-scroll");
     } else {
