@@ -46,6 +46,11 @@
 
   &-menu {
     &-content {
+      &:not(.home) {
+        backdrop-filter: blur(3px) !important;
+        background-color: rgba($primary, 0.5);
+      }
+
       &-title,
       &-connect {
         @media (max-width: 1499px) {

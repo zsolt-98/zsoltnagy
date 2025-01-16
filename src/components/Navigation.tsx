@@ -9,7 +9,7 @@ import IconLinkedin from "./Icons/IconLinkedin";
 import IconGithub from "./Icons/IconGithub";
 import { useEffect, useState } from "react";
 import useZustandStore from "../store/useZustandStore";
-import { Link } from "react-router";
+import { Link, useLocation } from "react-router";
 
 interface NavigationAnimationStates {
   title: boolean;
@@ -18,8 +18,9 @@ interface NavigationAnimationStates {
 
 export default function Navigation() {
   const isSMScreen = useMediaQuery({ minWidth: 768 });
-
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
   const { isOpen, setIsOpen } = useZustandStore();
   const [animationStates, setAnimationStates] =
     useState<NavigationAnimationStates>({
@@ -86,9 +87,9 @@ export default function Navigation() {
         } ${isOpen ? "open" : ""} z-2`}
       >
         <div
-          className={`nav-menu-content min-vh-100 d-flex align-items-center justify-content-${
+          className={`nav-menu-content min-vh-100 p-5 d-flex align-items-center justify-content-${
             !isXXLargeScreen ? "center" : "start"
-          } p-5`}
+          } ${isHomePage ? "home" : ""}`}
         >
           <Nav className="d-flex flex-column justify-content-between gap-6">
             <Stack
