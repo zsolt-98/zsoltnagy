@@ -1,8 +1,6 @@
 import Container from "react-bootstrap/Container";
 import Navigation from "../Navigation";
 import Image from "react-bootstrap/Image";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 
 import { useMediaQuery } from "react-responsive";
 import useZustandStore from "../../store/useZustandStore";
@@ -29,6 +27,7 @@ export default function Work() {
         <div className="work-bg-grain position-absolute" />
       </div>
       <Container
+        fluid="xs"
         className={`work-project-container d-flex
          justify-content-center align-items-center z-2`}
       >
