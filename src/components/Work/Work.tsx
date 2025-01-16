@@ -8,15 +8,15 @@ import useZustandStore from "../../store/useZustandStore";
 import bgWork from "../../assets/bg-work.png";
 import yourneyLogo from "../../assets/yourney-logo.png";
 import yourneyHero from "../../assets/yourney-hero.png";
-import yourneyHeroSm from "../../assets/yourney-hero-md.png";
-// import yourneyHeroMd from "../../assets/yourney-hero-md.png";
+import yourneyHeroMd from "../../assets/yourney-hero-md.png";
+import yourneyHeroSm from "../../assets/yourney-hero-sm.png";
 import portfolioLogo from "../../assets/zsn-logo-270x63.png";
 import portfoliHero from "../../assets/portfolio-hero.png";
 
 export default function Work() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
-  // const isUnderMdScreen = useMediaQuery({ maxWidth: 768 });
-  const isUnderSmScreen = useMediaQuery({ maxWidth: 460 });
+  const isUnderMdScreen = useMediaQuery({ maxWidth: 460 });
+  const isUnderSmScreen = useMediaQuery({ maxWidth: 390 });
   const { isOpen } = useZustandStore();
 
   return (
@@ -58,9 +58,9 @@ export default function Work() {
                       src={
                         isUnderSmScreen
                           ? yourneyHeroSm
-                          : // : isUnderMdScreen
-                            // ? yourneyHeroMd
-                            yourneyHero
+                          : isUnderMdScreen
+                          ? yourneyHeroMd
+                          : yourneyHero
                       }
                       className="w-100 h-100 object-fit-cover"
                       style={{
