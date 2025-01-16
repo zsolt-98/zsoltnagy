@@ -49,7 +49,7 @@ export default function Work() {
               <figure className="work-project-figure m-0">
                 <div className="work-project-img position-relative bg-light p-6">
                   <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
-                    <Image src={yourneyLogo} className="" />
+                    <Image src={yourneyLogo} className="img-fluid" />
                   </div>
                   <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
                     <Image
@@ -72,7 +72,7 @@ export default function Work() {
               <figure className="work-project-figure m-0">
                 <div className="work-project-img position-relative bg-light p-6">
                   <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
-                    <Image src={portfolioLogo} className="" />
+                    <Image src={portfolioLogo} className="img-fluid" />
                   </div>
                   <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
                     <Image
