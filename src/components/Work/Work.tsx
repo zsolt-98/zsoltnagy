@@ -33,7 +33,7 @@ export default function Work() {
         <div
           className={`work-project-main ${
             !isXXLargeScreen && isOpen ? "d-none" : "d-flex"
-          } flex-column p-3 p-xl-5 gap-6 my-7`}
+          } flex-column px-3 py-6 p-xl-5 gap-6 my-7`}
         >
           <div className="text-center">
             <h2 className="text-light display-4">
@@ -44,7 +44,7 @@ export default function Work() {
               A collection of the projects that I have worked on.
             </p>
           </div>
-          <Row className="gap-3 justify-content-center">
+          <Row className="gap-5 gap-xl-3 justify-content-center">
             <Col xs="auto" as="button" className="border-0 bg-transparent p-0">
               <figure className="work-project-figure m-0">
                 <div className="work-project-img position-relative bg-light p-6">
