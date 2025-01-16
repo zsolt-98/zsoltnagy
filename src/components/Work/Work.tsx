@@ -9,6 +9,7 @@ import bgWork from "../../assets/bg-work.png";
 import yourneyLogo from "../../assets/yourney-logo.png";
 import yourneyHero from "../../assets/yourney-linkedin.png";
 import portfolioLogo from "../../assets/zsn-logo-270x63.png";
+import portfoliHero from "../../assets/portfolio-hero.png";
 
 export default function Work() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
@@ -67,8 +68,20 @@ export default function Work() {
             </button>
             <button className="border-0 bg-transparent p-0">
               <figure className="work-project-figure m-0">
-                <div className="work-project-img d-flex justify-content-center align-items-center bg-light p-6 ">
-                  <Image src={portfolioLogo} className=""></Image>
+                <div className="work-project-img position-relative bg-light p-6">
+                  <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
+                    <Image src={portfolioLogo} className="" />
+                  </div>
+                  <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
+                    <Image
+                      src={portfoliHero}
+                      className="w-100 h-100 object-fit-cover"
+                      style={{
+                        transform: "translateZ(0)",
+                        backfaceVisibility: "hidden",
+                      }}
+                    />
+                  </div>
                 </div>
                 <figcaption className="work-project-text text-start p-4">
                   <h3 className="text-info">Personal Website</h3>
