@@ -9,12 +9,14 @@ import useZustandStore from "../../store/useZustandStore";
 
 import bgWork from "../../assets/bg-work.png";
 import yourneyLogo from "../../assets/yourney-logo.png";
-import yourneyHero from "../../assets/yourney-linkedin.png";
+import yourneyHero from "../../assets/yourney-hero.png";
+import yourneyHeroSM from "../../assets/yourney-hero-sm.png";
 import portfolioLogo from "../../assets/zsn-logo-270x63.png";
 import portfoliHero from "../../assets/portfolio-hero.png";
 
 export default function Work() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
+  const isUnderMdScreen = useMediaQuery({ maxWidth: 768 });
   const { isOpen } = useZustandStore();
 
   return (
@@ -47,13 +49,13 @@ export default function Work() {
           <Row className="gap-5 gap-xl-3 justify-content-center">
             <Col xs="auto" as="button" className="border-0 bg-transparent p-0">
               <figure className="work-project-figure m-0">
-                <div className="work-project-img position-relative bg-light p-6">
+                <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6">
                   <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
                     <Image src={yourneyLogo} className="img-fluid" />
                   </div>
                   <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
                     <Image
-                      src={yourneyHero}
+                      src={isUnderMdScreen ? yourneyHeroSM : yourneyHero}
                       className="w-100 h-100 object-fit-cover"
                       style={{
                         transform: "translateZ(0)",
@@ -70,7 +72,7 @@ export default function Work() {
             </Col>
             <Col xs="auto" as="button" className="border-0 bg-transparent p-0">
               <figure className="work-project-figure m-0">
-                <div className="work-project-img position-relative bg-light p-6">
+                <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6">
                   <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
                     <Image src={portfolioLogo} className="img-fluid" />
                   </div>
