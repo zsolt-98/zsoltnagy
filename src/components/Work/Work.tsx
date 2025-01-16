@@ -8,7 +8,7 @@ import useZustandStore from "../../store/useZustandStore";
 import bgWork from "../../assets/bg-work.png";
 import yourneyLogo from "../../assets/yourney-logo.png";
 import yourneyHero from "../../assets/yourney-hero.png";
-import yourneyHeroSm from "../../assets/yourney-hero-sm.png";
+import yourneyHeroSm from "../../assets/yourney-hero-md.png";
 // import yourneyHeroMd from "../../assets/yourney-hero-md.png";
 import portfolioLogo from "../../assets/zsn-logo-270x63.png";
 import portfoliHero from "../../assets/portfolio-hero.png";
