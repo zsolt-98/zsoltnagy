@@ -37,7 +37,7 @@ export default function Work() {
             !isXXLargeScreen && isOpen ? "d-none" : "d-flex"
           } flex-column px-3 py-6 p-sm-5 gap-6 my-7`}
         >
-          <div className="text-center">
+          <div className="work-project-title-container p-3 p-md-0 text-center">
             <h2 className="text-light display-4">
               <span className="text-info">/</span>work
               <span className="text-info ms-1">.</span>
