@@ -2,7 +2,6 @@ import Carousel from "react-bootstrap/Carousel";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 import Image from "react-bootstrap/Image";
-import test from "../../assets/yourney-hero.png";
 
 import yourneyHero from "../../assets/projects/yourney/yourney-hero-1848x1020.png";
 import yourneyRegister from "../../assets/projects/yourney/yourney-register-1848x1020.png";
