@@ -18,7 +18,7 @@ import yourneyBookings from "../../assets/projects/yourney/yourney-bookings-1848
 export default function Yourney() {
   return (
     <div className="my-7 d-flex flex-column gap-6">
-      <div className="work-project-content d-flex flex-column w-100  gap-5 py-5">
+      <div className="work-project-content d-flex flex-column w-100  gap-5 pt-5">
         <div className="work-project-title-container p-3 p-md-0 text-center">
           <h2 className="text-light display-4">
             <span className="text-info">/work/</span>yourney
@@ -32,7 +32,7 @@ export default function Yourney() {
             interval={2000}
             prevIcon={<ChevronLeft size={50} stroke="#58c4dc" />}
             nextIcon={<ChevronRight size={50} stroke="#58c4dc" />}
-            className="w-100 px-5"
+            className="w-100 px-5 pb-5"
           >
             <Carousel.Item>
               <Image src={yourneyHero} className="w-100"></Image>

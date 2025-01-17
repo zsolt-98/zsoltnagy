@@ -100,3 +100,25 @@
 .carousel-control-next {
   justify-content: end;
 }
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 0.5rem auto 0.5rem auto;
+
+  [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: $light;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+    margin: 0;
+
+    &.active {
+      opacity: 1;
+      background-color: $info;
+    }
+  }
+}
