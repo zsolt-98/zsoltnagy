@@ -6,33 +6,36 @@ import test from "../../assets/yourney-hero.png";
 
 export default function Yourney() {
   return (
-    <div className="d-flex flex-column w-100 my-7 gap-6">
-      <div className="work-project-title-container p-3 p-md-0 text-center">
-        <h2 className="text-light display-4">
-          <span className="text-info">/work/</span>yourney
-          <span className="text-info ms-1">.</span>
-        </h2>
+    <div className="my-7 d-flex flex-column gap-6">
+      <div className="work-project-content d-flex flex-column w-100  gap-6 py-5">
+        <div className="work-project-title-container p-3 p-md-0 text-center">
+          <h2 className="text-light display-4">
+            <span className="text-info">/work/</span>yourney
+            <span className="text-info ms-1">.</span>
+          </h2>
+          <p className="text-info fs-5">Premium car rentals.</p>
+        </div>
+        <div className="work-project-carousel-container d-flex position-relative w-100">
+          <Carousel
+            pause="hover"
+            interval={3000}
+            prevIcon={<ChevronLeft size={50} stroke="#58c4dc" />}
+            nextIcon={<ChevronRight size={50} stroke="#58c4dc" className="" />}
+            className="w-100 px-5"
+          >
+            <Carousel.Item>
+              <Image src={test} className="w-100"></Image>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={test} className="w-100"></Image>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={test} className="w-100"></Image>
+            </Carousel.Item>
+          </Carousel>
+        </div>
       </div>
-      <div className="work-project-carousel-container d-flex position-relative w-100">
-        <Carousel
-          pause="hover"
-          interval={3000}
-          prevIcon={<ChevronLeft size={50} stroke="#58c4dc" />}
-          nextIcon={<ChevronRight size={50} stroke="#58c4dc" className="" />}
-          className="w-100 px-5"
-        >
-          <Carousel.Item>
-            <Image src={test} className="w-100"></Image>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Image src={test} className="w-100"></Image>
-          </Carousel.Item>
-          <Carousel.Item>
-            <Image src={test} className="w-100"></Image>
-          </Carousel.Item>
-        </Carousel>
-      </div>
-      <div className="work-project-description d-flex flex-column gap-5 text-info mx-7 p-5">
+      <div className="work-project-description d-flex flex-column gap-4 text-info mx-7 p-5">
         <p className="fs-5">
           Yourney is a premium car rental application that showcases my frontend
           development skills using modern React technologies.

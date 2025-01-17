@@ -80,7 +80,8 @@
       background-color: rgba($primary, 0.75);
     }
 
-    &-description {
+    &-description,
+    &-content {
       background-color: rgba($primary, 0.5);
       backdrop-filter: blur(3px) !important;
     }
