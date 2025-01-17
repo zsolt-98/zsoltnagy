@@ -33,13 +33,6 @@
     }
   }
 
-  &-carousel {
-    &-container {
-      backdrop-filter: blur(3px) !important;
-      box-shadow: 0 0 15px 5px rgba($dark, 0.15);
-    }
-  }
-
   &-project {
     &-main {
       @media (min-width: 577px) {
@@ -87,4 +80,18 @@
       background-color: rgba($primary, 0.75);
     }
   }
+}
+
+.carousel-control-prev {
+  // left: -2.5rem;
+  opacity: 100%;
+  justify-content: start;
+  align-items: center;
+}
+
+.carousel-control-next {
+  // right: -2.5rem;
+  opacity: 100%;
+  justify-content: end;
+  align-items: center;
 }

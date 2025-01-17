@@ -39,14 +39,13 @@ export default function Work() {
       <div className="work-bg-container position-absolute">
         <div className="work-bg-grain position-absolute" />
       </div>
-
-      {isYourneyRoute ? (
-        <Outlet />
-      ) : (
-        <Container
-          className={`work-project-container d-flex
-           justify-content-center align-items-center z-2 px-0`}
-        >
+      <Container
+        className={`work-project-container d-flex
+         justify-content-center align-items-center z-2 px-0`}
+      >
+        {isYourneyRoute ? (
+          <Outlet />
+        ) : (
           <div
             className={`work-project-main ${
               !isXXLargeScreen && isOpen ? "d-none" : "d-flex"
@@ -119,8 +118,8 @@ export default function Work() {
               </button>
             </div>
           </div>
-        </Container>
-      )}
+        )}
+      </Container>
       <Navigation />
     </section>
   );
