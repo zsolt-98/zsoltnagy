@@ -7,6 +7,13 @@ import yourneyHero from "../../assets/projects/yourney/yourney-hero-1848x1020.pn
 import yourneyRegister from "../../assets/projects/yourney/yourney-register-1848x1020.png";
 import yourneySignin from "../../assets/projects/yourney/yourney-signin-1848x1020.png";
 import yourneyProfile from "../../assets/projects/yourney/yourney-profile-1848x1020.png";
+import yourneyNoBookings from "../../assets/projects/yourney/yourney-no-bookings-1848x1020.png";
+import yourneyModalVehicle from "../../assets/projects/yourney/yourney-modal-vehicle-1848x1020.png";
+import yourneyModalBook from "../../assets/projects/yourney/yourney-modal-book-1848x1020.png";
+import yourneyModalDetails from "../../assets/projects/yourney/yourney-modal-details-1848x1020.png";
+import yourneyModalPayment from "../../assets/projects/yourney/yourney-modal-payment-1848x1020.png";
+import yourneyModalConfirm from "../../assets/projects/yourney/yourney-modal-confirm-1848x1020.png";
+import yourneyBookings from "../../assets/projects/yourney/yourney-bookings-1848x1020.png";
 
 export default function Yourney() {
   return (
@@ -38,6 +45,27 @@ export default function Yourney() {
             </Carousel.Item>
             <Carousel.Item>
               <Image src={yourneyProfile} className="w-100"></Image>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={yourneyNoBookings} className="w-100"></Image>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={yourneyModalVehicle} className="w-100"></Image>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={yourneyModalBook} className="w-100"></Image>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={yourneyModalDetails} className="w-100"></Image>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={yourneyModalPayment} className="w-100"></Image>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={yourneyModalConfirm} className="w-100"></Image>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={yourneyBookings} className="w-100"></Image>
             </Carousel.Item>
           </Carousel>
         </div>
