@@ -4,33 +4,41 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "react-bootstrap/Image";
 import test from "../../assets/yourney-hero.png";
 
+import yourneyHero from "../../assets/projects/yourney/yourney-hero-1848x1020.png";
+import yourneyRegister from "../../assets/projects/yourney/yourney-register-1848x1020.png";
+import yourneySignin from "../../assets/projects/yourney/yourney-signin-1848x1020.png";
+import yourneyProfile from "../../assets/projects/yourney/yourney-profile-1848x1020.png";
+
 export default function Yourney() {
   return (
     <div className="my-7 d-flex flex-column gap-6">
-      <div className="work-project-content d-flex flex-column w-100  gap-6 py-5">
+      <div className="work-project-content d-flex flex-column w-100  gap-5 py-5">
         <div className="work-project-title-container p-3 p-md-0 text-center">
           <h2 className="text-light display-4">
             <span className="text-info">/work/</span>yourney
             <span className="text-info ms-1">.</span>
           </h2>
-          <p className="text-info fs-5">Premium car rentals.</p>
+          <p className="text-info fs-5">your-ney.netlify.app</p>
         </div>
         <div className="work-project-carousel-container d-flex position-relative w-100">
           <Carousel
             pause="hover"
-            interval={3000}
+            interval={2000}
             prevIcon={<ChevronLeft size={50} stroke="#58c4dc" />}
-            nextIcon={<ChevronRight size={50} stroke="#58c4dc" className="" />}
+            nextIcon={<ChevronRight size={50} stroke="#58c4dc" />}
             className="w-100 px-5"
           >
             <Carousel.Item>
-              <Image src={test} className="w-100"></Image>
+              <Image src={yourneyHero} className="w-100"></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={test} className="w-100"></Image>
+              <Image src={yourneyRegister} className="w-100"></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={test} className="w-100"></Image>
+              <Image src={yourneySignin} className="w-100"></Image>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src={yourneyProfile} className="w-100"></Image>
             </Carousel.Item>
           </Carousel>
         </div>
