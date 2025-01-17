@@ -6,25 +6,63 @@ import test from "../../assets/yourney-hero.png";
 
 export default function Yourney() {
   return (
-    <div className="work-project-carousel-container d-flex position-relative w-100">
-      <Carousel
-        pause="hover"
-        interval={3000}
-        indicators={false}
-        prevIcon={<ChevronLeft size={50} stroke="#58c4dc" />}
-        nextIcon={<ChevronRight size={50} stroke="#58c4dc" className="" />}
-        className="w-100 px-5"
-      >
-        <Carousel.Item>
-          <Image src={test} className="w-100"></Image>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image src={test} className="w-100"></Image>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image src={test} className="w-100"></Image>
-        </Carousel.Item>
-      </Carousel>
+    <div className="d-flex flex-column w-100 my-7 gap-6">
+      <div className="work-project-title-container p-3 p-md-0 text-center">
+        <h2 className="text-light display-4">
+          <span className="text-info">/work/</span>yourney
+          <span className="text-info ms-1">.</span>
+        </h2>
+      </div>
+      <div className="work-project-carousel-container d-flex position-relative w-100">
+        <Carousel
+          pause="hover"
+          interval={3000}
+          prevIcon={<ChevronLeft size={50} stroke="#58c4dc" />}
+          nextIcon={<ChevronRight size={50} stroke="#58c4dc" className="" />}
+          className="w-100 px-5"
+        >
+          <Carousel.Item>
+            <Image src={test} className="w-100"></Image>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image src={test} className="w-100"></Image>
+          </Carousel.Item>
+          <Carousel.Item>
+            <Image src={test} className="w-100"></Image>
+          </Carousel.Item>
+        </Carousel>
+      </div>
+      <div className="work-project-description d-flex flex-column gap-5 text-info mx-7 p-5">
+        <p className="fs-5">
+          Yourney is a premium car rental application that showcases my frontend
+          development skills using modern React technologies.
+        </p>
+        <p className="fs-5">
+          While working on this project, I focused on implementing core React
+          concepts and essential frontend functionalities. The application
+          features a clean, responsive design built with Bootstrap and Sass,
+          while using Zustand for efficient state management.
+        </p>
+        <p className="fs-5">
+          I implemented user authentication flows including registration and
+          login pages, demonstrating my understanding of form handling and
+          client-side validation. The authentication data is stored in local
+          storage, simulating how a real application would handle user sessions.
+        </p>
+        <p className="fs-5">
+          The main booking interface allows users to browse available vehicles,
+          select rental dates, and choose pickup/drop-off locations. The user
+          profile section enables customers to update their profile information
+          (username, first name, email address) and profile photo, as well as
+          reset their password. Users can manage their active bookings through a
+          simple dashboard interface.
+        </p>
+        <p className="fs-5">
+          This project helped me gain hands-on experience with React
+          development, state management, and frontend best practices while
+          creating a functional demo that showcases these skills.
+        </p>
+      </div>
     </div>
   );
 }

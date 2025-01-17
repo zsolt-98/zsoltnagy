@@ -79,19 +79,23 @@
     &-text {
       background-color: rgba($primary, 0.75);
     }
+
+    &-description {
+      background-color: rgba($primary, 0.5);
+      backdrop-filter: blur(3px) !important;
+    }
   }
 }
 
-.carousel-control-prev {
-  // left: -2.5rem;
-  opacity: 100%;
-  justify-content: start;
+.carousel-control-prev,
+.carousel-control-next {
+  opacity: 1;
   align-items: center;
+}
+.carousel-control-prev {
+  justify-content: start;
 }
 
 .carousel-control-next {
-  // right: -2.5rem;
-  opacity: 100%;
   justify-content: end;
-  align-items: center;
 }
