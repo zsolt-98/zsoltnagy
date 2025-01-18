@@ -46,7 +46,7 @@ export default function Work() {
           <div
             className={`work-project-main ${
               !isXXLargeScreen && isOpen ? "d-none" : "d-flex"
-            } flex-column px-3 py-6 p-sm-5 gap-5 my-7`}
+            } flex-column px-0 py-5 p-md-5 gap-5 my-7 w-90`}
           >
             <div className="work-project-title-container p-3 p-md-0 text-center">
               <h2 className="text-info display-6">
