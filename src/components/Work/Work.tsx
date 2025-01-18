@@ -17,7 +17,7 @@ import { Outlet, useLocation, useNavigate } from "react-router";
 export default function Work() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
   const isXLScreen = useMediaQuery({ minWidth: 1200 });
-  const isUnderMdScreen = useMediaQuery({ maxWidth: 460 });
+  const isUnderMdScreen = useMediaQuery({ maxWidth: 768 });
   const isUnderSmScreen = useMediaQuery({ maxWidth: 390 });
   const { isOpen } = useZustandStore();
   const navigate = useNavigate();
