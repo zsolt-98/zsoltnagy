@@ -80,10 +80,9 @@ export default function Yourney() {
           development skills using modern React technologies.
         </p>
         <p className="fs-6">
-          While working on this project, I focused on implementing core React
-          concepts and essential frontend functionalities. The application
-          features a clean, responsive design built with Bootstrap and Sass,
-          while using Zustand for efficient state management.
+          The application features a clean, responsive design built with
+          Bootstrap and Sass, while using Zustand for efficient state
+          management.
         </p>
         <p className="fs-6">
           I implemented user authentication flows including registration and

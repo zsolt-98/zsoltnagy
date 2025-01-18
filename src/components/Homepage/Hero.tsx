@@ -131,7 +131,7 @@ export default function Hero() {
                       animationStates.role ? "animating" : ""
                     } text-info fs-4 fw-semibold mb-3`}
                   >
-                    A front-end developer
+                    A frontend developer
                     <br />
                     based in Subotica, Serbia.
                   </h2>
