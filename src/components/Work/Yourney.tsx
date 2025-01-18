@@ -17,7 +17,7 @@ import yourneyBookings from "../../assets/projects/yourney/yourney-bookings-1848
 import { useMediaQuery } from "react-responsive";
 
 export default function Yourney() {
-  const isUnderLgScreen = useMediaQuery({ maxWidth: 768 });
+  const isUnderLgScreen = useMediaQuery({ maxWidth: 575 });
 
   return (
     <div className="w-100 my-7 d-flex flex-column align-items-center gap-6">
@@ -36,7 +36,7 @@ export default function Yourney() {
             controls={isUnderLgScreen ? false : true}
             prevIcon={<ChevronLeft size={50} stroke="#58c4dc" />}
             nextIcon={<ChevronRight size={50} stroke="#58c4dc" />}
-            className={`w-100 pb-5 ${isUnderLgScreen ? "px-0" : "px-5"}`}
+            className="w-100 pb-5 px-0 px-sm-5"
           >
             <Carousel.Item>
               <Image src={yourneyHero} fluid className=""></Image>

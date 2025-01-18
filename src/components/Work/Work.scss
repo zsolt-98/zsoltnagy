@@ -35,7 +35,7 @@
 
   &-project {
     &-main {
-      @media (min-width: 577px) {
+      @media (min-width: 576px) {
         background-color: rgba($primary, 0.5);
         backdrop-filter: blur(3px) !important;
       }
@@ -43,7 +43,7 @@
 
     &-title {
       &-container {
-        @media (max-width: 576px) {
+        @media (max-width: 575px) {
           background-color: rgba($primary, 0.5);
           backdrop-filter: blur(3px) !important;
         }
@@ -86,7 +86,7 @@
     }
 
     &-content {
-      @media (min-width: 769px) {
+      @media (min-width: 576px) {
         background-color: rgba($primary, 0.5);
         backdrop-filter: blur(3px) !important;
       }
