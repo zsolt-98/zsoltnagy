@@ -13,6 +13,11 @@ body.no-scroll {
   overflow: hidden;
 }
 
+.w-90 {
+  max-width: 90%;
+  height: auto;
+}
+
 @media (min-width: 992px) {
   .w-lg-50 {
     width: 50% !important;

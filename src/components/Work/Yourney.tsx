@@ -17,8 +17,8 @@ import yourneyBookings from "../../assets/projects/yourney/yourney-bookings-1848
 
 export default function Yourney() {
   return (
-    <div className="my-7 d-flex flex-column gap-6">
-      <div className="work-project-content d-flex flex-column w-100  gap-5 pt-5">
+    <div className="my-7 d-flex flex-column align-items-center gap-6">
+      <div className="work-project-content d-flex flex-column w-90  gap-5 pt-5">
         <div className="work-project-title-container p-3 p-md-0 text-center">
           <h2 className="text-light display-4">
             <span className="text-info">/work/</span>yourney
@@ -35,37 +35,37 @@ export default function Yourney() {
             className="w-100 px-5 pb-5"
           >
             <Carousel.Item>
-              <Image src={yourneyHero} className="w-100"></Image>
+              <Image src={yourneyHero} fluid className=""></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={yourneyRegister} className="w-100"></Image>
+              <Image src={yourneyRegister} fluid className=""></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={yourneySignin} className="w-100"></Image>
+              <Image src={yourneySignin} fluid className=""></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={yourneyProfile} className="w-100"></Image>
+              <Image src={yourneyProfile} fluid className=""></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={yourneyNoBookings} className="w-100"></Image>
+              <Image src={yourneyNoBookings} fluid className=""></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={yourneyModalVehicle} className="w-100"></Image>
+              <Image src={yourneyModalVehicle} fluid className=""></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={yourneyModalBook} className="w-100"></Image>
+              <Image src={yourneyModalBook} fluid className=""></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={yourneyModalDetails} className="w-100"></Image>
+              <Image src={yourneyModalDetails} fluid className=""></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={yourneyModalPayment} className="w-100"></Image>
+              <Image src={yourneyModalPayment} fluid className=""></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={yourneyModalConfirm} className="w-100"></Image>
+              <Image src={yourneyModalConfirm} fluid className=""></Image>
             </Carousel.Item>
             <Carousel.Item>
-              <Image src={yourneyBookings} className="w-100"></Image>
+              <Image src={yourneyBookings} fluid className=""></Image>
             </Carousel.Item>
           </Carousel>
         </div>
