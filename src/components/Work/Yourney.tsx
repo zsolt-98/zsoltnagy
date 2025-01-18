@@ -23,11 +23,11 @@ export default function Yourney() {
     <div className="w-100 my-7 d-flex flex-column align-items-center gap-6">
       <div className="work-project-content d-flex flex-column w-90  gap-5 pt-5">
         <div className="work-project-title-container p-3 p-md-0 text-center">
-          <h2 className="text-light display-4">
-            <span className="text-info">/work/</span>yourney
-            <span className="text-info ms-1">.</span>
+          <h2 className="text-info display-6">
+            <span className="text-light">/work/</span>yourney
+            <span className="text-light ms-1">.</span>
           </h2>
-          <p className="text-info fs-5">your-ney.netlify.app</p>
+          <p className="text-light fs-5">your-ney.netlify.app</p>
         </div>
         <div className="work-project-carousel-container d-flex position-relative w-100">
           <Carousel

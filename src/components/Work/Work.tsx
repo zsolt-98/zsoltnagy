@@ -49,11 +49,11 @@ export default function Work() {
             } flex-column px-3 py-6 p-sm-5 gap-5 my-7`}
           >
             <div className="work-project-title-container p-3 p-md-0 text-center">
-              <h2 className="text-light display-4">
-                <span className="text-info">/</span>work
-                <span className="text-info ms-1">.</span>
+              <h2 className="text-info display-6">
+                <span className="text-light">/</span>work
+                <span className="text-light ms-1">.</span>
               </h2>
-              <p className="text-info fs-5">
+              <p className="text-light fs-5">
                 A collection of the projects that I have worked on.
               </p>
             </div>
