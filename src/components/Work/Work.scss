@@ -80,10 +80,16 @@
       background-color: rgba($primary, 0.75);
     }
 
-    &-description,
-    &-content {
+    &-description {
       background-color: rgba($primary, 0.5);
       backdrop-filter: blur(3px) !important;
+    }
+
+    &-content {
+      @media (min-width: 769px) {
+        background-color: rgba($primary, 0.5);
+        backdrop-filter: blur(3px) !important;
+      }
     }
   }
 }

@@ -24,10 +24,6 @@ export default function Work() {
   const location = useLocation();
   const isYourneyRoute = location.pathname === "/work/yourney";
 
-  // if (isYourneyRoute) {
-  //   return
-  // }
-
   return (
     <section className="min-vh-100 w-100 position-relative d-flex justify-content-between">
       <Image
@@ -40,7 +36,6 @@ export default function Work() {
         <div className="work-bg-grain position-absolute" />
       </div>
       <Container
-        // fluid="md"
         className={`work-project-container d-flex
          justify-content-center align-items-center z-2 px-0`}
       >

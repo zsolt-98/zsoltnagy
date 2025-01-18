@@ -36,7 +36,7 @@ export default function Yourney() {
             controls={isUnderLgScreen ? false : true}
             prevIcon={<ChevronLeft size={50} stroke="#58c4dc" />}
             nextIcon={<ChevronRight size={50} stroke="#58c4dc" />}
-            className={`w-100 pb-5 ${isUnderLgScreen ? "px-5" : "px-5"}`}
+            className={`w-100 pb-5 ${isUnderLgScreen ? "px-0" : "px-5"}`}
           >
             <Carousel.Item>
               <Image src={yourneyHero} fluid className=""></Image>
