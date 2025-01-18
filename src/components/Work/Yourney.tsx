@@ -28,7 +28,14 @@ export default function Yourney() {
               <span className="text-light">/work/</span>yourney
               <span className="text-light ms-1">.</span>
             </h2>
-            <p className="text-light fs-5">your-ney.netlify.app</p>
+            <a
+              href="https://your-ney.netlify.app"
+              className="work-project-link text-light fs-5 text-decoration-none"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              your-ney.netlify.app
+            </a>
           </div>
         </div>
         <div className="work-project-carousel-container d-flex position-relative w-100">

@@ -50,6 +50,13 @@
       }
     }
 
+    &-link {
+      &:hover {
+        color: $info !important;
+        text-decoration: underline !important;
+      }
+    }
+
     &-figure {
       transition: all 0.3s ease;
 
