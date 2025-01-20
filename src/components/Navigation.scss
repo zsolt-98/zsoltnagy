@@ -46,6 +46,9 @@
 
   &-menu {
     &-content {
+      backdrop-filter: blur(3px);
+      box-shadow: 0 0 15px 5px rgba($dark, 0.15);
+
       &:not(.home) {
         backdrop-filter: blur(3px) !important;
         background-color: rgba($primary, 0.5);
@@ -111,11 +114,11 @@
     }
 
     &-side {
+      margin: 2rem 2rem 0 0;
       width: 0;
       min-width: 0;
       max-width: 0;
       overflow: hidden;
-      backdrop-filter: blur(3px);
       visibility: hidden;
       transition: width 0.3s ease, min-width 0.3s ease, visibility 0.3s;
 
@@ -123,7 +126,6 @@
         width: 23em; // 17.5em
         min-width: 23em; // 17.5em
         max-width: 23em;
-        box-shadow: 0 0 15px 5px rgba($dark, 0.15);
         visibility: visible;
         transition: width 0.3s ease, min-width 0.3s ease, visibility 0s;
       }

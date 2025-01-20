@@ -29,7 +29,7 @@ export default function Work() {
     <>
       <section className="min-vh-100 w-100 position-relative d-flex justify-content-between overflow-hidden">
         <Image
-          className={`position-absolute w-100 h-100 z-1 opacity-25 py-5 ${
+          className={`work-bg-img position-absolute w-100 z-1 opacity-25 py-5 ${
             !isXLScreen ? "object-fit-cover" : ""
           }`}
           src={bgWork}
@@ -48,7 +48,7 @@ export default function Work() {
             <div
               className={`work-project-main ${
                 !isXXLargeScreen && isOpen ? "d-none" : "d-flex"
-              } flex-column px-0 px-sm-5 py-5 p-md-5 gap-5 my-7 w-90`}
+              } flex-column px-0 px-sm-5 py-5 p-md-5 gap-5 my-6 mb-6 w-90`}
             >
               <div className="work-project-title-container p-3 p-md-0 text-center">
                 <h2 className="text-info display-6">

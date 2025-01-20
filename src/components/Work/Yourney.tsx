@@ -20,7 +20,7 @@ export default function Yourney() {
   const isUnderLgScreen = useMediaQuery({ maxWidth: 575 });
 
   return (
-    <div className="w-100 my-7 d-flex flex-column align-items-center gap-6">
+    <div className="w-100 my-6 d-flex flex-column align-items-center gap-6">
       <div className="work-project-content d-flex flex-column w-90  gap-5 pt-5">
         <div className="work-project-title-container px-sm-5 p-md-0 text-center">
           <div className="p-3 p-md-0 ">
@@ -83,7 +83,8 @@ export default function Yourney() {
           </Carousel>
         </div>
       </div>
-      <div className="work-project-description d-flex flex-column gap-4 w-90 text-light mx-0 mx-lg-7 p-3 p-sm-5">
+
+      {/* <div className="work-project-description d-flex flex-column gap-4 w-90 text-light mx-0 mx-lg-7 p-3 p-sm-5">
         <p className="fs-6">
           Yourney is a premium car rental application that showcases my frontend
           development skills using modern React technologies.
@@ -112,7 +113,7 @@ export default function Yourney() {
           development, state management, and frontend best practices while
           creating a functional demo that showcases these skills.
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
