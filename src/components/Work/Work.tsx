@@ -27,7 +27,7 @@ export default function Work() {
 
   return (
     <>
-      <section className="min-vh-100 w-100 position-relative d-flex justify-content-between">
+      <section className="min-vh-100 w-100 position-relative d-flex justify-content-between overflow-hidden">
         <Image
           className={`position-absolute w-100 h-100 z-1 opacity-25 py-5 ${
             !isXLScreen ? "object-fit-cover" : ""
