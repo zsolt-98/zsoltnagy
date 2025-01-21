@@ -14,6 +14,7 @@ import portfolioLogo from "../../assets/zsn-logo-270x63.png";
 import portfoliHero from "../../assets/portfolio-hero.png";
 import { Outlet, useLocation, useNavigate } from "react-router";
 import FooterHomepage from "../Homepage/FooterHomepage";
+import WorkProjectDescription from "./WorkProjectDescription";
 
 export default function Work() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
@@ -121,6 +122,20 @@ export default function Work() {
         </Container>
         <Navigation />
       </section>
+      {isYourneyRoute && (
+        <section className="min-vh-100 w-100 position-relative d-flex justify-content-between overflow-hidden">
+          {/* <Image
+            className={`work-bg-img position-absolute w-100 z-1 opacity-25 py-5 ${
+              !isXLScreen ? "object-fit-cover" : ""
+            }`}
+            src={bgWork}
+          /> */}
+          <div className="work-bg-container position-absolute">
+            <div className="work-bg-grain position-absolute" />
+          </div>
+          <WorkProjectDescription />
+        </section>
+      )}
       <FooterHomepage />
     </>
   );
