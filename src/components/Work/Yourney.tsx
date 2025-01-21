@@ -15,13 +15,20 @@ import yourneyModalPayment from "../../assets/projects/yourney/yourney-modal-pay
 import yourneyModalConfirm from "../../assets/projects/yourney/yourney-modal-confirm-1848x1020.png";
 import yourneyBookings from "../../assets/projects/yourney/yourney-bookings-1848x1020.png";
 import { useMediaQuery } from "react-responsive";
+import useZustandStore from "../../store/useZustandStore";
 
 export default function Yourney() {
   const isUnderLgScreen = useMediaQuery({ maxWidth: 575 });
+  const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
+  const { isOpen } = useZustandStore();
 
   return (
     <div className="w-100 my-6 d-flex flex-column align-items-center gap-6">
-      <div className="work-project-content d-flex flex-column w-90  gap-5 pt-5">
+      <div
+        className={`work-project-content ${
+          !isXXLargeScreen && isOpen ? "d-none" : "d-flex"
+        } flex-column w-90  gap-5 pt-5`}
+      >
         <div className="work-project-title-container px-sm-5 p-md-0 text-center">
           <div className="p-3 p-md-0 ">
             <h2 className="text-info display-6">

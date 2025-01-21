@@ -1,6 +1,16 @@
+import { useMediaQuery } from "react-responsive";
+import useZustandStore from "../../store/useZustandStore";
+
 export default function WorkProjectDescription() {
+  const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
+  const { isOpen } = useZustandStore();
+
   return (
-    <div className="work-project-description d-flex flex-column gap-4 w-90 text-light mx-0 mx-lg-7 p-3 p-sm-5 z-1">
+    <div
+      className={`work-project-description ${
+        !isXXLargeScreen && isOpen ? "d-none" : "d-flex"
+      } flex-column gap-4 w-90 text-light mx-0 mx-lg-7 p-3 p-sm-5 z-1`}
+    >
       <p className="fs-6">
         Yourney is a premium car rental application that showcases my frontend
         development skills using modern React technologies.

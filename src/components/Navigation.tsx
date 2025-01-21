@@ -92,7 +92,7 @@ export default function Navigation() {
       >
         <div
           className={`nav-menu-content p-5 d-flex align-items-center justify-content-${
-            !isXXLargeScreen ? "center" : "start"
+            !isXXLargeScreen ? "center w-100 h-100" : "start"
           } ${isHomePage ? "home" : ""}`}
         >
           <Nav className="d-flex flex-column justify-content-between gap-6">

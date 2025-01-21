@@ -35,7 +35,14 @@ export default function Work() {
           }`}
           src={bgWork}
         />
-        <div className="work-bg-container position-absolute">
+        <div
+          className="work-bg-container position-absolute"
+          style={{
+            background: `linear-gradient(180deg, #23272f 0%, #23272f 25%, #3d4452 75%, ${
+              !isYourneyRoute ? "#090a0c" : "#3d4452"
+            }  100%)`,
+          }}
+        >
           <div className="work-bg-grain position-absolute" />
         </div>
         <Container

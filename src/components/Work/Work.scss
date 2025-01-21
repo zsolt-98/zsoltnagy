@@ -11,28 +11,19 @@
   &-bg {
     &-img {
       max-height: 900px;
-
-      &-2 {
-        width: 100%;
-        height: auto;
-        top: 50%; // Start from vertical center
-        left: 0; // Align to left edge
-        transform: none; // No transform needed
-        min-height: 50%; // Ensure it fills at least to bottom
-      }
     }
 
     &-container {
       inset: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(
-        180deg,
-        $primary 0%,
-        $primary 25%,
-        $secondary 75%,
-        $secondary 100%
-      );
+      // background: linear-gradient(
+      //   180deg,
+      //   $primary 0%,
+      //   $primary 25%,
+      //   $secondary 75%,
+      //   $secondary 100%
+      // );
 
       &-2 {
         inset: 0;
