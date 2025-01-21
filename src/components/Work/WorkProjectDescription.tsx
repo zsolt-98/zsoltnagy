@@ -9,7 +9,7 @@ export default function WorkProjectDescription() {
     <div
       className={`work-project-description ${
         !isXXLargeScreen && isOpen ? "d-none" : "d-flex"
-      } flex-column gap-4 w-90 text-light mx-0 mx-lg-7 p-3 p-sm-5 z-1`}
+      } flex-column gap-4 w-90 text-light mx-0 mx-lg-7 p-3 p-sm-5 z-1 mb-6`}
     >
       <p className="fs-6">
         Yourney is a premium car rental application that showcases my frontend

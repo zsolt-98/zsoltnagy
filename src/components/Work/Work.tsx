@@ -28,7 +28,7 @@ export default function Work() {
 
   return (
     <>
-      <section className="min-vh-100 w-100 position-relative d-flex justify-content-between overflow-hidden">
+      <section className="min-vh-100 w-100 position-relative d-flex justify-content-between overflow-hidden pt-6">
         <Image
           className={`work-bg-img position-absolute w-100 z-1 opacity-25 py-5 ${
             !isXLScreen ? "" : ""
@@ -47,8 +47,10 @@ export default function Work() {
         </div>
         <Container
           fluid="md"
-          className={`work-project-container d-flex
-         justify-content-center align-items-center z-2 px-0`}
+          className={`work-project-container d-flex 
+         justify-content-center align-items-center ${
+           !isYourneyRoute ? "mb-6" : ""
+         } z-2 px-0`}
         >
           {isYourneyRoute ? (
             <Outlet />

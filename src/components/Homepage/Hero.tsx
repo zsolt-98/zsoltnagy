@@ -101,11 +101,11 @@ export default function Hero() {
   return (
     <>
       <div className="d-flex justify-content-between blur-bg">
-        <Container className="hero-main-container min-vh-100 px-0 d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-5">
+        <Container className="hero-main-container min-vh-100 px-0 d-flex flex-column flex-xxl-row align-items-center justify-content-center gap-5 pt-6">
           <div
             className={`hero-main ${
               !isXXLargeScreen && isOpen ? "hero-main-exit" : ""
-            } blur-bg ${animationStates.container ? "animating" : ""} my-7`}
+            } blur-bg ${animationStates.container ? "animating" : ""} my-6`}
           >
             <div className="p-3 p-xl-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
               <div className="d-inline-block">
