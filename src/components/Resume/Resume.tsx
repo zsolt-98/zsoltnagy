@@ -7,19 +7,19 @@ import IconUser from "../Icons/IconUser";
 
 export default function Resume() {
   return (
-    <section className="position-relative w-100 vh-100">
+    <section className="position-relative w-100">
       <div className="resume-bg-container position-absolute">
         <div className="resume-bg-grain position-absolute" />
       </div>
       <Container
         fluid="md"
-        className={`resume-container position-relative d-flex
-         justify-content-center align-items-center px-0 w-100 h-100 z-1`}
+        className="resume-container position-relative d-flex
+         justify-content-center align-items-center px-0 w-100 h-100 z-1"
       >
-        <div className="d-flex flex-column">
-          <h2 className="fs-1 text-info">Zsolt Nagy</h2>
+        <div className="d-flex flex-column py-6">
+          <h2 className="mb-0 fs-1 text-info">Zsolt Nagy</h2>
           <div className="d-flex gap-4 text-light">
-            <p className="fs-6 fw-normal">
+            <p className="fs-6 fw-normal mb-0">
               <span>
                 <IconLocation
                   className="me-1"
@@ -30,7 +30,7 @@ export default function Resume() {
               </span>
               Subotica, Serbia
             </p>
-            <p className="fs-6 fw-normal">
+            <p className="fs-6 fw-normal mb-0">
               <span>
                 <IconEmail
                   className="me-1"
@@ -41,19 +41,19 @@ export default function Resume() {
               </span>
               zsolt.nagy998@gmail.com
             </p>
-            <p className="fs-6 fw-normal">
+            <p className="fs-6 fw-normal mb-0">
               <span>
                 <IconGithub className="me-1" size={25} stroke="#e5e7eb" />
               </span>
               zsolt-98
             </p>
-            <p className="fs-6 fw-normal">
+            <p className="fs-6 fw-normal mb-0">
               <span>
                 <IconLinkedin className="me-1" size={25} stroke="#e5e7eb" />
               </span>
               zsolt98
             </p>
-            <p className="fs-6 fw-normal">
+            <p className="fs-6 fw-normal mb-0">
               <span>
                 <IconUser
                   className="me-1"
@@ -65,19 +65,19 @@ export default function Resume() {
               www.zsn.guru
             </p>
           </div>
-          <p className="text-light">
+          <p className="text-light mb-0">
             Web developer with a passion for intuitive design and strong
             problem-solving abilities. Specializes infrontend development with
             expertise in JavaScript and ReactJS, crafting responsive and
             user-focusedweb applications.
           </p>
           <div className="border-top border-info" />
-          <h3 className="fs-2 text-info">Professional Experience</h3>
-          <h4 className="fs-3 text-info fw-normal">Employment summary</h4>
-          <h5 className="fs-4 text-info fst-italic fw-light">
+          <h3 className="fs-2 text-info mb-0">Professional Experience</h3>
+          <h4 className="fs-3 text-info fw-normal mb-0">Employment summary</h4>
+          <h5 className="fs-4 text-info fst-italic fw-light mb-0">
             Work history across the United Kingdom and Serbia
           </h5>
-          <ul className="text-light fs-6 fw-normal">
+          <ul className="text-light fs-6 fw-normal mb-0">
             <li className="">
               Managed and maintained multiple Shopify e-commerce websites,
               including content updates, themecustomization, and code
@@ -93,12 +93,12 @@ export default function Resume() {
             </li>
           </ul>
 
-          <h3 className="fs-2 text-info">Projects</h3>
-          <h4 className="fs-3 text-info fw-normal">Yourney</h4>
-          <h5 className="fs-4 text-info fst-italic fw-light">
+          <h3 className="fs-2 text-info mb-0">Projects</h3>
+          <h4 className="fs-3 text-info fw-normal mb-0">Yourney</h4>
+          <h5 className="fs-4 text-info fst-italic fw-light mb-0">
             https://your-ney.netlify.app/
           </h5>
-          <ul className="text-light fs-6 fw-normal">
+          <ul className="text-light fs-6 fw-normal mb-0">
             <li className="">
               Developed a premium car rental platform using ReactJS, JavaScript,
               Bootstrap, and Sass withZustand for state management.
@@ -117,21 +117,21 @@ export default function Resume() {
             </li>
           </ul>
 
-          <h3 className="fs-2 text-info">Education</h3>
-          <h4 className="fs-3 text-info fw-normal">
+          <h3 className="fs-2 text-info mb-0">Education</h3>
+          <h4 className="fs-3 text-info fw-normal mb-0">
             Technical Secondary School "Ivan Sarić"
           </h4>
-          <h5 className="fs-4 text-info fst-italic fw-light">
+          <h5 className="fs-4 text-info fst-italic fw-light mb-0">
             Information Technology (IT) Technician
           </h5>
-          <ul className="text-light fs-6 fw-normal">
+          <ul className="text-light fs-6 fw-normal mb-0">
             <li className="">
               Technical education with a focus on computer science, including
               programming languages, webdevelopment, and database management.
             </li>
           </ul>
 
-          <h3 className="fs-2 text-info">Skills</h3>
+          <h3 className="fs-2 text-info mb-0">Skills</h3>
           <div className="d-flex gap-6">
             <div className="text-light fs-6 fw-normal ">
               <p className="m-0">JavaScript</p>
