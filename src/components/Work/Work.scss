@@ -13,8 +13,12 @@
       max-height: 900px;
 
       &-2 {
-        top: 0;
-        left: 0;
+        width: 100%;
+        height: auto;
+        top: 50%; // Start from vertical center
+        left: 0; // Align to left edge
+        transform: none; // No transform needed
+        min-height: 50%; // Ensure it fills at least to bottom
       }
     }
 
@@ -37,7 +41,6 @@
         background: linear-gradient(
           180deg,
           $secondary 0%,
-          $primary 50%,
           $primary 75%,
           $dark 100%
         );

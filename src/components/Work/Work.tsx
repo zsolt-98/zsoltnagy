@@ -6,7 +6,6 @@ import { useMediaQuery } from "react-responsive";
 import useZustandStore from "../../store/useZustandStore";
 
 import bgWork from "../../assets/bg-work.png";
-import bgWorkDescription from "../../assets/bg-work-description.png";
 import yourneyLogo from "../../assets/yourney-logo.png";
 import yourneyHero from "../../assets/yourney-hero.png";
 import yourneyHeroMd from "../../assets/yourney-hero-md.png";
@@ -124,7 +123,7 @@ export default function Work() {
         <Navigation />
       </section>
       {isYourneyRoute && (
-        <section className="w-100 position-relative ">
+        <section className="w-100 position-relative pb-6">
           <div className="work-bg-container-2 position-absolute">
             <div className="work-bg-grain position-absolute" />
           </div>

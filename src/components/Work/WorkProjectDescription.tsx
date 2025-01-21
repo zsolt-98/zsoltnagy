@@ -1,13 +1,6 @@
-import Image from "react-bootstrap/Image";
-import bgWorkDescription from "../../assets/bg-work-description.png";
-
 export default function WorkProjectDescription() {
   return (
-    <div className="work-project-description d-flex flex-column gap-4 w-90 text-light mx-0 mx-lg-7 p-3 p-sm-5 mb-6">
-      <Image
-        className={`work-bg-img-2 position-absolute h-100 w-100 opacity-25`}
-        src={bgWorkDescription}
-      />
+    <div className="work-project-description d-flex flex-column gap-4 w-90 text-light mx-0 mx-lg-7 p-3 p-sm-5 z-1">
       <p className="fs-6">
         Yourney is a premium car rental application that showcases my frontend
         development skills using modern React technologies.
