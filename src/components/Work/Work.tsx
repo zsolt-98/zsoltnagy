@@ -6,6 +6,7 @@ import { useMediaQuery } from "react-responsive";
 import useZustandStore from "../../store/useZustandStore";
 
 import bgWork from "../../assets/bg-work.png";
+import bgWorkDescription from "../../assets/bg-work-description.png";
 import yourneyLogo from "../../assets/yourney-logo.png";
 import yourneyHero from "../../assets/yourney-hero.png";
 import yourneyHeroMd from "../../assets/yourney-hero-md.png";
@@ -31,7 +32,7 @@ export default function Work() {
       <section className="min-vh-100 w-100 position-relative d-flex justify-content-between overflow-hidden">
         <Image
           className={`work-bg-img position-absolute w-100 z-1 opacity-25 py-5 ${
-            !isXLScreen ? "object-fit-cover" : ""
+            !isXLScreen ? "" : ""
           }`}
           src={bgWork}
         />
@@ -123,17 +124,17 @@ export default function Work() {
         <Navigation />
       </section>
       {isYourneyRoute && (
-        <section className="min-vh-100 w-100 position-relative d-flex justify-content-between overflow-hidden">
-          {/* <Image
-            className={`work-bg-img position-absolute w-100 z-1 opacity-25 py-5 ${
-              !isXLScreen ? "object-fit-cover" : ""
-            }`}
-            src={bgWork}
-          /> */}
-          <div className="work-bg-container position-absolute">
+        <section className="w-100 position-relative ">
+          <div className="work-bg-container-2 position-absolute">
             <div className="work-bg-grain position-absolute" />
           </div>
-          <WorkProjectDescription />
+          <Container
+            fluid="md"
+            className={`d-flex
+         justify-content-center align-items-center z-2 px-0 h-100`}
+          >
+            <WorkProjectDescription />
+          </Container>
         </section>
       )}
       <FooterHomepage />
