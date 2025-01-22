@@ -6,6 +6,8 @@ import IconEmail from "../Icons/IconEmail";
 import IconUser from "../Icons/IconUser";
 import FooterHomepage from "../Homepage/FooterHomepage";
 
+import Table from "react-bootstrap/Table";
+
 export default function Resume() {
   return (
     <>
@@ -18,7 +20,7 @@ export default function Resume() {
           className="resume-container position-relative d-flex
          justify-content-center align-items-center px-0 w-100 h-100 z-1"
         >
-          <div className="resume-wrapper d-flex flex-column p-5 m-0 m-xxl-6">
+          <div className="resume-wrapper w-90 d-flex flex-column p-3 p-xl-5 my-6 mx-md-6">
             <h2 className="mb-4 fs-1 text-info">Zsolt Nagy</h2>
             <div className="d-flex flex-wrap gap-4 text-light mb-4">
               <p className="fs-6 fw-normal mb-0">
@@ -67,7 +69,7 @@ export default function Resume() {
                 www.zsn.guru
               </p>
             </div>
-            <p className="text-light text-wrap mb-0">
+            <p className="text-light mb-0">
               Web developer with a passion for intuitive design and strong
               problem-solving abilities. Specializes infrontend development with
               expertise in JavaScript and ReactJS, crafting responsive and
@@ -137,24 +139,40 @@ export default function Resume() {
             </ul>
 
             <h3 className="fs-2 text-info my-4">Skills</h3>
-            <div className="d-flex gap-6">
-              <div className="text-light fs-6 fw-normal ">
-                <p className="m-0">JavaScript</p>
-                <p className="m-0">Web</p>
-                <p className="m-0">Design</p>
-              </div>
-              <div className="text-light">
-                <p className="m-0">ReactJS, TypeScript</p>
-                <p className="m-0">
-                  HTML, CSS, Sass, Bootstrap, PostgreSQL, Git, Citrix
-                </p>
-                <p className="m-0">Figma, Canva</p>
-              </div>
+            <div className="table-responsive">
+              <Table responsive borderless className="resume-table">
+                <tbody>
+                  <tr>
+                    <td className="p-0 pe-6 fs-6 fw-normal text-light ">
+                      JavaScript
+                    </td>
+                    <td className="p-0 fs-6 fw-normal text-light">
+                      ReactJS, TypeScript
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="p-0 pe-6 fs-6 fw-normal text-light ">Web</td>
+                    <td className="p-0 fs-6 fw-normal text-light">
+                      HTML, CSS, Sass, Bootstrap, PostgreSQL, Git, Citrix
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="p-0 pe-6 fs-6 fw-normal text-light ">
+                      Design
+                    </td>
+                    <td className="p-0 fs-6 fw-normal text-light">
+                      Figma, Canva
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
             </div>
           </div>
         </Container>
       </section>
-      <FooterHomepage />{" "}
+      <FooterHomepage />
     </>
   );
 }

@@ -31,4 +31,10 @@
   &-wrapper {
     background-color: rgba($primary, 0.5);
   }
+
+  &-table {
+    td {
+      background-color: transparent !important;
+    }
+  }
 }
