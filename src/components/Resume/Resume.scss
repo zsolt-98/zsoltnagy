@@ -23,4 +23,12 @@
       opacity: 0.06;
     }
   }
+
+  &-divider {
+    box-shadow: 0 0 3px $info, 0 0 6px $info;
+  }
+
+  &-wrapper {
+    background-color: rgba($primary, 0.5);
+  }
 }
