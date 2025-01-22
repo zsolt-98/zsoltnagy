@@ -19,7 +19,8 @@ interface NavigationAnimationStates {
 export default function Navigation() {
   const isSMScreen = useMediaQuery({ minWidth: 768 });
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
-  const isSmallerVH = useMediaQuery({ maxHeight: 700 });
+  const isSmallerVH = useMediaQuery({ maxHeight: 600 });
+
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const { isOpen, setIsOpen } = useZustandStore();
@@ -88,19 +89,20 @@ export default function Navigation() {
 
       <div
         className={` ${
-          isXXLargeScreen ? "nav-menu-side" : "nav-menu-overlay"
+          isXXLargeScreen ? "nav-menu-side" : "nav-menu-overlay d-flex"
         } ${isOpen ? "open" : ""} z-2`}
       >
         <div
           className={`nav-menu-content p-5 d-flex align-items-center justify-content-${
-            !isXXLargeScreen
-              ? `center w-100 ${isSmallerVH ? "min-" : ""}h-100`
-              : "start"
+            !isXXLargeScreen ? "center w-100 h-100" : "start"
           } ${isHomePage ? "home" : ""}`}
         >
-          <Nav className="d-flex flex-column my-6 justify-content-between gap-6">
+          <Nav
+            className={`d-flex flex-column justify-content-between gap-${
+              isSmallerVH ? "3" : "6"
+            }`}
+          >
             <Stack
-              gap={3}
               className={`nav-menu-title ${
                 animationStates.title ? "animating" : ""
               } fs-4`}
