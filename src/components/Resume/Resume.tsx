@@ -10,6 +10,8 @@ import Table from "react-bootstrap/Table";
 import Navigation from "../Navigation";
 import IconDownload from "../Icons/IconDownload";
 
+import ResumePDF from "../../assets/Zsolt_Nagy_CV_Eng.pdf";
+
 export default function Resume() {
   return (
     <>
@@ -26,8 +28,8 @@ export default function Resume() {
             <h2 className="mb-4 fs-1 text-info">Zsolt Nagy</h2>
             <a
               className="resume-download text-light text-decoration-none position-absolute p-3"
-              href="/public/Zsolt_Nagy_CV_Eng.pdf"
-              download="Zsolt_Nagy_CV_Eng.pdf"
+              href="../../assets/Zsolt_Nagy_CV_Eng.pdf"
+              download={ResumePDF}
             >
               <span>
                 <IconDownload
