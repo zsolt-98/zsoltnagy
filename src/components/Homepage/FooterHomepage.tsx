@@ -5,7 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import IconLinkedin from "../Icons/IconLinkedin";
 import IconGithub from "../Icons/IconGithub";
 import { useEffect, useRef, useState } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 
 interface FooterAnimation {
   footerTop: boolean;
@@ -14,6 +14,9 @@ interface FooterAnimation {
 
 export default function FooterHomepage() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const isHomeRoute = location.pathname === "/";
+
   const [animationStates, setAnimationStates] = useState<FooterAnimation>({
     footerTop: false,
     footerBottom: false,
@@ -58,8 +61,8 @@ export default function FooterHomepage() {
       </div>
       <Container className="footer-content position-relative py-6">
         <Row
-          className={`footer-top-wrapper ${
-            animationStates.footerTop ? "animating" : ""
+          className={`footer-top-wrapper ${isHomeRoute ? "home" : "not-home"} ${
+            isHomeRoute ? (animationStates.footerTop ? "animating" : "") : ""
           } gap-6 gap-lg-0`}
           ref={footerTopRef}
         >
@@ -121,7 +124,9 @@ export default function FooterHomepage() {
         </Row>
         <div
           className={`footer-bottom-wrapper ${
-            animationStates.footerBottom ? "animating" : ""
+            isHomeRoute ? "home" : "not-home"
+          } ${
+            isHomeRoute ? (animationStates.footerBottom ? "animating" : "") : ""
           }`}
           ref={footerBottomRef}
         >

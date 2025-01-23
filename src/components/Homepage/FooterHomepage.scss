@@ -43,13 +43,19 @@
 
   &-top-wrapper,
   &-bottom-wrapper {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease-out;
+    &.home {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease-out;
+    }
 
     &.animating {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    &.not-home {
+      opacity: 1;
     }
   }
 }
