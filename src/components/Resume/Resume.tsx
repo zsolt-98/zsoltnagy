@@ -28,7 +28,7 @@ export default function Resume() {
             <h2 className="mb-4 fs-1 text-info">Zsolt Nagy</h2>
             <a
               className="resume-download text-light text-decoration-none position-absolute p-3"
-              href="../../assets/Zsolt_Nagy_CV_Eng.pdf"
+              href={ResumePDF}
               download={ResumePDF}
             >
               <span>
