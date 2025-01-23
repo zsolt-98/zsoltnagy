@@ -22,7 +22,7 @@ export default function Resume() {
           className="resume-container position-relative d-flex
          justify-content-center align-items-center px-0 w-100 h-100 z-1"
         >
-          <div className="resume-wrapper w-90 d-flex flex-column p-3 p-xl-5 my-6 mx-md-6 position-relative">
+          <div className="resume-wrapper w-90 d-flex flex-column p-3 p-xl-5 my-6 mx-md-6 position-relative z-2">
             <h2 className="mb-4 fs-1 text-info">Zsolt Nagy</h2>
             <a
               className="resume-download text-light text-decoration-none position-absolute p-3"
