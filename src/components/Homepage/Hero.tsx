@@ -141,14 +141,22 @@ export default function Hero() {
                     animationStates.social ? "animating" : ""
                   }`}
                 >
-                  <a href="">
+                  <a
+                    href="https://linkedin.com/in/zsolt98"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <IconLinkedin
                       className="hero-social-icon"
                       size={40}
                       stroke="#e5e7eb"
                     />
                   </a>
-                  <a href="">
+                  <a
+                    href="https://github.com/zsolt-98"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <IconGithub
                       className="hero-social-icon"
                       size={40}

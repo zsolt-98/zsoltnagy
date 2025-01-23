@@ -132,20 +132,30 @@ export default function Navigation() {
               <div>
                 <Nav.Link
                   className="nav-menu-content-email text-info p-0"
-                  href="mailto:your.email@example.com"
+                  href="mailto:mailto:zsolt.nagy998@gmail.com"
                 >
                   zsolt.nagy998@gmail.com
                 </Nav.Link>
               </div>
               <div className="d-flex mt-2">
-                <Nav.Link className="nav-menu-content-social p-0">
+                <Nav.Link
+                  className="nav-menu-content-social p-0"
+                  href="https://linkedin.com/in/zsolt98"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <IconLinkedin
                     className="nav-menu-social-icon"
                     size={!isXXLargeScreen ? (isSMScreen ? 50 : 35) : 30}
                     stroke="#58c4dc"
                   />
                 </Nav.Link>
-                <Nav.Link className="nav-menu-content-social p-0">
+                <Nav.Link
+                  className="nav-menu-content-social p-0"
+                  href="https://github.com/zsolt-98"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <IconGithub
                     className="nav-menu-social-icon"
                     size={!isXXLargeScreen ? (isSMScreen ? 50 : 35) : 30}

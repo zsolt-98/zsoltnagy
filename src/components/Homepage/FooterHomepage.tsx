@@ -5,6 +5,7 @@ import Nav from "react-bootstrap/Nav";
 import IconLinkedin from "../Icons/IconLinkedin";
 import IconGithub from "../Icons/IconGithub";
 import { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router";
 
 interface FooterAnimation {
   footerTop: boolean;
@@ -12,6 +13,7 @@ interface FooterAnimation {
 }
 
 export default function FooterHomepage() {
+  const navigate = useNavigate();
   const [animationStates, setAnimationStates] = useState<FooterAnimation>({
     footerTop: false,
     footerBottom: false,
@@ -67,17 +69,27 @@ export default function FooterHomepage() {
               <div>
                 <Nav.Link
                   className="footer-email text-light p-0 fs-5 d-inline-block"
-                  href="mailto:your.email@example.com"
+                  href="mailto:mailto:zsolt.nagy998@gmail.com"
                 >
                   zsolt.nagy998@gmail.com
                 </Nav.Link>
               </div>
             </div>
             <div className="d-flex mt-2">
-              <Nav.Link className="footer-social p-0">
+              <Nav.Link
+                className="footer-social p-0"
+                href="https://linkedin.com/in/zsolt98"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <IconLinkedin className="footer-social-icon" stroke="#e5e7eb" />
               </Nav.Link>
-              <Nav.Link className="footer-social p-0">
+              <Nav.Link
+                className="footer-social p-0"
+                href="https://github.com/zsolt-98"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <IconGithub className="footer-social-icon" stroke="#e5e7eb" />
               </Nav.Link>
             </div>
@@ -87,7 +99,9 @@ export default function FooterHomepage() {
               <div>
                 <Nav.Link
                   className="footer-link text-light p-0 d-inline-block w-auto"
-                  href="/work"
+                  onClick={() => {
+                    navigate("/work");
+                  }}
                 >
                   My Work
                 </Nav.Link>
@@ -95,7 +109,9 @@ export default function FooterHomepage() {
               <div>
                 <Nav.Link
                   className="footer-link text-light p-0 d-inline-block w-auto"
-                  href="/work"
+                  onClick={() => {
+                    navigate("/resume");
+                  }}
                 >
                   My résumé
                 </Nav.Link>
