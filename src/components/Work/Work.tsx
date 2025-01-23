@@ -100,7 +100,10 @@ export default function Work() {
                     </figcaption>
                   </figure>
                 </button>
-                <button className="border-0 bg-transparent p-0">
+                <button
+                  className="border-0 bg-transparent p-0"
+                  onClick={() => navigate("/")}
+                >
                   <figure className="work-project-figure m-0">
                     <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6">
                       <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
