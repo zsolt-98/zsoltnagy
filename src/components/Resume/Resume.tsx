@@ -11,11 +11,16 @@ import Navigation from "../Navigation";
 import IconDownload from "../Icons/IconDownload";
 
 import ResumePDF from "../../assets/Zsolt_Nagy_CV_Eng.pdf";
+import useZustandStore from "../../store/useZustandStore";
+import { useMediaQuery } from "react-responsive";
 
 export default function Resume() {
+  const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
+  const { isOpen } = useZustandStore();
+
   return (
     <>
-      <section className="position-relative d-flex justify-content-between">
+      <section className="position-relative min-vh-100 d-flex justify-content-between">
         <div className="resume-bg-container position-absolute">
           <div className="resume-bg-grain position-absolute" />
         </div>
@@ -24,7 +29,11 @@ export default function Resume() {
           className="resume-container position-relative d-flex
          justify-content-center align-items-center px-0 w-100 h-100 z-1"
         >
-          <div className="resume-wrapper w-90 d-flex flex-column p-3 p-xl-5 mb-6 mt-7 mx-md-6 position-relative z-2">
+          <div
+            className={`resume-wrapper w-90 ${
+              !isXXLargeScreen && isOpen ? "invisible" : ""
+            } d-flex flex-column p-3 p-xl-5 mb-6 mt-7 mx-md-6 position-relative z-2`}
+          >
             <h2 className="mb-4 fs-1 text-info">Zsolt Nagy</h2>
             <a
               className="resume-download text-light text-decoration-none position-absolute p-3"

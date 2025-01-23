@@ -3,11 +3,13 @@ import { Route, BrowserRouter as Router, Routes } from "react-router";
 import Work from "./components/Work/Work";
 import Yourney from "./components/Work/Yourney";
 import Resume from "./components/Resume/Resume";
+import ScrollReset from "./components/shared/Layout/ScrollReset";
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollReset />
         <Routes>
           <Route path="/" element={<Homepage />} />
           <Route path="work" element={<Work />}>
