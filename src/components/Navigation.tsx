@@ -93,7 +93,7 @@ export default function Navigation() {
         } ${isOpen ? "open" : ""} z-2`}
       >
         <div
-          className={`nav-menu-content p-5 d-flex align-items-center justify-content-${
+          className={`nav-menu-content blur-bg p-5 d-flex align-items-center justify-content-${
             !isXXLargeScreen ? "center w-100 h-100" : "start"
           } ${isHomePage ? "home" : ""}`}
         >
