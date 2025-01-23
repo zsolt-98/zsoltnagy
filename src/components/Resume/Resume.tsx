@@ -7,11 +7,13 @@ import IconUser from "../Icons/IconUser";
 import FooterHomepage from "../Homepage/FooterHomepage";
 
 import Table from "react-bootstrap/Table";
+import Navigation from "../Navigation";
+import IconDownload from "../Icons/IconDownload";
 
 export default function Resume() {
   return (
     <>
-      <section className="position-relative w-100">
+      <section className="position-relative d-flex justify-content-between">
         <div className="resume-bg-container position-absolute">
           <div className="resume-bg-grain position-absolute" />
         </div>
@@ -20,8 +22,23 @@ export default function Resume() {
           className="resume-container position-relative d-flex
          justify-content-center align-items-center px-0 w-100 h-100 z-1"
         >
-          <div className="resume-wrapper w-90 d-flex flex-column p-3 p-xl-5 my-6 mx-md-6">
+          <div className="resume-wrapper w-90 d-flex flex-column p-3 p-xl-5 my-6 mx-md-6 position-relative">
             <h2 className="mb-4 fs-1 text-info">Zsolt Nagy</h2>
+            <a
+              className="text-light resume-download text-decoration-none position-absolute p-3"
+              href="/public/Zsolt_Nagy_CV_Eng.pdf"
+              download="Zsolt_Nagy_CV_Eng.pdf"
+            >
+              <span>
+                <IconDownload
+                  className="me-1 mb-1"
+                  size={22}
+                  stroke="none"
+                  fill="#e5e7eb"
+                />
+              </span>
+              Download
+            </a>
             <div className="d-flex flex-wrap gap-4 text-light mb-4">
               <p className="fs-6 fw-normal mb-0">
                 <span>
@@ -171,6 +188,7 @@ export default function Resume() {
             </div>
           </div>
         </Container>
+        <Navigation />
       </section>
       <FooterHomepage />
     </>
