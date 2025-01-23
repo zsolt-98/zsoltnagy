@@ -29,6 +29,29 @@
     right: 0;
   }
 
+  &-link-fill,
+  &-download {
+    &:hover {
+      color: $info !important;
+      text-decoration: underline !important;
+
+      svg {
+        fill: $info !important;
+      }
+    }
+  }
+
+  &-link-stroke {
+    &:hover {
+      color: $info !important;
+      text-decoration: underline !important;
+
+      svg {
+        stroke: $info !important;
+      }
+    }
+  }
+
   &-divider {
     box-shadow: 0 0 3px $info, 0 0 6px $info;
   }

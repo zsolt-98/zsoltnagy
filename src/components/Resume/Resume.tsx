@@ -25,7 +25,7 @@ export default function Resume() {
           <div className="resume-wrapper w-90 d-flex flex-column p-3 p-xl-5 my-6 mx-md-6 position-relative">
             <h2 className="mb-4 fs-1 text-info">Zsolt Nagy</h2>
             <a
-              className="text-light resume-download text-decoration-none position-absolute p-3"
+              className="resume-download text-light text-decoration-none position-absolute p-3"
               href="/public/Zsolt_Nagy_CV_Eng.pdf"
               download="Zsolt_Nagy_CV_Eng.pdf"
             >
@@ -51,7 +51,10 @@ export default function Resume() {
                 </span>
                 Subotica, Serbia
               </p>
-              <p className="fs-6 fw-normal mb-0">
+              <a
+                className="resume-link-fill fs-6 text-light fw-normal text-decoration-none mb-0"
+                href="mailto:zsolt.nagy998@gmail.com"
+              >
                 <span>
                   <IconEmail
                     className="me-1"
@@ -61,20 +64,35 @@ export default function Resume() {
                   />
                 </span>
                 zsolt.nagy998@gmail.com
-              </p>
-              <p className="fs-6 fw-normal mb-0">
+              </a>
+              <a
+                className="resume-link-stroke fs-6 text-light fw-normal text-decoration-none mb-0"
+                href="https://github.com/zsolt-98"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span>
                   <IconGithub className="me-1" size={25} stroke="#e5e7eb" />
                 </span>
                 zsolt-98
-              </p>
-              <p className="fs-6 fw-normal mb-0">
+              </a>
+              <a
+                className="resume-link-stroke fs-6 text-light fw-normal text-decoration-none mb-0"
+                href="https://linkedin.com/in/zsolt98"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span>
                   <IconLinkedin className="me-1" size={25} stroke="#e5e7eb" />
                 </span>
                 zsolt98
-              </p>
-              <p className="fs-6 fw-normal mb-0">
+              </a>
+              <a
+                className="resume-link-fill fs-6 text-light fw-normal text-decoration-none mb-0"
+                href="https://zsn.guru"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span>
                   <IconUser
                     className="me-1"
@@ -84,7 +102,7 @@ export default function Resume() {
                   />
                 </span>
                 www.zsn.guru
-              </p>
+              </a>
             </div>
             <p className="text-light mb-0">
               Web developer with a passion for intuitive design and strong
