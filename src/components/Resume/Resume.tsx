@@ -29,7 +29,7 @@ export default function Resume() {
             <a
               className="resume-download text-light text-decoration-none position-absolute p-3"
               href={ResumePDF}
-              download={ResumePDF}
+              download="Zsolt_Nagy_CV_Eng.pdf"
             >
               <span>
                 <IconDownload
