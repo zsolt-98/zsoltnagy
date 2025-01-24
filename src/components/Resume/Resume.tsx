@@ -117,9 +117,9 @@ export default function Resume() {
             </div>
             <p className="text-light mb-0">
               Web developer with a passion for intuitive design and strong
-              problem-solving abilities. Specializes infrontend development with
-              expertise in JavaScript and ReactJS, crafting responsive and
-              user-focusedweb applications.
+              problem-solving abilities. Specializes in frontend development
+              with expertise in JavaScript and ReactJS, crafting responsive and
+              user-focused web applications.
             </p>
             <div className="my-4 resume-divider border-top border-info" />
             <h3 className="fs-2 text-info mb-4">Professional Experience</h3>
@@ -132,7 +132,7 @@ export default function Resume() {
             <ul className="text-light fs-6 fw-normal mb-0">
               <li className="">
                 Managed and maintained multiple Shopify e-commerce websites,
-                including content updates, themecustomization, and code
+                including content updates, theme customization, and code
                 implementation.
               </li>
               <li className="">
@@ -141,7 +141,7 @@ export default function Resume() {
               </li>
               <li className="">
                 Provided customer support with a proven track record of high
-                satisfaction ratings and successfulupselling initiatives.
+                satisfaction ratings and successful upselling initiatives.
               </li>
             </ul>
 
@@ -158,7 +158,7 @@ export default function Resume() {
               </li>
               <li className="">
                 Implemented complete user authentication flow including
-                registration, sign-in, and password resetfunctionality.
+                registration, sign-in, and password reset functionality.
               </li>
               <li className="">
                 Built comprehensive booking system with vehicle selection, time
@@ -166,7 +166,7 @@ export default function Resume() {
               </li>
               <li className="">
                 Created user profile system with frontend CRUD operations for
-                profile management and bookingcreation/deletion.
+                profile management and booking creation/deletion.
               </li>
             </ul>
 
@@ -180,7 +180,7 @@ export default function Resume() {
             <ul className="text-light fs-6 fw-normal mb-0">
               <li className="">
                 Technical education with a focus on computer science, including
-                programming languages, webdevelopment, and database management.
+                programming languages, web development, and database management.
               </li>
             </ul>
 
