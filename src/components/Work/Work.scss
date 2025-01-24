@@ -5,6 +5,8 @@
 
 .default-state {
   transition: opacity 0.3s ease;
+  min-width: 273px;
+  min-height: 63px;
 }
 
 .work {

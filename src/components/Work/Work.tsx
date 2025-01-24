@@ -67,12 +67,12 @@ export default function Work() {
               </div>
               <div className="d-flex gap-5 gap-xl-3 justify-content-center flex-column flex-xl-row">
                 <button
-                  className="border-0 bg-transparent p-0"
+                  className="work-project-btn border-0 bg-transparent p-0"
                   onClick={() => navigate("yourney")}
                 >
                   <figure className="work-project-figure m-0">
                     <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6">
-                      <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
+                      <div className="default-state d-flex justify-content-center align-items-center w-100 h-100 bg-light">
                         <Image src={yourneyLogo} className="img-fluid" />
                       </div>
                       <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
@@ -99,7 +99,7 @@ export default function Work() {
                   </figure>
                 </button>
                 <button
-                  className="border-0 bg-transparent p-0"
+                  className="work-project-btn border-0 bg-transparent p-0"
                   onClick={() => navigate("/")}
                 >
                   <figure className="work-project-figure m-0">
