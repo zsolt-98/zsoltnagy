@@ -27,7 +27,7 @@ export default function Yourney() {
       <div
         className={`work-project-content ${
           !isXXLargeScreen && isOpen ? "d-none" : "d-flex"
-        } flex-column w-90  gap-5 pt-5`}
+        } flex-column w-90 gap-5 pt-5`}
       >
         <div className="work-project-title-container px-sm-5 p-md-0 text-center">
           <div className="p-3 p-md-0 ">
