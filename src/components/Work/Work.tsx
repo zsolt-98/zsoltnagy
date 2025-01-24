@@ -18,7 +18,6 @@ import WorkProjectDescription from "./WorkProjectDescription";
 
 export default function Work() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
-  const isXLScreen = useMediaQuery({ minWidth: 1200 });
   const isUnderMdScreen = useMediaQuery({ maxWidth: 576 });
   const isUnderSmScreen = useMediaQuery({ maxWidth: 390 });
   const { isOpen } = useZustandStore();
@@ -29,10 +28,9 @@ export default function Work() {
     <>
       <section className="min-vh-100 w-100 position-relative d-flex justify-content-between overflow-hidden">
         <Image
-          className={`work-bg-img position-absolute w-100 z-1 opacity-25 py-5 ${
-            !isXLScreen ? "" : ""
-          }`}
+          className="work-bg-img position-absolute w-100 z-1 opacity-25 py-5"
           src={bgWork}
+          loading="eager"
         />
         <div
           className="work-bg-container position-absolute"
