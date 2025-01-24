@@ -200,7 +200,8 @@ export default function Resume() {
                   <tr>
                     <td className="p-0 pe-6 fs-6 fw-normal text-light ">Web</td>
                     <td className="p-0 fs-6 fw-normal text-light">
-                      HTML, CSS, Sass, Bootstrap, PostgreSQL, Git, Citrix
+                      HTML, CSS, Sass, Bootstrap, PostgreSQL, Git, Shopify,
+                      Citrix
                     </td>
                   </tr>
 

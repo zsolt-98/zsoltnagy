@@ -26,12 +26,12 @@ export default function WorkProjectDescription() {
         simulating how a real application would handle user sessions.
       </p>
       <p className="fs-6">
-        The main booking interface allows users to browse available vehicles,
-        select rental dates, and choose pickup/drop-off locations. The user
-        profile section enables customers to update their profile information
-        (username, first name, email address) and profile photo, as well as
-        reset their password. Users can manage their active bookings through a
-        simple dashboard interface.
+        The booking flow allows users to browse available vehicles, select
+        rental dates, and choose pickup/drop-off locations. The user profile
+        section enables customers to update their profile information (username,
+        first name, email address) and profile photo, as well as reset their
+        password. Users can manage their active bookings through a simple
+        dashboard interface.
       </p>
       <p className="fs-6">
         This project helped me gain hands-on experience with React development,
