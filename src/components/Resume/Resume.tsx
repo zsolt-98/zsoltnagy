@@ -116,9 +116,9 @@ export default function Resume() {
               </a>
             </div>
             <p className="text-light mb-0">
-              Web developer with a passion for intuitive design and strong
-              problem-solving abilities. Specializes in frontend development
-              with expertise in JavaScript and ReactJS, crafting responsive and
+              Web developer with strong problem-solving abilities and a passion
+              for intuitive design. Specializes in frontend development with
+              expertise in JavaScript and ReactJS, crafting responsive and
               user-focused web applications.
             </p>
             <div className="my-4 resume-divider border-top border-info" />
