@@ -104,6 +104,7 @@
     }
 
     &-content {
+      min-width: 90% !important;
       @media (min-width: 576px) {
         background-color: rgba($primary, 0.5);
         backdrop-filter: blur(3px) !important;
