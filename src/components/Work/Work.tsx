@@ -15,13 +15,8 @@ import portfoliHero from "../../assets/portfolio-hero.png";
 import { Outlet, useLocation, useNavigate } from "react-router";
 import FooterHomepage from "../Homepage/FooterHomepage";
 import WorkProjectDescription from "./WorkProjectDescription";
-import { useEffect, useRef, useState } from "react";
-import Spinner from "react-bootstrap/Spinner";
 
 export default function Work() {
-  const [isLoading, setIsLoading] = useState(true);
-  const loadedCount = useRef(0);
-
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
   const isXLScreen = useMediaQuery({ minWidth: 1200 });
   const isUnderMdScreen = useMediaQuery({ maxWidth: 576 });
@@ -30,51 +25,6 @@ export default function Work() {
   const navigate = useNavigate();
   const location = useLocation();
   const isYourneyRoute = location.pathname === "/work/yourney";
-
-  useEffect(() => {
-    const imagesToPreload = [
-      bgWork,
-      yourneyLogo,
-      yourneyHero,
-      yourneyHeroMd,
-      yourneyHeroSm,
-      portfolioLogo,
-      portfoliHero,
-    ];
-
-    const totalImages = imagesToPreload.length;
-
-    const handleImageLoad = () => {
-      loadedCount.current += 1;
-      if (loadedCount.current === totalImages) {
-        setIsLoading(false);
-      }
-    };
-
-    imagesToPreload.forEach((src) => {
-      const img = new window.Image();
-      img.src = src;
-      img.onload = handleImageLoad;
-      img.onerror = handleImageLoad;
-    });
-  }, []);
-
-  const getHeroImage = () => {
-    if (isUnderSmScreen) return yourneyHeroSm;
-    if (isUnderMdScreen) return yourneyHeroMd;
-    return yourneyHero;
-  };
-
-  if (isLoading) {
-    return (
-      <div className="min-vh-100 w-100 d-flex justify-content-center align-items-center bg-dark">
-        <Spinner animation="border" role="status" variant="info">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      </div>
-    );
-  }
-
   return (
     <>
       <section className="min-vh-100 w-100 position-relative d-flex justify-content-between overflow-hidden">
@@ -96,8 +46,7 @@ export default function Work() {
         </div>
         <Container
           fluid="md"
-          className={`work-project-container d-flex
-         justify-content-center align-items-center z-2 px-0 `}
+          className={`work-project-container d-flex   justify-content-center align-items-center z-2 px-0 `}
         >
           {isYourneyRoute ? (
             <Outlet />
@@ -128,7 +77,13 @@ export default function Work() {
                       </div>
                       <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
                         <Image
-                          src={getHeroImage()}
+                          src={
+                            isUnderSmScreen
+                              ? yourneyHeroSm
+                              : isUnderMdScreen
+                              ? yourneyHeroMd
+                              : yourneyHero
+                          }
                           className="w-100 h-100 object-fit-cover"
                           style={{
                             transform: "translateZ(0)",
@@ -160,7 +115,7 @@ export default function Work() {
                             transform: "translateZ(0)",
                             backfaceVisibility: "hidden",
                           }}
-                        />
+                        />{" "}
                       </div>
                     </div>
                     <figcaption className="work-project-text text-start p-4">
@@ -168,7 +123,7 @@ export default function Work() {
                       <p className="mb-0 text-light">zsn.guru</p>
                     </figcaption>
                   </figure>
-                </button>
+                </button>{" "}
               </div>
             </div>
           )}
