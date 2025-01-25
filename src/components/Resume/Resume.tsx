@@ -36,7 +36,9 @@ export default function Resume() {
             <div className="resume-language-download p-3 position-absolute d-flex gap-4">
               <div className="resume-language d-flex gap-1 text-light fw-light">
                 <button
-                  className="bg-transparent border-0 text-light"
+                  className={`resume-language-btn ${
+                    currentLang === "eng" ? "active" : ""
+                  } bg-transparent border-0 text-light`}
                   onClick={() => {
                     setCurrentLang("eng");
                   }}
@@ -45,7 +47,9 @@ export default function Resume() {
                 </button>
                 <span>|</span>
                 <button
-                  className="bg-transparent border-0 text-light"
+                  className={`resume-language-btn ${
+                    currentLang === "srb" ? "active" : ""
+                  } bg-transparent border-0 text-light`}
                   onClick={() => {
                     setCurrentLang("srb");
                   }}
@@ -54,7 +58,9 @@ export default function Resume() {
                 </button>
                 <span>|</span>
                 <button
-                  className="bg-transparent border-0 text-light"
+                  className={`resume-language-btn ${
+                    currentLang === "hun" ? "active" : ""
+                  } bg-transparent border-0 text-light`}
                   onClick={() => {
                     setCurrentLang("hun");
                   }}

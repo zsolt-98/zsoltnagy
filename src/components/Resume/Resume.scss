@@ -29,6 +29,18 @@
     right: 0;
   }
 
+  &-language {
+    &-btn {
+      &:hover {
+        color: $info !important;
+      }
+
+      &.active {
+        color: $info !important;
+      }
+    }
+  }
+
   &-link-fill,
   &-download {
     &:hover {
