@@ -12,7 +12,7 @@ interface FooterAnimation {
   footerBottom: boolean;
 }
 
-export default function FooterHomepage() {
+export default function Footer() {
   const navigate = useNavigate();
   const location = useLocation();
   const isHomeRoute = location.pathname === "/";

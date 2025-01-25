@@ -4,7 +4,6 @@ import IconGithub from "../Icons/IconGithub";
 import IconLocation from "../Icons/IconLocation";
 import IconEmail from "../Icons/IconEmail";
 import IconUser from "../Icons/IconUser";
-import FooterHomepage from "../Homepage/FooterHomepage";
 
 import Table from "react-bootstrap/Table";
 import Navigation from "../Navigation";
@@ -220,7 +219,6 @@ export default function Resume() {
         </Container>
         <Navigation />
       </section>
-      <FooterHomepage />
     </>
   );
 }

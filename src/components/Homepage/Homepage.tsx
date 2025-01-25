@@ -2,7 +2,6 @@ import Hero from "./Hero";
 import AboutMe from "./AboutMe";
 import ParticlesComponent from "./Particles";
 import WorkAndCV from "./WorkAndCV";
-import FooterHomepage from "./FooterHomepage";
 import bgNetwork from "../../assets/bg-network.png";
 import { useMediaQuery } from "react-responsive";
 
@@ -33,7 +32,6 @@ export default function Homepage() {
           <WorkAndCV />
         </section>
       </div>
-      <FooterHomepage />
     </>
   );
 }

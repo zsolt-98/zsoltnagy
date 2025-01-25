@@ -13,7 +13,6 @@ import yourneyHeroSm from "../../assets/yourney-hero-sm.png";
 import portfolioLogo from "../../assets/zsn-logo-270x63.png";
 import portfoliHero from "../../assets/portfolio-hero.png";
 import { Outlet, useLocation, useNavigate } from "react-router";
-import FooterHomepage from "../Homepage/FooterHomepage";
 import WorkProjectDescription from "./WorkProjectDescription";
 
 export default function Work() {
@@ -142,7 +141,6 @@ export default function Work() {
           </Container>
         </section>
       )}
-      <FooterHomepage />
     </>
   );
 }

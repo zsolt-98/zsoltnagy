@@ -4,6 +4,7 @@ import Work from "./components/Work/Work";
 import Yourney from "./components/Work/Yourney";
 import Resume from "./components/Resume/Resume";
 import ScrollReset from "./components/shared/Layout/ScrollReset";
+import Footer from "./components/Homepage/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="resume" element={<Resume />}></Route>
           <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
+        <Footer />
       </Router>
     </>
   );
