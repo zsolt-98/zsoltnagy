@@ -34,21 +34,30 @@ export default function Resume() {
             } d-flex flex-column p-3 p-xl-5 mb-6 mt-7 mx-md-6 position-relative z-2`}
           >
             <h2 className="mb-4 fs-1 text-info">Zsolt Nagy</h2>
-            <a
-              className="resume-download text-light text-decoration-none position-absolute p-3"
-              href={ResumePDF}
-              download="Zsolt_Nagy_CV_Eng.pdf"
-            >
-              <span>
-                <IconDownload
-                  className="me-1 mb-1"
-                  size={22}
-                  stroke="none"
-                  fill="#e5e7eb"
-                />
-              </span>
-              Download
-            </a>
+            <div className="resume-language-download p-3 position-absolute d-flex gap-4">
+              <div className="resume-language d-flex gap-1 text-light fw-light">
+                <p className="">ENG</p>
+                <span>|</span>
+                <p className="">HUN</p>
+                <span>|</span>
+                <p className="">SRB</p>
+              </div>
+              <a
+                className="resume-download text-light text-decoration-none"
+                href={ResumePDF}
+                download="Zsolt_Nagy_CV_Eng.pdf"
+              >
+                <span>
+                  <IconDownload
+                    className="me-1 mb-1"
+                    size={22}
+                    stroke="none"
+                    fill="#e5e7eb"
+                  />
+                </span>
+                Download
+              </a>
+            </div>
             <div className="d-flex flex-wrap gap-4 text-light mb-4">
               <p className="fs-6 fw-normal mb-0">
                 <span>
