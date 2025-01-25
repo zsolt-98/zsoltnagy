@@ -105,14 +105,14 @@ export default function Hero() {
           <div
             className={`hero-main ${
               !isXXLargeScreen && isOpen ? "hero-main-exit" : ""
-            } blur-bg ${animationStates.container ? "animating" : ""} my-6`}
+            } blur-bg ${animationStates.container ? "visible" : ""} my-6`}
           >
             <div className="p-3 p-xl-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
               <div className="d-inline-block">
                 <div className="hero-heading-container">
                   <h3
                     className={`text-info hero-heading ${
-                      animationStates.hello ? "animating" : ""
+                      animationStates.hello ? "visible" : ""
                     } fs-4 fw-semibold mb-3`}
                   >
                     Hello! I'm
@@ -120,7 +120,7 @@ export default function Hero() {
                   <div className="h1-cursor-wrapper">
                     <h1
                       className={`hero-heading ${
-                        animationStates.name ? "animating" : ""
+                        animationStates.name ? "visible" : ""
                       } h1-cursor ${phase} d-inline-block text-light display-1 fw-light mb-3`}
                     >
                       {name}
@@ -128,7 +128,7 @@ export default function Hero() {
                   </div>
                   <h2
                     className={`hero-heading ${
-                      animationStates.role ? "animating" : ""
+                      animationStates.role ? "visible" : ""
                     } text-info fs-4 fw-semibold mb-3`}
                   >
                     A frontend developer
@@ -138,7 +138,7 @@ export default function Hero() {
                 </div>
                 <div
                   className={`hero-social-icon-container ${
-                    animationStates.social ? "animating" : ""
+                    animationStates.social ? "visible" : ""
                   }`}
                 >
                   <a
@@ -167,7 +167,7 @@ export default function Hero() {
               </div>
               <div
                 className={`hero-img-container ${
-                  animationStates.image ? "animating" : ""
+                  animationStates.image ? "visible" : ""
                 } position-relative mt-5 mt-lg-0`}
               >
                 <div className="hero-glowing-border rounded-5 border-info position-relative overflow-hidden">
@@ -182,7 +182,7 @@ export default function Hero() {
               <div>
                 <h3
                   className={`hero-tech-stack-title ${
-                    animationStates.techStack ? "animating" : ""
+                    animationStates.techStack ? "visible" : ""
                   } text-info text-center text-lg-start fs-4 fw-semibold mb-3 text-nowrap`}
                 >
                   Tech stack
@@ -190,7 +190,7 @@ export default function Hero() {
               </div>
               <div
                 className={`hero-tech-stack-icons ${
-                  animationStates.techStackIcons ? "animating" : ""
+                  animationStates.techStackIcons ? "visible" : ""
                 } d-flex flex-column flex-md-row`}
               >
                 <div className="d-flex flex-column flex-md-row align-items-center justify-content-center">

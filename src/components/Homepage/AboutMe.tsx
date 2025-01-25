@@ -89,19 +89,19 @@ export default function AboutMe() {
               <div
                 ref={aboutMeRef}
                 className={`about-content-wrapper mx-3 p-3 ${
-                  animationStates.aboutMe ? "animating" : ""
+                  animationStates.aboutMe ? "visible" : ""
                 }`}
               >
                 <h2
                   className={`about-me-header text-info display-4 fw-bold text-capitalize ${
-                    animationStates.aboutMeTitle ? "animating" : ""
+                    animationStates.aboutMeTitle ? "visible" : ""
                   }`}
                 >
                   About me
                 </h2>
                 <p
                   className={`about-me-paragraph text-light ${
-                    animationStates.aboutMeText ? "animating" : ""
+                    animationStates.aboutMeText ? "visible" : ""
                   }`}
                 >
                   My journey began with maintaining Shopify sites, where I
@@ -119,19 +119,19 @@ export default function AboutMe() {
               <div
                 ref={engineeringRef}
                 className={`about-content-wrapper mx-3 p-3 ${
-                  animationStates.engineering ? "animating" : ""
+                  animationStates.engineering ? "visible" : ""
                 }`}
               >
                 <h2
                   className={`about-engineering-header text-info display-4 fw-bold text-capitalize ${
-                    animationStates.engineeringTitle ? "animating" : ""
+                    animationStates.engineeringTitle ? "visible" : ""
                   }`}
                 >
                   Engineering
                 </h2>
                 <p
                   className={`about-engineering text-light ${
-                    animationStates.engineeringText ? "animating" : ""
+                    animationStates.engineeringText ? "visible" : ""
                   }`}
                 >
                   I build scalable web applications that meet technical
@@ -148,20 +148,20 @@ export default function AboutMe() {
               <div
                 ref={designRef}
                 className={`about-content-wrapper mx-3 p-3 ${
-                  animationStates.design ? "animating" : ""
+                  animationStates.design ? "visible" : ""
                 }`}
               >
                 <div className="">
                   <h2
                     className={`about-design-header text-info display-4 fw-bold text-capitalize ${
-                      animationStates.designTitle ? "animating" : ""
+                      animationStates.designTitle ? "visible" : ""
                     }`}
                   >
                     Design
                   </h2>
                   <p
                     className={`about-design text-light ${
-                      animationStates.designText ? "animating" : ""
+                      animationStates.designText ? "visible" : ""
                     }`}
                   >
                     While my foundation is in development, I have a keen eye for

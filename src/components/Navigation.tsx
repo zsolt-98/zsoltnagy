@@ -104,7 +104,7 @@ export default function Navigation() {
           >
             <Stack
               className={`nav-menu-title ${
-                animationStates.title ? "animating" : ""
+                animationStates.title ? "visible" : ""
               } fs-4`}
             >
               <Link
@@ -123,7 +123,7 @@ export default function Navigation() {
 
             <div
               className={`nav-menu-connect ${
-                animationStates.connect ? "animating" : ""
+                animationStates.connect ? "visible" : ""
               } `}
             >
               <h3 className="nav-menu-content-connect text-light fs-4 fw-light">

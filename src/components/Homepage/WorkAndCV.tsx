@@ -72,7 +72,7 @@ export default function WorkAndCV() {
         <Row
           ref={contentContainerRef}
           className={`workcv-content-container ${
-            animationStates.contentContainer ? "animating" : ""
+            animationStates.contentContainer ? "visible" : ""
           } d-flex mx-3 justify-content-evenly position-relative`}
         >
           <Col
@@ -83,14 +83,14 @@ export default function WorkAndCV() {
             <div className="">
               <h2
                 className={`text-capitalize text-info fw-bold ${
-                  animationStates.contentTitle ? "animating" : ""
+                  animationStates.contentTitle ? "visible" : ""
                 }`}
               >
                 My work
               </h2>
               <p
                 className={`text-light fs-4 ${
-                  animationStates.contentText ? "animating" : ""
+                  animationStates.contentText ? "visible" : ""
                 }`}
               >
                 A showcase of my latest web projects.
@@ -100,7 +100,7 @@ export default function WorkAndCV() {
               variant="outline-info"
               size="lg"
               className={`workcv-button ${
-                animationStates.contentBtn ? "animating" : ""
+                animationStates.contentBtn ? "visible" : ""
               } rounded-0 text-uppercase fs-6 border-2 w-100 w-xl-75`}
               onClick={() => {
                 navigate("/work");
@@ -121,14 +121,14 @@ export default function WorkAndCV() {
             <div className="">
               <h2
                 className={`text-capitalize text-info fw-bold ${
-                  animationStates.contentTitle ? "animating" : ""
+                  animationStates.contentTitle ? "visible" : ""
                 }`}
               >
                 My résumé
               </h2>
               <p
                 className={`text-light fs-4 ${
-                  animationStates.contentText ? "animating" : ""
+                  animationStates.contentText ? "visible" : ""
                 }`}
               >
                 See my professional experience and skills.
@@ -138,7 +138,7 @@ export default function WorkAndCV() {
               variant="outline-info"
               size="lg"
               className={`workcv-button ${
-                animationStates.contentBtn ? "animating" : ""
+                animationStates.contentBtn ? "visible" : ""
               } rounded-0 text-uppercase fs-6 border-2 w-100 w-xl-75`}
               onClick={() => {
                 navigate("/resume");

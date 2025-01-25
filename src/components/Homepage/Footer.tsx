@@ -62,7 +62,7 @@ export default function Footer() {
       <Container className="footer-content position-relative py-6">
         <Row
           className={`footer-top-wrapper ${isHomeRoute ? "home" : "not-home"} ${
-            isHomeRoute ? (animationStates.footerTop ? "animating" : "") : ""
+            isHomeRoute ? (animationStates.footerTop ? "visible" : "") : ""
           } gap-6 gap-lg-0`}
           ref={footerTopRef}
         >
@@ -126,7 +126,7 @@ export default function Footer() {
           className={`footer-bottom-wrapper ${
             isHomeRoute ? "home" : "not-home"
           } ${
-            isHomeRoute ? (animationStates.footerBottom ? "animating" : "") : ""
+            isHomeRoute ? (animationStates.footerBottom ? "visible" : "") : ""
           }`}
           ref={footerBottomRef}
         >
