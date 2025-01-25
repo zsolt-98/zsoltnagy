@@ -3,7 +3,10 @@ import Container from "react-bootstrap/Container";
 import Navigation from "../Navigation";
 import IconDownload from "../Icons/IconDownload";
 
-import ResumePDF from "../../assets/Zsolt_Nagy_CV_Eng.pdf";
+import resumeEngPDF from "../../assets/Zsolt_Nagy_CV_Eng.pdf";
+import resumeHunPDF from "../../assets/Zsolt_Nagy_CV_Hun.pdf";
+// import resumeSrbPDF from "../../assets/Zsolt_Nagy_CV_Srb.pdf";
+
 import useZustandStore from "../../store/useZustandStore";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
@@ -15,6 +18,7 @@ export default function Resume() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
   const { isOpen } = useZustandStore();
   const [currentLang, setCurrentLang] = useState("eng");
+  const resumeSrbPDF = "";
 
   return (
     <>
@@ -32,10 +36,7 @@ export default function Resume() {
               !isXXLargeScreen && isOpen ? "invisible" : ""
             } d-flex flex-column p-3 p-xl-5 mb-6 mt-7 mx-md-6 position-relative z-2`}
           >
-            <h2 className="mb-4 fs-1 text-info">
-              {currentLang === "hun" ? "Nagy Zsolt" : "Zsolt Nagy"}
-            </h2>
-            <div className="resume-language-download p-3 position-absolute d-flex gap-4">
+            <div className="resume-language-download pb-4 d-flex justify-content-between gap-4">
               <div className="resume-language d-flex gap-1 text-light fw-light">
                 <button
                   className={`resume-language-btn ${
@@ -72,8 +73,14 @@ export default function Resume() {
               </div>
               <a
                 className="resume-download text-light text-decoration-none"
-                href={ResumePDF}
-                download="Zsolt_Nagy_CV_Eng.pdf"
+                href={
+                  currentLang === "eng"
+                    ? resumeEngPDF
+                    : currentLang === "srb"
+                    ? resumeSrbPDF
+                    : resumeHunPDF
+                }
+                download={`Zsolt_Nagy_CV_${currentLang.toUpperCase()}.pdf`}
               >
                 <span>
                   <IconDownload
@@ -86,6 +93,10 @@ export default function Resume() {
                 Download
               </a>
             </div>
+            <h2 className="mb-4 fs-1 text-info">
+              {currentLang === "hun" ? "Nagy Zsolt" : "Zsolt Nagy"}
+            </h2>
+
             {currentLang === "eng" && <ResumeEng />}
             {currentLang === "srb" && <ResumeSrb />}
             {currentLang === "hun" && <ResumeHun />}
