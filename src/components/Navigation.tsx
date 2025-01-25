@@ -90,7 +90,7 @@ export default function Navigation() {
       <div
         className={` ${
           isXXLargeScreen ? "nav-menu-side" : "nav-menu-overlay d-flex"
-        } ${isOpen ? "open" : ""} z-2`}
+        } ${isOpen ? "open" : ""}`}
       >
         <div
           className={`nav-menu-content blur-bg p-5 d-flex align-items-center justify-content-${
