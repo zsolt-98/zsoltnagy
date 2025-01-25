@@ -32,7 +32,9 @@ export default function Resume() {
               !isXXLargeScreen && isOpen ? "invisible" : ""
             } d-flex flex-column p-3 p-xl-5 mb-6 mt-7 mx-md-6 position-relative z-2`}
           >
-            <h2 className="mb-4 fs-1 text-info">Zsolt Nagy</h2>
+            <h2 className="mb-4 fs-1 text-info">
+              {currentLang === "hun" ? "Nagy Zsolt" : "Zsolt Nagy"}
+            </h2>
             <div className="resume-language-download p-3 position-absolute d-flex gap-4">
               <div className="resume-language d-flex gap-1 text-light fw-light">
                 <button
