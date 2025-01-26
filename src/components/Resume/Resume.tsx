@@ -13,6 +13,7 @@ import { useState } from "react";
 import ResumeEng from "./ResumeEng";
 import ResumeSrb from "./ResumeSrb";
 import ResumeHun from "./ResumeHun";
+import { Col, Row } from "react-bootstrap";
 
 export default function Resume() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
@@ -36,8 +37,8 @@ export default function Resume() {
               !isXXLargeScreen && isOpen ? "invisible" : ""
             } d-flex flex-column p-3 p-xl-5 mb-6 mt-7 mx-md-6 position-relative z-2`}
           >
-            <div className="resume-language-download pb-4 d-flex justify-content-between gap-4">
-              <div className="resume-language d-flex gap-1 text-light fw-light">
+            <Row className="resume-language-download pb-4 d-flex justify-content-between">
+              <Col className="resume-language d-flex justify-content-start align-items-center gap-1 text-light fw-light">
                 <button
                   className={`resume-language-btn ${
                     currentLang === "eng" ? "active" : ""
@@ -70,9 +71,10 @@ export default function Resume() {
                 >
                   HUN
                 </button>
-              </div>
-              <a
-                className="resume-download text-light text-decoration-none"
+              </Col>
+              <Col
+                as="a"
+                className="resume-download text-light text-decoration-none d-flex justify-content-end align-items-center flex-wrap-0"
                 href={
                   currentLang === "eng"
                     ? resumeEngPDF
@@ -91,8 +93,8 @@ export default function Resume() {
                   />
                 </span>
                 Download
-              </a>
-            </div>
+              </Col>
+            </Row>
             <h2 className="mb-4 fs-1 text-info">
               {currentLang === "hun" ? "Nagy Zsolt" : "Zsolt Nagy"}
             </h2>

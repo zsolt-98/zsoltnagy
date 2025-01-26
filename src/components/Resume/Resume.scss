@@ -54,6 +54,12 @@
     }
   }
 
+  &-download {
+    @media (max-width: 360px) {
+      justify-content: flex-start !important;
+    }
+  }
+
   &-link-stroke {
     &:hover {
       color: $info !important;
