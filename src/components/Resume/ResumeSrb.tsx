@@ -6,7 +6,7 @@ import IconUser from "../Icons/IconUser";
 
 import Table from "react-bootstrap/Table";
 
-export default function ResumeSrb() {
+export default function ResumeHun() {
   return (
     <>
       <div className="d-flex flex-wrap gap-4 text-light mb-4">
@@ -19,7 +19,7 @@ export default function ResumeSrb() {
               fill="#e5e7eb"
             />
           </span>
-          Subotica, Serbia
+          Subotica, Srbija
         </p>
         <a
           className="resume-link-fill fs-6 text-light fw-normal text-decoration-none mb-0"
@@ -70,68 +70,78 @@ export default function ResumeSrb() {
         </a>
       </div>
       <p className="text-light mb-0">
-        Web developer with strong problem-solving abilities and a passion for
-        intuitive design. Specializes in frontend development with expertise in
-        JavaScript and ReactJS, crafting responsive and user-focused web
-        applications.
+        Veb developer sa jakim sposobnostima rešavanja problema i strašću prema
+        intuitivnom dizajnu.Specijalizovan za frontend razvoj sa stručnostima u
+        JavaScript-u i ReactJS-u, kreirajući responzivne ikorisnicima
+        orijentisane web aplikacije.
       </p>
       <div className="my-4 resume-divider border-top border-info" />
-      <h3 className="fs-2 text-info mb-4">Professional Experience</h3>
-      <h4 className="fs-3 text-info fw-normal mb-2">Employment summary</h4>
+      <h3 className="fs-2 text-info mb-4">Profesionalno iskustvo</h3>
+      <h4 className="fs-3 text-info fw-normal mb-2 d-flex justify-content-between align-items-center">
+        Radna istorija
+        <span className="d-none d-lg-inline fs-6 fw-light">
+          Jul 2019 - Trenutno
+        </span>
+      </h4>
       <h5 className="fs-4 text-info fst-italic fw-light mb-2">
-        Work history across the United Kingdom and Serbia
+        U Ujedinjenom Kraljevstvu i Srbiji
       </h5>
       <ul className="text-light fs-6 fw-normal mb-0">
         <li className="">
-          Managed and maintained multiple Shopify e-commerce websites, including
-          content updates, theme customization, and code implementation.
+          Upravljanje i održavanje više Shopify e-commerce veb sajtova,
+          uključujući ažuriranje sadržaja,prilagođavanje tema i implementaciju
+          koda.
         </li>
         <li className="">
-          Optimized Meta Ads and Google Ads campaigns, improving conversion
-          rates and site traffic.
+          Optimizacija Meta Ads i Google Ads kampanja, poboljšanje konverzija i
+          saobraćaja na sajtu.
         </li>
         <li className="">
-          Provided customer support with a proven track record of high
-          satisfaction ratings and successful upselling initiatives.
+          Pružao korisničku podršku sa dokazanim rezultatima visokih ocena
+          zadovoljstva i uspešnih inicijativaza dodatnu prodaju.
         </li>
       </ul>
-      <h3 className="fs-2 text-info my-4">Projects</h3>
+      <h3 className="fs-2 text-info my-4">Projekti</h3>
       <h4 className="fs-3 text-info fw-normal mb-2">Yourney</h4>
       <h5 className="fs-4 text-info fst-italic fw-light mb-2">
         https://your-ney.netlify.app/
       </h5>
       <ul className="text-light fs-6 fw-normal mb-0">
         <li className="">
-          Developed a premium car rental platform using ReactJS, JavaScript,
-          Bootstrap, and Sass withZustand for state management.
+          Razvio platformu za iznajmljivanje premium automobila koristeći
+          ReactJS, JavaScript, Bootstrap iSass, uz Zustand za upravljanje
+          stanjem.
         </li>
         <li className="">
-          Implemented complete user authentication flow including registration,
-          sign-in, and password reset functionality.
+          Implementirao kompletan tok autentifikacije korisnika, uključujući
+          registraciju, prijavu ifunkcionalnost za resetovanje lozinke.
         </li>
         <li className="">
-          Built comprehensive booking system with vehicle selection, time and
-          location scheduling.
+          Izgradio sveobuhvatan sistem za rezervaciju sa izborom vozila,
+          rasporedom vremena i lokacije.
         </li>
         <li className="">
-          Created user profile system with frontend CRUD operations for profile
-          management and booking creation/deletion.
+          Kreirao sistem korisničkog profila sa frontend CRUD operacijama za
+          upravljanje profilom ikreiranje/brisanje rezervacija.
         </li>
       </ul>
-      <h3 className="fs-2 text-info my-4">Education</h3>
-      <h4 className="fs-3 text-info fw-normal mb-2">
-        Technical Secondary School "Ivan Sarić"
+      <h3 className="fs-2 text-info my-4">Obrazovanje</h3>
+      <h4 className="fs-3 text-info fw-normal mb-2 d-flex justify-content-between align-items-center">
+        "Ivan Sarić" Műszaki Középiskola
+        <span className="d-none d-lg-inline fs-6 fw-light">
+          Subotica, Srbija
+        </span>
       </h4>
       <h5 className="fs-4 text-info fst-italic fw-light mb-2">
-        Information Technology (IT) Technician
+        Tehnička srednja škola "Ivan Sarić"
       </h5>
       <ul className="text-light fs-6 fw-normal mb-0">
         <li className="">
-          Technical education with a focus on computer science, including
-          programming languages, web development, and database management.
+          Tehničko obrazovanje sa fokusom na računarske nauke, uključujući
+          programske jezike, razvoj veba iupravljanje bazama podataka.
         </li>
       </ul>
-      <h3 className="fs-2 text-info my-4">Skills</h3>
+      <h3 className="fs-2 text-info my-4">Veštine</h3>
       <div className="table-responsive">
         <Table responsive borderless className="resume-table">
           <tbody>
@@ -144,13 +154,13 @@ export default function ResumeSrb() {
               </td>
             </tr>
             <tr>
-              <td className="p-0 pe-6 fs-6 fw-normal text-light ">Web</td>
+              <td className="p-0 pe-6 fs-6 fw-normal text-light ">Veb</td>
               <td className="p-0 fs-6 fw-normal text-light">
                 HTML, CSS, Sass, Bootstrap, PostgreSQL, Git, Shopify, Citrix
               </td>
             </tr>
             <tr>
-              <td className="p-0 pe-6 fs-6 fw-normal text-light ">Design</td>
+              <td className="p-0 pe-6 fs-6 fw-normal text-light ">Dizajn</td>
               <td className="p-0 fs-6 fw-normal text-light">Figma, Canva</td>
             </tr>
           </tbody>

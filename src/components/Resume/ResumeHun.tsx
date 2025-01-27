@@ -77,7 +77,12 @@ export default function ResumeHun() {
       </p>
       <div className="my-4 resume-divider border-top border-info" />
       <h3 className="fs-2 text-info mb-4">Munkahelyi tapasztalat</h3>
-      <h4 className="fs-3 text-info fw-normal mb-2">Munkatörténet</h4>
+      <h4 className="fs-3 text-info fw-normal mb-2 d-flex justify-content-between align-items-center">
+        Munkatörténet
+        <span className="d-none d-lg-inline fs-6 fw-light">
+          July 2019 - Jelen
+        </span>
+      </h4>
       <h5 className="fs-4 text-info fst-italic fw-light mb-2">
         Az Egyesült Királyságban és Szerbiában
       </h5>
@@ -120,8 +125,11 @@ export default function ResumeHun() {
         </li>
       </ul>
       <h3 className="fs-2 text-info my-4">Oktatás</h3>
-      <h4 className="fs-3 text-info fw-normal mb-2">
+      <h4 className="fs-3 text-info fw-normal mb-2 d-flex justify-content-between align-items-center">
         "Ivan Sarić" Műszaki Középiskola
+        <span className="d-none d-lg-inline fs-6 fw-light">
+          Szabadka, Szerbia
+        </span>
       </h4>
       <h5 className="fs-4 text-info fst-italic fw-light mb-2">
         Informatikai (IT) technikus

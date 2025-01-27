@@ -5,7 +5,7 @@ import IconDownload from "../Icons/IconDownload";
 
 import resumeEngPDF from "../../assets/Zsolt_Nagy_CV_Eng.pdf";
 import resumeHunPDF from "../../assets/Zsolt_Nagy_CV_Hun.pdf";
-// import resumeSrbPDF from "../../assets/Zsolt_Nagy_CV_Srb.pdf";
+import resumeSrbPDF from "../../assets/Zsolt_Nagy_CV_Srb.pdf";
 
 import useZustandStore from "../../store/useZustandStore";
 import { useMediaQuery } from "react-responsive";
@@ -19,7 +19,6 @@ export default function Resume() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
   const { isOpen } = useZustandStore();
   const [currentLang, setCurrentLang] = useState("eng");
-  const resumeSrbPDF = "";
 
   return (
     <>
@@ -96,7 +95,11 @@ export default function Resume() {
               </Col>
             </Row>
             <h2 className="mb-4 fs-1 text-info">
-              {currentLang === "hun" ? "Nagy Zsolt" : "Zsolt Nagy"}
+              {currentLang === "hun"
+                ? "Nagy Zsolt"
+                : currentLang === "eng"
+                ? "Zsolt Nagy"
+                : "Žolt Nađ"}
             </h2>
 
             {currentLang === "eng" && <ResumeEng />}
