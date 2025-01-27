@@ -37,7 +37,7 @@ export default function Resume() {
             } d-flex flex-column p-3 p-xl-5 mb-6 mt-7 mx-md-6 position-relative z-2`}
           >
             <Row className="resume-language-download pb-4 d-flex justify-content-between">
-              <Col className="resume-language d-flex justify-content-start align-items-center gap-1 text-light fw-light">
+              <Col className="resume-language px-0 d-flex justify-content-start align-items-center text-light fw-light">
                 <button
                   className={`resume-language-btn ${
                     currentLang === "eng" ? "active" : ""
@@ -73,7 +73,7 @@ export default function Resume() {
               </Col>
               <Col
                 as="a"
-                className="resume-download text-light text-decoration-none d-flex justify-content-end align-items-center flex-wrap-0"
+                className="resume-download px-0 text-light text-decoration-none d-flex justify-content-end align-items-center flex-wrap-0"
                 href={
                   currentLang === "eng"
                     ? resumeEngPDF

@@ -40,6 +40,12 @@
         text-decoration: underline;
       }
     }
+
+    // &-col {
+    //   @media (max-width: 576px) {
+    //     width: 100% !important;
+    //   }
+    // }
   }
 
   &-link-fill,
@@ -55,7 +61,7 @@
   }
 
   &-download {
-    @media (max-width: 360px) {
+    @media (max-width: 281px) {
       justify-content: flex-start !important;
     }
   }
