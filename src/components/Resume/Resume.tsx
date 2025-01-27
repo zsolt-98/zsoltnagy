@@ -39,7 +39,7 @@ export default function Resume() {
             <Row className="resume-language-download pb-4 d-flex justify-content-between">
               <Col className="resume-language px-0 d-flex justify-content-start align-items-center text-light fw-light">
                 <button
-                  className={`resume-language-btn ${
+                  className={`resume-language-btn px-2 ${
                     currentLang === "eng" ? "active" : ""
                   } bg-transparent border-0 text-light`}
                   onClick={() => {
@@ -50,7 +50,7 @@ export default function Resume() {
                 </button>
                 <span>|</span>
                 <button
-                  className={`resume-language-btn ${
+                  className={`resume-language-btn px-2 ${
                     currentLang === "srb" ? "active" : ""
                   } bg-transparent border-0 text-light`}
                   onClick={() => {
@@ -61,7 +61,7 @@ export default function Resume() {
                 </button>
                 <span>|</span>
                 <button
-                  className={`resume-language-btn ${
+                  className={`resume-language-btn px-2 ${
                     currentLang === "hun" ? "active" : ""
                   } bg-transparent border-0 text-light`}
                   onClick={() => {
@@ -73,7 +73,7 @@ export default function Resume() {
               </Col>
               <Col
                 as="a"
-                className="resume-download px-0 text-light text-decoration-none d-flex justify-content-end align-items-center flex-wrap-0"
+                className="resume-download pe-2 text-light text-decoration-none d-flex justify-content-end align-items-center flex-wrap-0"
                 href={
                   currentLang === "eng"
                     ? resumeEngPDF
