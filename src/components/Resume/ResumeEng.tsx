@@ -108,7 +108,7 @@ export default function ResumeEng() {
       <ul className="text-light fs-6 fw-normal mb-0">
         <li className="">
           Developed a premium car rental platform using ReactJS, JavaScript,
-          Bootstrap, and Sass withZustand for state management.
+          Bootstrap, and Sass with Zustand for state management.
         </li>
         <li className="">
           Implemented complete user authentication flow including registration,

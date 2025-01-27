@@ -71,8 +71,8 @@ export default function ResumeHun() {
       </div>
       <p className="text-light mb-0">
         Veb developer sa jakim sposobnostima rešavanja problema i strašću prema
-        intuitivnom dizajnu.Specijalizovan za frontend razvoj sa stručnostima u
-        JavaScript-u i ReactJS-u, kreirajući responzivne ikorisnicima
+        intuitivnom dizajnu. Specijalizovan za frontend razvoj sa stručnostima u
+        JavaScript-u i ReactJS-u, kreirajući responzivne i korisnicima
         orijentisane web aplikacije.
       </p>
       <div className="my-4 resume-divider border-top border-info" />
@@ -89,7 +89,7 @@ export default function ResumeHun() {
       <ul className="text-light fs-6 fw-normal mb-0">
         <li className="">
           Upravljanje i održavanje više Shopify e-commerce veb sajtova,
-          uključujući ažuriranje sadržaja,prilagođavanje tema i implementaciju
+          uključujući ažuriranje sadržaja, prilagođavanje tema i implementaciju
           koda.
         </li>
         <li className="">
@@ -109,12 +109,12 @@ export default function ResumeHun() {
       <ul className="text-light fs-6 fw-normal mb-0">
         <li className="">
           Razvio platformu za iznajmljivanje premium automobila koristeći
-          ReactJS, JavaScript, Bootstrap iSass, uz Zustand za upravljanje
+          ReactJS, JavaScript, Bootstrap i Sass, uz Zustand za upravljanje
           stanjem.
         </li>
         <li className="">
           Implementirao kompletan tok autentifikacije korisnika, uključujući
-          registraciju, prijavu ifunkcionalnost za resetovanje lozinke.
+          registraciju, prijavu i funkcionalnost za resetovanje lozinke.
         </li>
         <li className="">
           Izgradio sveobuhvatan sistem za rezervaciju sa izborom vozila,
@@ -122,23 +122,23 @@ export default function ResumeHun() {
         </li>
         <li className="">
           Kreirao sistem korisničkog profila sa frontend CRUD operacijama za
-          upravljanje profilom ikreiranje/brisanje rezervacija.
+          upravljanje profilom i kreiranje/brisanje rezervacija.
         </li>
       </ul>
       <h3 className="fs-2 text-info my-4">Obrazovanje</h3>
       <h4 className="fs-3 text-info fw-normal mb-2 d-flex justify-content-between align-items-center">
-        "Ivan Sarić" Műszaki Középiskola
+        Tehnička srednja škola "Ivan Sarić"
         <span className="d-none d-lg-inline fs-6 fw-light">
           Subotica, Srbija
         </span>
       </h4>
       <h5 className="fs-4 text-info fst-italic fw-light mb-2">
-        Tehnička srednja škola "Ivan Sarić"
+        Elektrotehničar informacionih tehnologija (IT)
       </h5>
       <ul className="text-light fs-6 fw-normal mb-0">
         <li className="">
           Tehničko obrazovanje sa fokusom na računarske nauke, uključujući
-          programske jezike, razvoj veba iupravljanje bazama podataka.
+          programske jezike, razvoj veba i upravljanje bazama podataka.
         </li>
       </ul>
       <h3 className="fs-2 text-info my-4">Veštine</h3>
