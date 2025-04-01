@@ -29,6 +29,7 @@ export default function Hero() {
   const [name, setName] = useState<string>(fullName);
   const [currentIndex, setCurrentIndex] = useState<number>(fullName.length);
   const [phase, setPhase] = useState<Phase>("waiting");
+  const isUnderLgScreen = useMediaQuery({ maxWidth: 991 });
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
   const { isOpen } = useZustandStore();
   const [animationStates, setAnimationStates] = useState<AnimationStates>({
@@ -131,7 +132,7 @@ export default function Hero() {
                       animationStates.role ? "visible" : ""
                     } text-info fs-4 fw-semibold mb-3`}
                   >
-                    A frontend developer
+                    A web developer
                     <br />
                     based in Subotica, Serbia.
                   </h2>
@@ -183,7 +184,7 @@ export default function Hero() {
                 <h3
                   className={`hero-tech-stack-title ${
                     animationStates.techStack ? "visible" : ""
-                  } text-info text-center text-lg-start fs-4 mt-5 mt-lg-0  fw-semibold mb-3 text-nowrap`}
+                  } text-info text-center text-lg-start fs-4 mt-5 mt-lg-0  fw-semibold mb-5 mb-lg-3  text-nowrap`}
                 >
                   Tech stack
                 </h3>
@@ -194,32 +195,32 @@ export default function Hero() {
                   animationStates.techStackIcons ? "visible" : ""
                 } d-flex flex-column gap-3 `}
               >
-                <div className="d-flex  align-items-center ">
-                  <h4 className="hero-tech-icon-heading text-info mb-0 fw-semibold fs-6">
-                    Frontend:
-                  </h4>
-                  <Image
-                    className="hero-tech-icon ms-3 img-fluid me-0"
-                    src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,bootstrap,sass"
-                  />
-                </div>
-                <div className="d-flex  align-items-center ">
-                  <h4 className="hero-tech-icon-heading text-info mb-0 fw-semibold fs-6">
-                    Backend:
-                  </h4>
-                  <Image
-                    className="hero-tech-icon ms-3 img-fluid me-0"
-                    src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgresql"
-                  />
-                </div>
-                <div className="d-flex  align-items-center ">
-                  <h4 className="hero-tech-icon-heading text-info mb-0 fw-semibold fs-6">
-                    Miscellaneous:
-                  </h4>
-                  <Image
-                    className="hero-tech-icon ms-3 img-fluid me-0"
-                    src="https://skillicons.dev/icons?i=git,figma"
-                  />
+                <div className="d-flex flex-column gap-5 gap-lg-3">
+                  <div className="d-flex  align-items-start align-items-lg-center justify-content-center justify-content-lg-start">
+                    <h4 className="hero-tech-icon-heading text-info mb-0 fw-semibold fs-6">
+                      Frontend:
+                    </h4>
+                    {!isUnderLgScreen ? (
+                      <Image
+                        className="hero-tech-icon ms-3 img-fluid me-0"
+                        src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,bootstrap,sass"
+                      />
+                    ) : (
+                      <Image
+                        className="hero-tech-icon-stack ms-3 img-fluid me-0"
+                        src="https://skillicons.dev/icons?i=html,css,js,ts,react,tailwind,bootstrap,sass&perline=4"
+                      />
+                    )}
+                  </div>
+                  <div className="d-flex  align-items-start align-items-lg-center justify-content-center justify-content-lg-start">
+                    <h4 className="hero-tech-icon-heading text-info mb-0 fw-semibold fs-6">
+                      Backend:
+                    </h4>
+                    <Image
+                      className="hero-tech-icon ms-3 img-fluid me-0"
+                      src="https://skillicons.dev/icons?i=nodejs,express,mongodb,postgresql"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
