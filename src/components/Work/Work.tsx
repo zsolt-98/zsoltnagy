@@ -66,13 +66,13 @@ export default function Work() {
                   A collection of the projects that I have worked on.
                 </p>
               </div>
-              <div className="d-flex gap-5 gap-xl-3 justify-content-center flex-column flex-xl-row flex-wrap">
+              <div className="d-flex gap-5 gap-xl-3 justify-content-center flex-column flex-xl-row ">
                 <button
                   className="work-project-btn border-0 bg-transparent p-0"
                   onClick={() => navigate("yourney")}
                 >
                   <figure className="work-project-figure m-0">
-                    <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6">
+                    <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6 d-flex justify-content-center">
                       <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
                         <Image src={yourneyLogo} className="img-fluid" />
                       </div>
@@ -105,7 +105,7 @@ export default function Work() {
                   onClick={() => navigate("pomegrenade")}
                 >
                   <figure className="work-project-figure m-0">
-                    <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6">
+                    <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6 d-flex justify-content-center">
                       <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
                         <Image
                           src={pomegrenadeLogo}
@@ -135,7 +135,7 @@ export default function Work() {
                   onClick={() => navigate("/")}
                 >
                   <figure className="work-project-figure m-0">
-                    <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6">
+                     <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6 d-flex justify-content-center">
                       <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
                         <Image src={portfolioLogo} className="img-fluid" />
                       </div>
