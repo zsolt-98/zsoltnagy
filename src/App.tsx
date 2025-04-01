@@ -5,6 +5,7 @@ import Yourney from "./components/Work/Yourney";
 import Resume from "./components/Resume/Resume";
 import ScrollReset from "./components/shared/Layout/ScrollReset";
 import Footer from "./components/Homepage/Footer";
+import Pomegrenade from "./components/Work/Pomegrenade";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<Homepage />} />
           <Route path="work" element={<Work />}>
             <Route path="yourney" element={<Yourney />} />
+            <Route path="pomegrenade" element={<Pomegrenade />} />
           </Route>
           <Route path="resume" element={<Resume />}></Route>
           <Route path="*" element={<Navigate replace to="/" />} />

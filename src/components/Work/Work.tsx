@@ -10,9 +10,10 @@ import yourneyLogo from "../../assets/yourney-logo.png";
 import yourneyHero from "../../assets/yourney-hero.png";
 import yourneyHeroMd from "../../assets/yourney-hero-md.png";
 import yourneyHeroSm from "../../assets/yourney-hero-sm.png";
-import portfolioLogo from "../../assets/zsn-logo-270x63.png";
-import portfoliHero from "../../assets/portfolio-hero.png";
+// import portfolioLogo from "../../assets/zsn-logo-270x63.png";
+// import portfoliHero from "../../assets/portfolio-hero.png";
 import pomegrenadeLogo from "../../assets/projects/pomegrenade/pomegrenade-logo-secondary-light-636x295px.png";
+import pomegrenadeHero from "../../assets/projects/pomegrenade/pomegrenade-hero-1848x1020px.png";
 import { Outlet, useLocation, useNavigate } from "react-router";
 import WorkProjectDescription from "./WorkProjectDescription";
 
@@ -23,7 +24,9 @@ export default function Work() {
   const { isOpen } = useZustandStore();
   const navigate = useNavigate();
   const location = useLocation();
-  const isYourneyRoute = location.pathname === "/work/yourney";
+  const isProjectRoute =
+    location.pathname === "/work/yourney" ||
+    location.pathname === "/work/pomegrenade";
   return (
     <>
       <section className="min-vh-100 w-100 position-relative d-flex justify-content-between overflow-hidden">
@@ -36,7 +39,7 @@ export default function Work() {
           className="work-bg-container position-absolute"
           style={{
             background: `linear-gradient(180deg, #23272f 0%, #23272f 25%, #3d4452 75%, ${
-              !isYourneyRoute ? "#090a0c" : "#3d4452"
+              !isProjectRoute ? "#090a0c" : "#3d4452"
             }  100%)`,
           }}
         >
@@ -46,7 +49,7 @@ export default function Work() {
           fluid="md"
           className={`work-project-container d-flex   justify-content-center align-items-center z-2 px-0 `}
         >
-          {isYourneyRoute ? (
+          {isProjectRoute ? (
             <Outlet />
           ) : (
             <div
@@ -96,10 +99,10 @@ export default function Work() {
                     </figcaption>
                   </figure>
                 </button>
-                {/* Pomegrenade */}
+
                 <button
                   className="work-project-btn border-0 bg-transparent p-0"
-                  onClick={() => navigate("yourney")}
+                  onClick={() => navigate("pomegrenade")}
                 >
                   <figure className="work-project-figure m-0">
                     <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6">
@@ -112,13 +115,7 @@ export default function Work() {
                       </div>
                       <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
                         <Image
-                          src={
-                            isUnderSmScreen
-                              ? yourneyHeroSm
-                              : isUnderMdScreen
-                              ? yourneyHeroMd
-                              : yourneyHero
-                          }
+                          src={pomegrenadeHero}
                           className="w-100 h-100 object-fit-cover"
                           style={{
                             transform: "translateZ(0)",
@@ -128,12 +125,12 @@ export default function Work() {
                       </div>
                     </div>
                     <figcaption className="work-project-text text-start p-4">
-                      <h3 className="text-info">Yourney</h3>
-                      <p className="mb-0 text-light">your-ney.netlify.app</p>
+                      <h3 className="text-info">Pomegrenade</h3>
+                      <p className="mb-0 text-light">pomegrenade.xyz</p>
                     </figcaption>
                   </figure>
                 </button>
-                <button
+                {/* <button
                   className="work-project-btn border-0 bg-transparent p-0"
                   onClick={() => navigate("/")}
                 >
@@ -158,14 +155,14 @@ export default function Work() {
                       <p className="mb-0 text-light">zsn.guru</p>
                     </figcaption>
                   </figure>
-                </button>{" "}
+                </button> */}
               </div>
             </div>
           )}
         </Container>
         <Navigation />
       </section>
-      {isYourneyRoute && (
+      {isProjectRoute && (
         <section className="w-100 position-relative">
           <div className="work-bg-container-2 position-absolute">
             <div className="work-bg-grain position-absolute" />
