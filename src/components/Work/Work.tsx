@@ -12,6 +12,7 @@ import yourneyHeroMd from "../../assets/yourney-hero-md.png";
 import yourneyHeroSm from "../../assets/yourney-hero-sm.png";
 import portfolioLogo from "../../assets/zsn-logo-270x63.png";
 import portfoliHero from "../../assets/portfolio-hero.png";
+import pomegrenadeLogo from "../../assets/projects/pomegrenade/pomegrenade-logo-secondary-light-636x295px.png";
 import { Outlet, useLocation, useNavigate } from "react-router";
 import WorkProjectDescription from "./WorkProjectDescription";
 
@@ -62,7 +63,7 @@ export default function Work() {
                   A collection of the projects that I have worked on.
                 </p>
               </div>
-              <div className="d-flex gap-5 gap-xl-3 justify-content-center flex-column flex-xl-row">
+              <div className="d-flex gap-5 gap-xl-3 justify-content-center flex-column flex-xl-row flex-wrap">
                 <button
                   className="work-project-btn border-0 bg-transparent p-0"
                   onClick={() => navigate("yourney")}
@@ -71,6 +72,43 @@ export default function Work() {
                     <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6">
                       <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
                         <Image src={yourneyLogo} className="img-fluid" />
+                      </div>
+                      <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
+                        <Image
+                          src={
+                            isUnderSmScreen
+                              ? yourneyHeroSm
+                              : isUnderMdScreen
+                              ? yourneyHeroMd
+                              : yourneyHero
+                          }
+                          className="w-100 h-100 object-fit-cover"
+                          style={{
+                            transform: "translateZ(0)",
+                            backfaceVisibility: "hidden",
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <figcaption className="work-project-text text-start p-4">
+                      <h3 className="text-info">Yourney</h3>
+                      <p className="mb-0 text-light">your-ney.netlify.app</p>
+                    </figcaption>
+                  </figure>
+                </button>
+                {/* Pomegrenade */}
+                <button
+                  className="work-project-btn border-0 bg-transparent p-0"
+                  onClick={() => navigate("yourney")}
+                >
+                  <figure className="work-project-figure m-0">
+                    <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6">
+                      <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
+                        <Image
+                          src={pomegrenadeLogo}
+                          className="img-fluid "
+                          style={{ maxWidth: "220px" }}
+                        />
                       </div>
                       <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
                         <Image
