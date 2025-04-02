@@ -22,7 +22,7 @@ export function PomegrenadeDescription() {
         chart by using an external API.
       </p>
       <p className="fs-6">
-        I implemented a user profile section, where users can edit their weight
+        It also has a user profile section, where users can edit their weight
         goals, macronutrient goals, update their first name and email address.
       </p>
       <p className="fs-6">
@@ -37,7 +37,7 @@ export function PomegrenadeDescription() {
       </p>
       <p className="fs-6 ">
         <span className="text-decoration-underline">
-          Tech Stack & Libraries:
+          Technologies & Libraries used:
         </span>
         <br />
         <span className="mt-2 d-block">
