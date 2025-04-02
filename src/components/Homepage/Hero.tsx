@@ -108,7 +108,7 @@ export default function Hero() {
               !isXXLargeScreen && isOpen ? "hero-main-exit" : ""
             } blur-bg ${animationStates.container ? "visible" : ""} my-6`}
           >
-            <div className="p-3 p-xl-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
+            <div className="p-3 pb-0 p-xl-5 mx-xl-0 rounded-5 d-flex flex-column flex-lg-row justify-content-between align-items-center position-relative text-center text-lg-start">
               <div className="d-inline-block">
                 <div className="hero-heading-container">
                   <h3
@@ -179,7 +179,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="hero-tech-stack p-0 p-lg-5 pt-lg-0 mx-3 mx-lg-0 rounded-5 d-flex flex-column justify-content-start  position-relative">
+            <div className="hero-tech-stack px-3 py-0 p-xl-5 pt-xl-0 rounded-5 d-flex flex-column justify-content-start  position-relative">
               <div>
                 <h3
                   className={`hero-tech-stack-title ${
