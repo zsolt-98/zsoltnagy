@@ -28,7 +28,7 @@ export function PomegrenadeDescription() {
       <p className="fs-6">
         It features a secure authentication system using JWT tokens with cookies
         to provide safe user sessions. When resetting their password or
-        verifying their email address, the user is provided with a 6-digit
+        verifying their email address, users are provided with a 6-digit
         verification code, which is sent to their respective email address.
       </p>
       <p className="fs-6">

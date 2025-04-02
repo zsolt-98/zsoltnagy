@@ -71,9 +71,8 @@ export default function ResumeEng() {
       </div>
       <p className="text-light mb-0">
         Web developer with strong problem-solving abilities and a passion for
-        intuitive design. Specializes in frontend development with expertise in
-        JavaScript and ReactJS, crafting responsive and user-focused web
-        applications.
+        intuitive design. Specializes in full stack development with expertise
+        in JavaScript, ReactJS and Node.js.
       </p>
       <div className="my-4 resume-divider border-top border-info" />
       <h3 className="fs-2 text-info mb-4">Professional Experience</h3>
@@ -95,13 +94,45 @@ export default function ResumeEng() {
           Optimized Meta Ads and Google Ads campaigns, improving conversion
           rates and site traffic.
         </li>
-        <li className="">
-          Provided customer support with a proven track record of high
-          satisfaction ratings and successful upselling initiatives.
-        </li>
       </ul>
       <h3 className="fs-2 text-info my-4">Projects</h3>
-      <h4 className="fs-3 text-info fw-normal mb-2">Yourney</h4>
+      <h4 className="fs-3 text-info fw-normal mb-2">Pomegrenade</h4>
+      <h5 className="fs-4 text-info fst-italic fw-light mb-2">
+        https://pomegrenade.xyz/
+      </h5>
+      <ul className="text-light fs-6 fw-normal mb-0">
+        <li className="">
+          Developed a full stack (MERN) calorie tracking application, using
+          ReactJS, TypeScript, TailwindCSS, NodeJS, Express and MongoDB.
+        </li>
+        <li className="">
+          Built a comprehensive nutrition dashboard, where users can log their
+          daily caloric intake.
+        </li>
+        <li className="">
+          Implemented a food search interface that queries and shows results
+          from an external food diary API.
+        </li>
+        <li className="">
+          Macronutrient data from the external API is displayed via a pie chart,
+          that shows the values in percentages and grams, when adding a food
+          entry or when editing one.
+        </li>
+        <li className="">
+          Added customizable weight and macronutrient user goals.
+        </li>
+        <li className="">
+          Integrated personalized user profiles, including updatable profile
+          images, names, email addresses and self-service password reset
+          functionality.
+        </li>
+        <li className="">
+          When users reset their password or verify their email address, they
+          receive a 6-digit verification code, which is sent to their respective
+          email address.
+        </li>
+      </ul>
+      <h4 className="fs-3 mt-4 text-info fw-normal mb-2">Yourney</h4>
       <h5 className="fs-4 text-info fst-italic fw-light mb-2">
         https://your-ney.netlify.app/
       </h5>
@@ -144,17 +175,18 @@ export default function ResumeEng() {
         <Table responsive borderless className="resume-table">
           <tbody>
             <tr>
-              <td className="p-0 pe-6 fs-6 fw-normal text-light ">
+              <td className="p-0 pe-6 fs-6 fw-normal text-light pb-3 pb-md-0">
                 JavaScript
               </td>
-              <td className="p-0 fs-6 fw-normal text-light">
-                ReactJS, TypeScript
+              <td className="p-0 fs-6 fw-normal text-light HTML, CSS, Tailwind, Bootstrap, Sass, Express, MongoDB, Mongoose, PostgreSQL, Git, Shopify">
+                ReactJS, TypeScript, Node.js
               </td>
             </tr>
             <tr>
-              <td className="p-0 pe-6 fs-6 fw-normal text-light ">Web</td>
-              <td className="p-0 fs-6 fw-normal text-light">
-                HTML, CSS, Sass, Bootstrap, PostgreSQL, Git, Shopify, Citrix
+              <td className="p-0 pe-6 fs-6  fw-normal text-light ">Web</td>
+              <td className="p-0 fs-6 fw-normal text-light pb-3 pb-md-0">
+                HTML, CSS, Tailwind, Bootstrap, Sass, Express, MongoDB,
+                Mongoose, PostgreSQL, Git, Shopify
               </td>
             </tr>
             <tr>
