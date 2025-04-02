@@ -68,7 +68,7 @@ export default function Pomegrenade() {
             className="w-100 pb-5 px-0 px-sm-5"
           >
             {images.map((image) => (
-              <Carousel.Item>
+              <Carousel.Item key={image}>
                 <Image src={image} fluid />
               </Carousel.Item>
             ))}
