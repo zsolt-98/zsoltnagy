@@ -16,6 +16,7 @@ import pomegrenadeLogo from "../../assets/projects/pomegrenade/pomegrenade-logo-
 import pomegrenadeHero from "../../assets/projects/pomegrenade/pomegrenade-hero-1848x1020px.png";
 import { Outlet, useLocation, useNavigate } from "react-router";
 import WorkProjectDescription from "./WorkProjectDescription";
+import { PomegrenadeDescription } from "./PomegrenadeDescription";
 
 export default function Work() {
   const isXXLargeScreen = useMediaQuery({ minWidth: 1500 });
@@ -69,6 +70,36 @@ export default function Work() {
               <div className="d-flex gap-5 gap-xl-3 justify-content-center flex-column flex-xl-row ">
                 <button
                   className="work-project-btn border-0 bg-transparent p-0"
+                  onClick={() => navigate("pomegrenade")}
+                >
+                  <figure className="work-project-figure m-0">
+                    <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6 d-flex justify-content-center">
+                      <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
+                        <Image
+                          src={pomegrenadeLogo}
+                          className="img-fluid "
+                          style={{ maxWidth: "220px" }}
+                        />
+                      </div>
+                      <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
+                        <Image
+                          src={pomegrenadeHero}
+                          className="w-100 h-100 object-fit-cover"
+                          style={{
+                            transform: "translateZ(0)",
+                            backfaceVisibility: "hidden",
+                          }}
+                        />
+                      </div>
+                    </div>
+                    <figcaption className="work-project-text text-start p-4">
+                      <h3 className="text-info">Pomegrenade</h3>
+                      <p className="mb-0 text-light">pomegrenade.xyz</p>
+                    </figcaption>
+                  </figure>
+                </button>
+                <button
+                  className="work-project-btn border-0 bg-transparent p-0"
                   onClick={() => navigate("yourney")}
                 >
                   <figure className="work-project-figure m-0">
@@ -100,36 +131,6 @@ export default function Work() {
                   </figure>
                 </button>
 
-                <button
-                  className="work-project-btn border-0 bg-transparent p-0"
-                  onClick={() => navigate("pomegrenade")}
-                >
-                  <figure className="work-project-figure m-0">
-                    <div className="work-project-img position-relative bg-light px-5 px-md-6 p-6 d-flex justify-content-center">
-                      <div className="default-state d-flex justify-content-center align-items-center w-100 h-100">
-                        <Image
-                          src={pomegrenadeLogo}
-                          className="img-fluid "
-                          style={{ maxWidth: "220px" }}
-                        />
-                      </div>
-                      <div className="hover-state position-absolute top-0 start-0 w-100 h-100">
-                        <Image
-                          src={pomegrenadeHero}
-                          className="w-100 h-100 object-fit-cover"
-                          style={{
-                            transform: "translateZ(0)",
-                            backfaceVisibility: "hidden",
-                          }}
-                        />
-                      </div>
-                    </div>
-                    <figcaption className="work-project-text text-start p-4">
-                      <h3 className="text-info">Pomegrenade</h3>
-                      <p className="mb-0 text-light">pomegrenade.xyz</p>
-                    </figcaption>
-                  </figure>
-                </button>
                 {/* <button
                   className="work-project-btn border-0 bg-transparent p-0"
                   onClick={() => navigate("/")}
@@ -172,7 +173,13 @@ export default function Work() {
             className={`d-flex
          justify-content-center align-items-center z-2 px-0 h-100`}
           >
-            <WorkProjectDescription />
+            {location.pathname === "/work/pomegrenade" && (
+              <PomegrenadeDescription />
+            )}
+
+            {location.pathname === "/work/yourney" && (
+              <WorkProjectDescription />
+            )}
           </Container>
         </section>
       )}
