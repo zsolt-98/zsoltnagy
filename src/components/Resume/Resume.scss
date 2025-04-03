@@ -48,6 +48,12 @@
     // }
   }
 
+  &-project {
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+
   &-link-fill,
   &-download {
     &:hover {

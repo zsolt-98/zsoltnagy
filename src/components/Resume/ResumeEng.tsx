@@ -97,9 +97,14 @@ export default function ResumeEng() {
       </ul>
       <h3 className="fs-2 text-info my-4">Projects</h3>
       <h4 className="fs-3 text-info fw-normal mb-2">Pomegrenade</h4>
-      <h5 className="fs-4 text-info fst-italic fw-light mb-2">
+      <a
+        href="https://pomegrenade.xyz/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="resume-project fs-4 text-info fst-italic fw-light mb-2 text-decoration-none"
+      >
         https://pomegrenade.xyz/
-      </h5>
+      </a>
       <ul className="text-light fs-6 fw-normal mb-0">
         <li className="">
           Developed a full stack (MERN) calorie tracking application, using
@@ -133,9 +138,14 @@ export default function ResumeEng() {
         </li>
       </ul>
       <h4 className="fs-3 mt-4 text-info fw-normal mb-2">Yourney</h4>
-      <h5 className="fs-4 text-info fst-italic fw-light mb-2">
+      <a
+        href="https://your-ney.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="resume-project fs-4 text-info fst-italic fw-light mb-2 text-decoration-none"
+      >
         https://your-ney.netlify.app/
-      </h5>
+      </a>
       <ul className="text-light fs-6 fw-normal mb-0">
         <li className="">
           Developed a premium car rental platform using ReactJS, JavaScript,
