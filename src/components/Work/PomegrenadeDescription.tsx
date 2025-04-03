@@ -14,12 +14,12 @@ export function PomegrenadeDescription() {
       <p className="fs-6">
         Pomegrenade is a simple calorie and macronutrient tracking application
         built using the MERN stack. It features a user-friendly interface for
-        monitoring daily diet.
+        diet monitoring.
       </p>
       <p className="fs-6">
         The application allows users to track their caloric intake, view
         macronutrient details of food items in a pie chart, add foods to the
-        chart by using an external API.
+        main dashboard by using an external API.
       </p>
       <p className="fs-6">
         It also has a user profile section, where users can edit their weight
